@@ -2215,7 +2215,7 @@ class Mission
 			leader=1;
 			skill=0.44999999;
 			text="truck";
-			init="this addItemCargo [""B_UavTerminal"", 3]; this addBackpackCargo [""B_UAV_01_backpack_F"", 3]; this addMagazineCargo [""1Rnd_Smoke_Grenade_shell"", 20]; this addMagazineCargo [""1Rnd_SmokeRed_Grenade_shell"", 20]; this addMagazineCargo [""1Rnd_SmokeGreen_Grenade_shell"", 20]; this addMagazineCargo [""1Rnd_SmokeBlue_Grenade_shell"", 20];";
+			init="this addItemCargoGlobal [""B_UavTerminal"", 3]; this addBackpackCargoGlobal [""B_UAV_01_backpack_F"", 3]; this addMagazineCargoGlobal [""1Rnd_Smoke_Grenade_shell"", 20]; this addMagazineCargoGlobal [""1Rnd_SmokeRed_Grenade_shell"", 20]; this addMagazineCargoGlobal [""1Rnd_SmokeGreen_Grenade_shell"", 20]; this addMagazineCargoGlobal [""1Rnd_SmokeBlue_Grenade_shell"", 20];";
 		};
 		class Item7
 		{
