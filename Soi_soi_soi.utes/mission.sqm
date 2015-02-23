@@ -16,24 +16,27 @@ class Mission
 		"A3_Air_F_EPC_Plane_CAS_02",
 		"a3_soft_f_gamma_truckheavy",
 		"mas_rus_spet_veh",
-		"A3_Structures_F_Mil_Shelters"
+		"A3_Structures_F_Mil_Shelters",
+		"a3_characters_f",
+		"aia_utes_config"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_BLUFOR",
-		"a3_characters_f_gamma",
+		"a3_characters_f",
 		"A3_Modules_F_Multiplayer",
 		"A3_Characters_F_OPFOR",
-		"a3_characters_f_beta",
 		"A3_Soft_F_MRAP_02",
 		"A3_Soft_F_TruckHeavy",
 		"A3_Modules_F_Intel",
+		"A3_Characters_F_Gamma",
 		"A3_Air_F_Heli_Light_01",
 		"A3_Air_F_Beta_Heli_Attack_01",
 		"A3_Air_F_EPC_Plane_CAS_02",
 		"a3_soft_f_gamma_truckheavy",
 		"mas_rus_spet_veh",
-		"A3_Structures_F_Mil_Shelters"
+		"A3_Structures_F_Mil_Shelters",
+		"aia_utes_config"
 	};
 	randomSeed=8950207;
 	class Intel
@@ -2045,6 +2048,14 @@ class Mission
 };
 class Intro
 {
+	addOns[]=
+	{
+		"aia_utes_config"
+	};
+	addOnsAuto[]=
+	{
+		"aia_utes_config"
+	};
 	randomSeed=3240425;
 	class Intel
 	{
@@ -2067,6 +2078,14 @@ class Intro
 };
 class OutroWin
 {
+	addOns[]=
+	{
+		"aia_utes_config"
+	};
+	addOnsAuto[]=
+	{
+		"aia_utes_config"
+	};
 	randomSeed=15067707;
 	class Intel
 	{
@@ -2089,6 +2108,14 @@ class OutroWin
 };
 class OutroLoose
 {
+	addOns[]=
+	{
+		"aia_utes_config"
+	};
+	addOnsAuto[]=
+	{
+		"aia_utes_config"
+	};
 	randomSeed=14889570;
 	class Intel
 	{
