@@ -1,0 +1,44 @@
+OnLoadName = "[HEHU] [COOP] Drip Drop";
+OnLoadMission = "Take a series of objectives while providing CAS and transport";
+author = "Mange";
+
+respawn = "BASE";
+respawnTemplates[] = {"MenuPosition"};
+respawnDelay = 8;
+respawnVehicleDelay = 10;
+respawnOnStart = 0;
+
+disabledAI = 1;
+joinUnassigned = 0;
+saving = 0;
+
+class Header
+{
+	gameType = Coop;
+	minPlayers = 4;
+	maxPlayers = 8;
+};
+
+class Params
+{
+	class VirtualArsenal {
+		title = "Enable virtual arsenal?";
+		texts[] = {"No", "Yes"};
+		values[] = {0, 1};
+		default = 1;
+	};
+	class EnableRevive {
+		title = "Enable revive system?";
+		texts[] = {"No", "Yes"};
+		values[] = {0, 1};
+		default = 1;
+	};
+};
+
+#include "SRS\GUI\SRSdialogs.hpp"
+class RscTitles {
+	#include "SRS\GUI\SRSprogressBar.hpp"
+};
+class CfgFunctions {
+	#include "SRS\CfgFunctions.hpp"
+};

@@ -1,0 +1,334 @@
+version=12;
+class Mission
+{
+	addOns[]=
+	{
+		"aia_desert_config",
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f",
+		"mbg_killhouses_a3",
+		"MEC_GME",
+		"CAMisc",
+		"aia_misc_config",
+		"A3_Modules_F_Curator_Misc",
+		"task_force_radio_items",
+		"A3_Supplies_F_Heli_CargoNets"
+	};
+	addOnsAuto[]=
+	{
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f",
+		"mbg_killhouses_a3",
+		"A3_Supplies_F_Heli_CargoNets",
+		"CAMisc",
+		"aia_misc_config",
+		"aia_desert_config"
+	};
+	randomSeed=6330168;
+	class Intel
+	{
+		briefingName="[HEHU] [COOP] CQBuilding 2";
+		overviewText="Practice CQB in a building.";
+		startWeather=0.099999994;
+		startWind=0.099999994;
+		startWaves=0.099999994;
+		forecastWeather=0.29999998;
+		forecastWind=0.099999994;
+		forecastWaves=0.099999994;
+		forecastLightnings=0.099999994;
+		year=2007;
+		month=6;
+		day=7;
+		hour=8;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+	class Groups
+	{
+		items=5;
+		class Item0
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2696.6406,17.219881,2689.9485};
+					azimut=35.537701;
+					special="NONE";
+					id=0;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAYER COMMANDER";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item1
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2695.4067,17.214329,2690.7122};
+					azimut=35.537701;
+					special="NONE";
+					id=1;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item2
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2696.1152,17.217518,2690.2905};
+					azimut=35.537701;
+					special="NONE";
+					id=2;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item3
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2697.1111,17.221998,2689.5928};
+					azimut=35.537701;
+					special="NONE";
+					id=3;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item4
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2697.6294,17.224331,2689.2253};
+					azimut=35.537701;
+					special="NONE";
+					id=4;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.60000002;
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items=9;
+		class Item0
+		{
+			position[]={2698.1746,17.236435,2693.9697};
+			azimut=220.03749;
+			id=5;
+			side="EMPTY";
+			vehicle="MBG_Cinderwall_5_InEditor";
+			skill=0.60000002;
+		};
+		class Item1
+		{
+			position[]={2698.6433,17.23271,2692.2041};
+			azimut=40.417301;
+			special="NONE";
+			id=6;
+			side="EMPTY";
+			vehicle="B_CargoNet_01_ammo_F";
+			leader=1;
+			skill=0.60000002;
+			text="ammobox";
+			init="0 = [""AmmoboxInit"",[this, true]] spawn BIS_fnc_arsenal;";
+		};
+		class Item2
+		{
+			position[]={2701.9993,17.256363,2690.7493};
+			azimut=220.03749;
+			id=7;
+			side="EMPTY";
+			vehicle="MBG_Cinderwall_5_InEditor";
+			skill=0.60000002;
+		};
+		class Item3
+		{
+			position[]={2699.9575,17.245771,2692.4785};
+			azimut=220.037;
+			offsetY=2;
+			id=8;
+			side="EMPTY";
+			vehicle="MBG_Cinderwall_5_InEditor";
+			skill=0.60000002;
+		};
+		class Item4
+		{
+			position[]={2702.9341,17.306408,2712.3848};
+			azimut=-45.897999;
+			id=9;
+			side="EMPTY";
+			vehicle="Land_MBG_Shoothouse_1";
+			skill=0.60000002;
+			text="killhouse_1";
+		};
+		class Item5
+		{
+			position[]={2709.4297,17.306799,2736.5261};
+			azimut=-135.755;
+			id=10;
+			side="EMPTY";
+			vehicle="Land_MBG_Shoothouse_1";
+			skill=0.60000002;
+			text="killhouse_2";
+		};
+		class Item6
+		{
+			position[]={2707.7378,17.354162,2722.8906};
+			azimut=-85.332512;
+			id=11;
+			side="EMPTY";
+			vehicle="Danger";
+			skill=0.60000002;
+		};
+		class Item7
+		{
+			position[]={2694.1331,17.208597,2694.6814};
+			azimut=159.79225;
+			id=12;
+			side="EMPTY";
+			vehicle="MBG_Cinderwall_5_InEditor";
+			skill=0.60000002;
+		};
+		class Item8
+		{
+			position[]={2703.7119,17.268406,2689.0903};
+			azimut=98.124962;
+			id=13;
+			side="EMPTY";
+			vehicle="MBG_Cinderwall_5_InEditor";
+			skill=0.60000002;
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"aia_desert_config"
+	};
+	addOnsAuto[]=
+	{
+		"aia_desert_config"
+	};
+	randomSeed=13662584;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.1;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2007;
+		month=6;
+		day=7;
+		hour=8;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"aia_desert_config"
+	};
+	addOnsAuto[]=
+	{
+		"aia_desert_config"
+	};
+	randomSeed=7671241;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.1;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2007;
+		month=6;
+		day=7;
+		hour=8;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"aia_desert_config"
+	};
+	addOnsAuto[]=
+	{
+		"aia_desert_config"
+	};
+	randomSeed=9286672;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.1;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2007;
+		month=6;
+		day=7;
+		hour=8;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};

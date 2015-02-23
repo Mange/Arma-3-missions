@@ -1,0 +1,36 @@
+OnLoadName = "[HEHU] [COOP] Infidels";
+OnLoadMission = "Protect the home of our holy leader from the American dogs!";
+author = "Mange";
+
+/*
+TODO:
+	- Fix respawn. I want respawns inside waves disabled, after a wave it is enabled again.
+		- Respawn tickets, perhaps? Give a lot of tickets before a wave, remove them again some time after the wave has started..?
+	- Spawn enemies in waves. How to do this the best way?
+		- Probably using scripts; but could the editor be used as "templates", perhaps? Copy units in an area, or something.
+	- Proper ammo boxes
+		- "minebox" should have claymores
+		- "launcherbox" should have RPG-7 and some rockets for it
+	- Need to add some optics somewhere..?
+	- Loadouts for respawn!
+	- Place teammates
+		- Two teams: Guard, Reaction force
+		- Officer playable?
+	- Polish:
+		- Place some markers, name certain places
+		- Add briefing
+	- Disable Zeus! How? Is it already disabled but MCC is enabling it? Does the mission work without MCC?
+*/
+
+respawn = "BASE";
+respawnTemplates[] = {"MenuPosition", "Wave"};
+respawnDelay = 4;
+respawnVehicleDelay = 2;
+respawnOnStart = 1;
+
+class Header
+{
+	gameType = Coop;
+	minPlayers = 1;
+	maxPlayers = 7;
+};

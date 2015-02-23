@@ -1,0 +1,18 @@
+//////////////////////////////////////////////////
+general idea behind SRS:
+
+on each client there is a local "setVariable" for each player named ["%1_VAR",_unitString]
+which contains the information such as KO, Healing, Dragging, Etc (see unitVarInit)
+
+for each unit we setup a publicVariableEventHandler which detects when changes to this variable have been made.
+When it triggers, the local variable is updated with the values from the public one.
+
+primary method for broadcasting new variables is the SRS_fnc_unitVarSetter, which reassigns the public
+variable and broadcasts the changes if requested.
+
+TODO: 
+    * fix the animation transitions
+*   * medical supplies on the ground (add more)
+    * blood on player when downed
+*   * black screen transitions for camera & down->up
+    * unco screen similar to BTC

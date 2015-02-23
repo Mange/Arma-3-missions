@@ -1,0 +1,20 @@
+OnLoadName = "[HEHU] [COOP] UPS Man";
+OnLoadMission = "Escort a pilot to an airfield, then destroy targets in a nearby town.";
+author = "Mange";
+
+respawn = "BASE";
+respawnTemplates[] = {"MenuPosition"};
+respawnDelay = 8;
+respawnVehicleDelay = 20;
+respawnOnStart = 0;
+
+disabledAI = 1;
+joinUnassigned = 0;
+saving = 1;
+
+class Header
+{
+	gameType = Coop;
+	minPlayers = 3;
+	maxPlayers = 8;
+};

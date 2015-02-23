@@ -1,0 +1,17 @@
+//respawn = "BASE";
+//respawnDelay = 20;
+//respawnVehicleDelay = 20;
+//respawnTemplates[] = {"MenuPosition","Wave"};
+
+//respawnOnStart = 1;
+//enableDebugConsole = 1;
+
+author = "Mange & Xerita";
+onLoadName = "[HEHU] [COOP] Look out";
+onLoadMission = "Defend a worthless island to your last breath.";
+//loadScreen = "loadScreen_ca.paa";
+
+class Header
+{
+	gameType = Coop;
+};

@@ -1,0 +1,32 @@
+respawn = "BIRD";
+//respawnDelay = 7;
+//respawnDialog = 1;
+
+//respawnVehicleDelay = 20;
+//respawnTemplates[] = {"MenuPosition","Wave"};
+
+//respawnOnStart = 1;
+//enableDebugConsole = 1;
+
+disabledAI = 1;
+joinUnassigned = 0;
+saving = 0;
+
+author = "Mange";
+onLoadName = "[HEHU] [COOP] CQBuilding+";
+onLoadMission = "Do some CQB practice.";
+//loadScreen = "loadScreen_ca.paa";
+
+class Header
+{
+	gameType = Coop;
+};
+
+class Params
+{
+	#include "hehu_cqb\Params.hpp"
+};
+
+class CfgFunctions {
+	#include "hehu_cqb\CfgFunctions.hpp"
+};

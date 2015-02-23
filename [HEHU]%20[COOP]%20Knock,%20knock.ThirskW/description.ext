@@ -1,0 +1,27 @@
+//respawn = "BASE";
+//respawnDelay = 20;
+//respawnVehicleDelay = 20;
+//respawnTemplates[] = {"MenuPosition","Wave"};
+
+//respawnOnStart = 1;
+//enableDebugConsole = 1;
+
+author = "Mange";
+onLoadName = "[HEHU] [COOP] Knock, knock";
+onLoadMission = "Defend your position against the enemy to your last breath.";
+//loadScreen = "loadScreen_ca.paa";
+
+class Header
+{
+	gameType = Coop;
+};
+
+class Params
+{
+	class MagnifyingOpticsAllowed {
+		title = "Magnifying optics available";
+		texts[] = {"Yes", "No"};
+		values[] = {1, 0};
+		default = 1;
+	};
+};
