@@ -3,8 +3,6 @@ class Mission
 {
 	addOns[]=
 	{
-		"mas_usa_mars_b",
-		"thirskw_fix",
 		"A3_Modules_F_Sites",
 		"A3_Weapons_F_Ammoboxes",
 		"a3_weapons_f_beta_ammoboxes",
@@ -16,24 +14,24 @@ class Mission
 		"A3_Armor_F_Marid",
 		"jsrs2_mse3_marid",
 		"A3_Weapons_F_Explosives",
-		"A3_Boat_F_Boat_Transport_01"
+		"A3_Boat_F_Boat_Transport_01",
+		"a3_characters_f",
+		"thirskw",
+		"mas_usa_devg_b"
 	};
 	addOnsAuto[]=
 	{
-		"mas_usa_mars_b",
+		"mas_usa_devg_b",
 		"A3_Modules_F_Sites",
 		"A3_Characters_F_OPFOR",
-		"a3_characters_f_beta",
+		"a3_characters_f",
 		"A3_Soft_F_MRAP_02",
-		"a3_characters_f_gamma",
 		"A3_Armor_F_Marid",
-		"jsrs2_mse3_marid",
 		"A3_Boat_F_Boat_Transport_01",
 		"A3_Weapons_F_Ammoboxes",
-		"a3_weapons_f_beta_ammoboxes",
 		"A3_Air_F_Heli_Light_01",
 		"A3_Weapons_F_Explosives",
-		"thirskw_fix"
+		"thirskw"
 	};
 	randomSeed=13997646;
 	class Intel
@@ -74,7 +72,7 @@ class Mission
 					position[]={4140.9712,12.426094,2579.1409};
 					id=0;
 					side="WEST";
-					vehicle="B_mas_mar_Soldier_SL_F_w";
+					vehicle="B_mas_usn_Soldier_SL_F_w";
 					player="PLAYER COMMANDER";
 					leader=1;
 					rank="CAPTAIN";
@@ -86,7 +84,7 @@ class Mission
 					special="NONE";
 					id=1;
 					side="WEST";
-					vehicle="B_mas_mar_Soldier_TL_F_w";
+					vehicle="B_mas_usn_Soldier_F_w";
 					player="PLAY CDG";
 					rank="LIEUTENANT";
 					skill=0.55000001;
@@ -97,7 +95,7 @@ class Mission
 					special="NONE";
 					id=2;
 					side="WEST";
-					vehicle="B_mas_mar_soldier_AR_F_w";
+					vehicle="B_mas_usn_soldier_MG_F_w";
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.44999999;
@@ -108,7 +106,7 @@ class Mission
 					special="NONE";
 					id=3;
 					side="WEST";
-					vehicle="B_mas_mar_Soldier_JTAC_F_w";
+					vehicle="B_mas_usn_Soldier_GL_F_w";
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.5;
@@ -119,7 +117,7 @@ class Mission
 					special="NONE";
 					id=4;
 					side="WEST";
-					vehicle="B_mas_mar_soldier_LAT_F_w";
+					vehicle="B_mas_usn_soldier_LAT_F_w";
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.44999999;
@@ -130,7 +128,7 @@ class Mission
 					special="NONE";
 					id=5;
 					side="WEST";
-					vehicle="B_mas_mar_Soldier_TL_F_w";
+					vehicle="B_mas_usn_medic_F_w";
 					player="PLAY CDG";
 					rank="LIEUTENANT";
 					skill=0.55000001;
@@ -141,7 +139,7 @@ class Mission
 					special="NONE";
 					id=6;
 					side="WEST";
-					vehicle="B_mas_mar_soldier_AR_F_w";
+					vehicle="B_mas_usn_soldier_M_F_w";
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.44999999;
@@ -152,7 +150,7 @@ class Mission
 					special="NONE";
 					id=7;
 					side="WEST";
-					vehicle="B_mas_mar_soldier_MG_F_w";
+					vehicle="B_mas_usn_soldier_Mh_F_w";
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.5;
@@ -163,7 +161,7 @@ class Mission
 					special="NONE";
 					id=8;
 					side="WEST";
-					vehicle="B_mas_mar_soldier_M_F_w";
+					vehicle="B_mas_usn_soldier_MG_F_w";
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.44999999;
@@ -174,7 +172,7 @@ class Mission
 					special="NONE";
 					id=9;
 					side="WEST";
-					vehicle="B_mas_mar_medic_F_w";
+					vehicle="B_mas_usn_Soldier_GL_F_w";
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.5;
@@ -2363,8 +2361,8 @@ class Mission
 			activationBy="EAST";
 			activationType="NOT PRESENT";
 			interruptable=1;
-			type="END1";
 			age="UNKNOWN";
+			expActiv="""end1"" call BIS_fnc_endMission;";
 			class Effects
 			{
 			};
@@ -2375,11 +2373,11 @@ class Intro
 {
 	addOns[]=
 	{
-		"thirskw_fix"
+		"thirskw"
 	};
 	addOnsAuto[]=
 	{
-		"thirskw_fix"
+		"thirskw"
 	};
 	randomSeed=7789585;
 	class Intel
@@ -2407,11 +2405,11 @@ class OutroWin
 {
 	addOns[]=
 	{
-		"thirskw_fix"
+		"thirskw"
 	};
 	addOnsAuto[]=
 	{
-		"thirskw_fix"
+		"thirskw"
 	};
 	randomSeed=12063443;
 	class Intel
@@ -2439,11 +2437,11 @@ class OutroLoose
 {
 	addOns[]=
 	{
-		"thirskw_fix"
+		"thirskw"
 	};
 	addOnsAuto[]=
 	{
-		"thirskw_fix"
+		"thirskw"
 	};
 	randomSeed=3914205;
 	class Intel
