@@ -1,7 +1,3 @@
-/*
-TODO:
-	* Add Victory trigger.
-*/
 // Configure TFAR
 tf_no_auto_long_range_radio = true;
 TF_give_personal_radio_to_regular_soldier = true;
@@ -9,8 +5,8 @@ tf_same_sw_frequencies_for_side = true;
 tf_same_lr_frequencies_for_side = true;
 
 _itemsToRemove = [
-	"NVGoggles", "NVGoggles_INDEP", "NVGoggles_OPFOR",
-	"Laserdesignator"
+	"NVGoggles", "NVGoggles_INDEP", "NVGoggles_OPFOR", "NVGoggles_mas_h",
+	"Laserdesignator", "Rangefinder"
 ];
 
 _magazinesToRemove = [
@@ -18,7 +14,15 @@ _magazinesToRemove = [
 ];
 
 _attachmentsToRemove = [
-	"acc_pointer_IR", "acc_mas_pointer_IR"
+	"acc_pointer_IR", "acc_mas_pointer_IR_b",
+
+	// Some units have a flashlight in their inventory. Remove it and re-add it through
+	// _attachmentsToAdd later.
+	"acc_flashlight",
+
+	// Silencers
+	"muzzle_mas_snds_Mc", "muzzle_mas_snds_L", "muzzle_snds_H_MG",
+	"muzzle_mas_snds_MP7", "muzzle_mas_snds_SVc", "muzzle_mas_snds_SM"
 ];
 
 _itemsToAdd = [
@@ -41,11 +45,13 @@ if (_magnifyingOpticsAllowed == 0) then {
     _unit = _x;
 
     { _unit unlinkItem _x; } foreach (_itemsToRemove);
+    { _unit removeItem _x; } foreach (_itemsToRemove);
     { _unit removeMagazines _x; } foreach (_magazinesToRemove);
 
     { _unit removePrimaryWeaponItem _x; } foreach (_attachmentsToRemove);
     // In case there are some of them inside the inventory too
     { _unit unlinkItem _x; } foreach (_attachmentsToRemove);
+    { _unit removeItem _x; } foreach (_attachmentsToRemove);
 
     { _unit addItem _x; _unit assignItem _x; } foreach (_itemsToAdd);
 
@@ -54,15 +60,6 @@ if (_magnifyingOpticsAllowed == 0) then {
     { _unit unlinkItem _x; } foreach (_attachmentsToAdd);
     { _unit removePrimaryWeaponItem _x; } foreach (_attachmentsToAdd);
     { _unit addPrimaryWeaponItem _x; } foreach (_attachmentsToAdd);
-
-    // Replace Nightstalker with RCO
-    if (
-    	("optic_Nightstalker" in items _unit) ||
-    	("optic_Nightstalker" in primaryWeaponItems _unit)
-    ) then {
-    	_unit unlinkItem "optic_Nightstalker";
-    	_unit addPrimaryWeaponItem "optic_Hamr";
-    };
 
     // Replace 1Rnd GL shells with 3Rnd
     if ("1Rnd_HE_Grenade_shell" in magazines _unit) then {
