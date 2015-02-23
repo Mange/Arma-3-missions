@@ -73,49 +73,58 @@ if (_magnifyingOpticsAllowed == 0) then {
 } foreach (allUnits);
 
 // Setup supply boxes
-{
-	clearWeaponCargoGlobal _x;
-	clearMagazineCargoGlobal _x;
-	clearItemCargoGlobal _x;
-	clearBackpackCargoGlobal _x;
-
-	_x addMagazineCargoGlobal ["3Rnd_HE_Grenade_shell", 5];
-	_x addItemCargoGlobal ["FirstAidKit", 5];
-
-	_x addMagazineCargoGlobal ["HandGrenade", 8];
-	_x addMagazineCargoGlobal ["SmokeShellRed", 2];
-
-	_x addMagazineCargoGlobal ["3Rnd_UGL_FlareGreen_F", 3];
-	_x addMagazineCargoGlobal ["3Rnd_UGL_FlareRed_F", 3];
-	_x addMagazineCargoGlobal ["3Rnd_UGL_FlareWhite_F", 3];
-	_x addMagazineCargoGlobal ["3Rnd_UGL_FlareYellow_F", 3];
-
-	_x addWeaponCargoGlobal ["launch_RPG32_F", 2];
-	_x addMagazineCargoGlobal ["RPG32_HE_F", 2];
-	_x addMagazineCargoGlobal ["RPG32_F", 3];
-
-	_x addWeaponCargoGlobal ["launch_B_Titan_F", 1];
-	_x addMagazineCargoGlobal ["Titan_AA", 3];
-
-	_x addMagazineCargoGlobal ["30Rnd_mas_556x45_Stanag", 30];
-	_x addMagazineCargoGlobal ["30Rnd_mas_556x45_T_Stanag", 30];
-	_x addMagazineCargoGlobal ["200Rnd_mas_556x45_Stanag", 10];
-	_x addMagazineCargoGlobal ["200Rnd_mas_556x45_T_Stanag", 10];
-	_x addMagazineCargoGlobal ["100Rnd_mas_762x51_Stanag", 10];
-	_x addMagazineCargoGlobal ["100Rnd_mas_762x51_T_Stanag", 10];
-	_x addMagazineCargoGlobal ["100Rnd_mas_762x39_mag", 10];
-	_x addMagazineCargoGlobal ["100Rnd_mas_762x39_T_mag", 10];
-
-	_x addBackpackCargoGlobal ["B_HMG_01_high_weapon_F", 1];
-	_x addBackpackCargoGlobal ["B_HMG_01_support_high_F", 1];
-
-	if (_magnifyingOpticsAllowed == 0) then {
-		_x addItemCargoGlobal ["optic_Aco", 5];
+if (isServer) then {
+	// playableUnits is empty in single player (for example, editor preview.)
+	_playableUnits = playableUnits;
+	if (count _playableUnits == 0) then {
+		_playableUnits = units group player;
 	};
 
-} foreach ([supply1, supply2]);
+	{
+		_box = _x;
+		clearWeaponCargoGlobal _box;
+		clearMagazineCargoGlobal _box;
+		clearItemCargoGlobal _box;
+		clearBackpackCargoGlobal _box;
 
-// Iterate over all ammoboxes
-//{
-//
-//} foreach (allMissionObjects "ReammoBox_F");
+		_box addMagazineCargoGlobal ["3Rnd_HE_Grenade_shell", 5];
+		_box addItemCargoGlobal ["FirstAidKit", 5];
+
+		_box addMagazineCargoGlobal ["HandGrenade", 8];
+		_box addMagazineCargoGlobal ["SmokeShellRed", 2];
+
+		_box addMagazineCargoGlobal ["3Rnd_UGL_FlareGreen_F", 3];
+		_box addMagazineCargoGlobal ["3Rnd_UGL_FlareRed_F", 3];
+		_box addMagazineCargoGlobal ["3Rnd_UGL_FlareWhite_F", 3];
+		_box addMagazineCargoGlobal ["3Rnd_UGL_FlareYellow_F", 3];
+
+		_box addWeaponCargoGlobal ["launch_RPG32_F", 2];
+		_box addMagazineCargoGlobal ["RPG32_HE_F", 2];
+		_box addMagazineCargoGlobal ["RPG32_F", 3];
+
+		_box addWeaponCargoGlobal ["launch_B_Titan_F", 1];
+		_box addMagazineCargoGlobal ["Titan_AA", 3];
+
+		_box addBackpackCargoGlobal ["B_HMG_01_high_weapon_F", 1];
+		_box addBackpackCargoGlobal ["B_HMG_01_support_high_F", 1];
+
+		if (_magnifyingOpticsAllowed == 0) then {
+			_box addItemCargoGlobal ["optic_Aco", 5];
+		};
+
+		/* Add ammo that each playable unit needs. */
+		{
+			_magazine = getArray (configFile / "CfgWeapons" / (primaryWeapon _x) / "magazines") select 0;
+
+			// Some magazines have 5 shots, others have 200. Try to adjust the amount of magazines added in the
+			// box depending on the size of the magazine.
+			_ammoCount = getNumber (configfile / "CfgMagazines" / _magazine / "count");
+			_magazineCount = 5;
+			if (_ammoCount < 50) then { _magazineCount = 7; };
+			if (_ammoCount < 30) then { _magazineCount = 20; };
+
+			_box addMagazineCargoGlobal [_magazine, _magazineCount];
+		} foreach (_playableUnits);
+
+	} foreach ([supply1, supply2]);
+};
