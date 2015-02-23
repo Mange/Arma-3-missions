@@ -98,4 +98,4 @@ Escort a pilot to an airfield, steal an airplane and a truck and take out enemie
 
 **Interesting parts:**
 * Time skip script.
-* Rearming script. (Should be updated to the one in Drip Drop!)
+* Rearming script.

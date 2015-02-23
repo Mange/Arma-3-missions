@@ -2202,6 +2202,7 @@ class Mission
 			vehicle="B_Plane_CAS_01_F";
 			leader=1;
 			skill=0.44999999;
+			text="plane";
 			syncId=24;
 			synchronizations[]={26};
 		};
@@ -2433,8 +2434,8 @@ class Mission
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
-			expCond="this && {vehicle _x iskindof ""B_Plane_CAS_01_F""} count thislist > 0;";
-			expActiv="0 = [vehicle (thisList select 0)] spawn rearmVehicle;";
+			expCond="[thisTrigger, plane] call BIS_fnc_inTrigger && (getPos plane select 2) < 1;";
+			expActiv="0 = [plane] spawn rearmVehicle;";
 			class Effects
 			{
 			};
