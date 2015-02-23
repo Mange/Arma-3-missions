@@ -1,4 +1,4 @@
-//respawn = "BASE";
+respawn = "BIRD";
 //respawnDelay = 20;
 //respawnVehicleDelay = 20;
 //respawnTemplates[] = {"MenuPosition","Wave"};
