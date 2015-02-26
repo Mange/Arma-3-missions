@@ -4,6 +4,22 @@ TF_give_personal_radio_to_regular_soldier = true;
 tf_same_sw_frequencies_for_side = true;
 tf_same_lr_frequencies_for_side = true;
 
+fnc_selectMagazine = {
+	_magazines = _this select 0;
+	_index = _this select 1;
+
+	_magazine = _magazines select _index;
+
+	// Some magazines have 5 shots, others have 200. Try to adjust the amount of magazines added in the
+	// box depending on the size of the magazine.
+	_ammoCount = getNumber (configfile / "CfgMagazines" / _magazine / "count");
+	_magazineCount = 5;
+	if (_ammoCount < 50) then { _magazineCount = 7; };
+	if (_ammoCount < 30) then { _magazineCount = 20; };
+
+	[_magazine, _magazineCount]
+};
+
 _itemsToRemove = [
 	"NVGoggles", "NVGoggles_INDEP", "NVGoggles_OPFOR", "NVGoggles_mas_h",
 	"Laserdesignator", "Rangefinder"
@@ -39,7 +55,6 @@ if (_magnifyingOpticsAllowed == 0) then {
 		"optic_Holosight"
 	];
 };
-
 
 {
     _unit = _x;
@@ -77,6 +92,25 @@ if (isServer) then {
 		_playableUnits = units group player;
 	};
 
+	/* Figure ammo that each playable unit needs. */
+	_extraMagazines = [];
+	{
+		_magazines = getArray (configFile / "CfgWeapons" / (primaryWeapon _x) / "magazines");
+
+		if (count _magazines > 0) then {
+			_extraMagazines = _extraMagazines + [
+				[_magazines, 0] call fnc_selectMagazine
+			];
+		};
+
+		if (count _magazines > 1) then {
+			_extraMagazines = _extraMagazines + [
+				[_magazines, 1] call fnc_selectMagazine
+			];
+		};
+	} foreach (_playableUnits);
+
+
 	{
 		_box = _x;
 		clearWeaponCargoGlobal _box;
@@ -109,19 +143,9 @@ if (isServer) then {
 			_box addItemCargoGlobal ["optic_Aco", 5];
 		};
 
-		/* Add ammo that each playable unit needs. */
 		{
-			_magazine = getArray (configFile / "CfgWeapons" / (primaryWeapon _x) / "magazines") select 0;
-
-			// Some magazines have 5 shots, others have 200. Try to adjust the amount of magazines added in the
-			// box depending on the size of the magazine.
-			_ammoCount = getNumber (configfile / "CfgMagazines" / _magazine / "count");
-			_magazineCount = 5;
-			if (_ammoCount < 50) then { _magazineCount = 7; };
-			if (_ammoCount < 30) then { _magazineCount = 20; };
-
-			_box addMagazineCargoGlobal [_magazine, _magazineCount];
-		} foreach (_playableUnits);
+			_box addMagazineCargoGlobal [_x select 0, _x select 1];
+		} foreach _extraMagazines;
 
 	} foreach ([supply1, supply2]);
 };
