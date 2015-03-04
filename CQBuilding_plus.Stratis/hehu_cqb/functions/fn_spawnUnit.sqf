@@ -1,4 +1,4 @@
-private ["_type", "_position", "_side", "_group", "_unit"];
+private ["_type", "_position", "_side", "_group", "_unit", "_direction"];
 _type = [_this, 0, "O_soldier_F", [""]] call BIS_fnc_param;
 _position = [_this, 1, ObjNull, [[]], [2,3]] call BIS_fnc_param;
 
@@ -14,8 +14,14 @@ _side = switch(_side) do {
 _group = createGroup _side;
 _unit = _group createUnit [_type, _position, [], 0, "CAN_COLLIDE"];
 
-_unit setBehaviour "COMBAT";
-_unit setUnitPos "UP";
-_unit setDir random 360;
+_unit setBehaviour "COMBAT"; // Ready weapon
+_unit setUnitPos "UP"; // Force stand up
+
+_direction = random 360;
+_unit setFormDir _direction; // Set group formation direction
+_unit setDir _direction; // Turn the unit in the same direction
+
+// Cargo culted:
+_unit setPos getPos _unit; // Setting position synchronizes over to MP clients
 
 _unit;
