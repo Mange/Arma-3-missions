@@ -14,8 +14,10 @@ class HEHU_CQB
 
 		class getAllBuildingPositions{};
 
-		class setupGameLogic{};
 		class inferEnemyUnits{};
+		class getSpawns{};
+		class getSpawnsInLogic{};
+		class spawn{};
 		class spawnUnit{};
 		class setupPatrol{};
 

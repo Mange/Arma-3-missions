@@ -1,4 +1,4 @@
-private ["_triggers", "_positions", "_numberOfEnemies", "_enemyAlertness", "_enemyCombatMode", "_enemyPatrols"];
+private ["_triggers", "_positions", "_numberOfEnemies", "_enemyAlertness", "_enemyCombatMode", "_enemyPatrols", "_spawns"];
 
 if (isServer) then {
 	_logics = [_this, 0, [], [[]]] call BIS_fnc_param;
@@ -28,10 +28,8 @@ if (isServer) then {
 
 	////////////////////////
 
-	{
-		// TODO: _numberOfEnemies should be divided amongst the logics
-		[_x, _numberOfEnemies, _enemyPatrols, _enemyCombatMode] call HEHU_CQB_fnc_setupGameLogic;
-	} forEach _logics;
+	_spawns = [_logics] call HEHU_CQB_fnc_getSpawns;
+	[_spawns, _numberOfEnemies, _enemyPatrols, _enemyAlertness] call HEHU_CQB_fnc_spawn;
 };
 
 
