@@ -49,4 +49,5 @@ if (!isServer) then {
 
 // Win the game when enemies are killed!
 waitUntil { [] call HEHU_CQB_fnc_aliveEnemies == 0; };
-["END1", true, 2] call BIS_fnc_endMission;
+sleep 0.5;
+["END1", true, 7] call BIS_fnc_endMission;
