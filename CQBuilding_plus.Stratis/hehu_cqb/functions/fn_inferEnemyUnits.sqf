@@ -15,8 +15,10 @@ if (!isNil "cqb_units") then {
 	_gameLogic = cqb_units;
 
 	{
-		_units = _units + [typeOf _x];
-		deleteVehicle _x;
+		if (_x isKindOf "Man") then {
+			_units = _units + [typeOf _x];
+			deleteVehicle _x;
+		};
 	} foreach (synchronizedObjects _gameLogic);
 };
 
