@@ -1,4 +1,4 @@
-private ["_logic", "_triggers", "_soldierTypes", "_positions", "_numberOfEnemies", "_enemyPatrols", "_enemyCombatMode"];
+private ["_logic", "_triggers", "_soldierTypes", "_positions", "_numberOfEnemies", "_enemyPatrols", "_enemyCombatMode", "_i", "_position", "_soldierType", "_unit"];
 
 
 _logic = _this select 0;

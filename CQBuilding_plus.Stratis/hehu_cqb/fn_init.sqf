@@ -1,4 +1,4 @@
-private ["_triggers", "_positions", "_numberOfEnemies", "_enemyAlertness", "_enemyCombatMode", "_enemyPatrols", "_soldierType", "_soldierTypes", "_unit", "_i", "_position"];
+private ["_triggers", "_positions", "_numberOfEnemies", "_enemyAlertness", "_enemyCombatMode", "_enemyPatrols"];
 
 if (isServer) then {
 	_logics = [_this, 0, [], [[]]] call BIS_fnc_param;
