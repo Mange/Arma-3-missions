@@ -4,19 +4,17 @@ class Mission
 	addOns[]=
 	{
 		"a3_map_stratis",
-		"MEC_Irregulars",
 		"A3_Modules_F",
-		"MEC_Taliban",
-		"A3_Characters_F_Civil",
-		"a3_characters_f"
+		"a3_characters_f",
+		"A3_Characters_F_BLUFOR",
+		"A3_Characters_F_OPFOR"
 	};
 	addOnsAuto[]=
 	{
-		"MEC_Irregulars",
-		"A3_Modules_F",
-		"MEC_Taliban",
-		"A3_Characters_F_Civil",
+		"A3_Characters_F_BLUFOR",
 		"a3_characters_f",
+		"A3_Modules_F",
+		"A3_Characters_F_OPFOR",
 		"a3_map_stratis"
 	};
 	randomSeed=12324632;
@@ -41,7 +39,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=9;
+		items=4;
 		class Item0
 		{
 			side="WEST";
@@ -54,7 +52,7 @@ class Mission
 					azimut=46.219986;
 					id=0;
 					side="WEST";
-					vehicle="MEC_IRR_RiflemanB";
+					vehicle="B_Soldier_F";
 					player="PLAYER COMMANDER";
 					leader=1;
 					skill=0.60000002;
@@ -78,7 +76,7 @@ class Mission
 					skill=0.60000002;
 					text="cqb_units";
 					syncId=0;
-					synchronizations[]={1,5,2,4,3,6};
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -92,8 +90,8 @@ class Mission
 				{
 					position[]={3388.9971,5.8395658,6076.2705};
 					id=2;
-					side="GUER";
-					vehicle="MEC_TAL_Rifleman";
+					side="EAST";
+					vehicle="O_Soldier_F";
 					leader=1;
 					skill=0.60000002;
 					syncId=1;
@@ -103,82 +101,6 @@ class Mission
 		};
 		class Item3
 		{
-			side="GUER";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={3394.981,5.635797,6072.999};
-					id=3;
-					side="GUER";
-					vehicle="MEC_TAL_RPG7Soldier";
-					leader=1;
-					skill=0.60000002;
-					syncId=2;
-					synchronizations[]={0};
-				};
-			};
-		};
-		class Item4
-		{
-			side="GUER";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={3397.8337,5.8881435,6075.7837};
-					id=4;
-					side="GUER";
-					vehicle="MEC_TAL_RPG7Soldier";
-					leader=1;
-					skill=0.60000002;
-					syncId=3;
-					synchronizations[]={0};
-				};
-			};
-		};
-		class Item5
-		{
-			side="GUER";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={3397.8337,5.6351933,6072.7207};
-					id=5;
-					side="GUER";
-					vehicle="MEC_TAL_RPG7Soldier";
-					leader=1;
-					skill=0.60000002;
-					syncId=4;
-					synchronizations[]={0};
-				};
-			};
-		};
-		class Item6
-		{
-			side="GUER";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={3391.7107,5.7869906,6074.6699};
-					id=6;
-					side="GUER";
-					vehicle="MEC_TAL_RPG7Soldier";
-					leader=1;
-					skill=0.60000002;
-					syncId=5;
-					synchronizations[]={0};
-				};
-			};
-		};
-		class Item7
-		{
 			side="LOGIC";
 			class Vehicles
 			{
@@ -186,30 +108,11 @@ class Mission
 				class Item0
 				{
 					position[]={3393.1709,6.0734963,6080.7954};
-					id=7;
+					id=3;
 					side="LOGIC";
 					vehicle="SideResistance_F";
 					leader=1;
 					skill=0.60000002;
-				};
-			};
-		};
-		class Item8
-		{
-			side="CIV";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={3395.6765,5.879972,6076.8975};
-					id=8;
-					side="CIV";
-					vehicle="C_man_p_beggar_F";
-					leader=1;
-					skill=0.60000002;
-					syncId=6;
-					synchronizations[]={0};
 				};
 			};
 		};
