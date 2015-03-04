@@ -5,5 +5,5 @@ tf_same_sw_frequencies_for_side = true;
 tf_same_lr_frequencies_for_side = true;
 
 [
-	[cqb]
+	[cqb_1, cqb_2]
 ] call HEHU_CQB_fnc_init;
