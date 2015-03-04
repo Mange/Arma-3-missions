@@ -41,7 +41,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=5;
+		items=7;
 		class Item0
 		{
 			side="WEST";
@@ -78,7 +78,7 @@ class Mission
 					skill=0.60000002;
 					text="cqb_1";
 					syncId=0;
-					synchronizations[]={1,4};
+					synchronizations[]={1,6,4};
 				};
 			};
 		};
@@ -117,7 +117,7 @@ class Mission
 					skill=0.60000002;
 					text="cqb_2";
 					syncId=2;
-					synchronizations[]={5,3};
+					synchronizations[]={7,3,5};
 				};
 			};
 		};
@@ -140,6 +140,44 @@ class Mission
 				};
 			};
 		};
+		class Item5
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3362.8069,14.681125,6108.6655};
+					id=5;
+					side="EAST";
+					vehicle="O_Soldier_lite_F";
+					leader=1;
+					skill=0.60000002;
+					syncId=4;
+					synchronizations[]={0};
+				};
+			};
+		};
+		class Item6
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3433.8528,13.059193,6086.8677};
+					id=6;
+					side="GUER";
+					vehicle="I_officer_F";
+					leader=1;
+					skill=0.60000002;
+					syncId=5;
+					synchronizations[]={2};
+				};
+			};
+		};
 	};
 	class Sensors
 	{
@@ -155,7 +193,7 @@ class Mission
 			{
 			};
 			synchronizations[]={0};
-			syncId=4;
+			syncId=6;
 		};
 		class Item1
 		{
@@ -168,7 +206,7 @@ class Mission
 			{
 			};
 			synchronizations[]={2};
-			syncId=5;
+			syncId=7;
 		};
 	};
 };
