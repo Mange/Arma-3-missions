@@ -1,3 +1,4 @@
+// TODO: Replace this function with BIS_fnc_buildingPositions
 private ["_i", "_loop", "_positions", "_next"];
 _loop = true;
 _i = 0;

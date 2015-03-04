@@ -1,5 +1,17 @@
 private ["_triggers", "_positions", "_numberOfEnemies", "_enemyAlertness", "_enemyCombatMode", "_enemyPatrols", "_soldierType", "_soldierTypes", "_unit", "_i", "_position"];
-_triggers = [_this, 0, [], [[]]] call BIS_fnc_param;
+
+_logics = [_this, 0, [], [[]]] call BIS_fnc_param;
+// TODO: Support more than one Game Logic.
+_logic = _logics select 0;
+
+_triggers = [];
+{
+	if (_x isKindOf "EmptyDetector") then {
+		_triggers = _triggers + [_x];
+	};
+} foreach (synchronizedObjects _logic);
+
+
 _soldierTypes = [] call HEHU_CQB_fnc_inferEnemyUnits;
 
 //
@@ -14,6 +26,7 @@ _positions = (
 //
 // Read mission parameters
 //
+// TODO: Get this working properly. Global unit limit.
 _numberOfEnemies = ["NumberOfEnemies", 10] call BIS_fnc_getParamValue;
 
 // Just in case the building don't have that many enemies.

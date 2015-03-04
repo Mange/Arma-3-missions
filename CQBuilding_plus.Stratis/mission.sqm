@@ -39,7 +39,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=4;
+		items=3;
 		class Item0
 		{
 			side="WEST";
@@ -68,30 +68,30 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3394.2151,5.761065,6075.2266};
+					position[]={3359.3726,10.183247,6100.4111};
 					id=1;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
 					skill=0.60000002;
-					text="cqb_units";
+					text="cqb";
 					syncId=0;
-					synchronizations[]={1};
+					synchronizations[]={1,3,2};
 				};
 			};
 		};
 		class Item2
 		{
-			side="GUER";
+			side="EAST";
 			class Vehicles
 			{
 				items=1;
 				class Item0
 				{
-					position[]={3388.9971,5.8395658,6076.2705};
+					position[]={3370.4688,14.415956,6106.6484};
 					id=2;
 					side="EAST";
-					vehicle="O_Soldier_F";
+					vehicle="O_helicrew_F";
 					leader=1;
 					skill=0.60000002;
 					syncId=1;
@@ -99,36 +99,35 @@ class Mission
 				};
 			};
 		};
-		class Item3
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={3393.1709,6.0734963,6080.7954};
-					id=3;
-					side="LOGIC";
-					vehicle="SideResistance_F";
-					leader=1;
-					skill=0.60000002;
-				};
-			};
-		};
 	};
 	class Sensors
 	{
-		items=1;
+		items=2;
 		class Item0
 		{
-			position[]={3400.5603,5.0650086,6053.1616};
+			position[]={3378.1287,5.5746737,6068.1855};
+			a=15;
+			b=10;
 			interruptable=1;
 			age="UNKNOWN";
-			name="cqbuildings";
 			class Effects
 			{
 			};
+			synchronizations[]={0};
+			syncId=2;
+		};
+		class Item1
+		{
+			position[]={3412.7964,5.5409889,6051.6768};
+			a=20;
+			b=20;
+			interruptable=1;
+			age="UNKNOWN";
+			class Effects
+			{
+			};
+			synchronizations[]={0};
+			syncId=3;
 		};
 	};
 };
