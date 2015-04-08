@@ -12,14 +12,18 @@ class Mission
 		"A3_Structures_F_Mil_Flags",
 		"A3_Soft_F_Gamma_Offroad",
 		"a3_soft_f_offroad_01",
-		"A3_Weapons_F_Ammoboxes"
+		"A3_Weapons_F_Ammoboxes",
+		"A3_Characters_F_OPFOR",
+		"a3_characters_f",
+		"A3_Characters_F_BLUFOR"
 	};
 	addOnsAuto[]=
 	{
-		"MEC_GME",
+		"A3_Characters_F_OPFOR",
+		"a3_characters_f",
 		"A3_Modules_F_Curator_Animals",
 		"HEHU_MF",
-		"MEC_WBO",
+		"A3_Characters_F_BLUFOR",
 		"A3_Modules_F_StrategicMap",
 		"A3_Structures_F_Mil_Flags",
 		"A3_Soft_F_Gamma_Offroad",
@@ -57,24 +61,26 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={9131.9736,207.33989,6672.1851};
+					position[]={9120.8125,206.32695,6677.4404};
 					id=0;
 					side="EAST";
-					vehicle="MEC_GME_Marksman";
+					vehicle="O_Soldier_F";
 					player="PLAYER COMMANDER";
 					leader=1;
 					skill=0.60000002;
+					init="comment ""Exported from Arsenal by Mange"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""MEC_dishdaw_des2_jacket"";  this addItemToUniform ""hlc_30Rnd_545x39_EP_ak"";  this addVest ""V_Rangemaster_belt"";  this addItemToVest ""FirstAidKit"";  this addItemToVest ""MiniGrenade"";  this addBackpack ""B_mas_Kitbag_des"";  this addItemToBackpack ""FirstAidKit"";  for ""_i"" from 1 to 5 do {this addItemToBackpack ""hlc_30Rnd_545x39_EP_ak"";};  for ""_i"" from 1 to 2 do {this addItemToBackpack ""SmokeShell"";};  this addItemToBackpack ""MiniGrenade"";  this addHeadgear ""H_MilCap_gry"";    comment ""Add weapons"";  this addWeapon ""hlc_rifle_ak74"";  this addWeapon ""RH_vz61"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemRadio"";    comment ""Set identity"";  this setFace ""PersianHead_A3_03"";  this setSpeaker ""Male01PER"";  [this,""MCo_PVT_W""] call bis_fnc_setUnitInsignia;";
 					syncId=0;
 					synchronizations[]={1,2};
 				};
 				class Item1
 				{
-					position[]={9135.4463,207.92337,6669.8687};
+					position[]={9124.2852,206.58263,6675.124};
 					id=1;
 					side="EAST";
-					vehicle="MEC_GME_Marksman";
+					vehicle="O_Soldier_F";
 					player="PLAY CDG";
 					skill=0.60000002;
+					init="comment ""Exported from Arsenal by Mange"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""MEC_dishda_jacket"";  this addItemToUniform ""hlc_30Rnd_545x39_EP_ak"";  this addVest ""V_Rangemaster_belt"";  this addItemToVest ""FirstAidKit"";  this addItemToVest ""MiniGrenade"";  for ""_i"" from 1 to 2 do {this addItemToVest ""hlc_30Rnd_545x39_EP_ak"";};  this addBackpack ""B_mas_Kitbag_des"";  this addItemToBackpack ""FirstAidKit"";  for ""_i"" from 1 to 5 do {this addItemToBackpack ""hlc_30Rnd_545x39_EP_ak"";};  for ""_i"" from 1 to 2 do {this addItemToBackpack ""SmokeShell"";};  this addItemToBackpack ""MiniGrenade"";  this addGoggles ""NeckTight_DMCLR"";    comment ""Add weapons"";  this addWeapon ""hlc_rifle_ak74"";  this addPrimaryWeaponItem ""hlc_optic_kobra"";  this addWeapon ""RH_vz61"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemRadio"";    comment ""Set identity"";  this setFace ""PersianHead_A3_02"";  this setSpeaker ""Male03PER"";  [this,""MCo_PVT_W""] call bis_fnc_setUnitInsignia;";
 				};
 			};
 		};
@@ -312,63 +318,69 @@ class Mission
 					azimut=101.61;
 					id=7;
 					side="WEST";
-					vehicle="MEC_WBO_Rifleman";
+					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.44999999;
+					init="comment ""Exported from Arsenal by Mange"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_I_G_Story_Protagonist_F"";  this addItemToUniform ""FirstAidKit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""MiniGrenade"";};  this addItemToUniform ""SmokeShellBlue"";  this addVest ""V_Chestrig_blk"";  this addItemToVest ""FirstAidKit"";  for ""_i"" from 1 to 4 do {this addItemToVest ""hlc_20Rnd_762x51_B_fal"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";};  this addBackpack ""B_AssaultPack_blk"";  this addItemToBackpack ""FirstAidKit"";  this addItemToBackpack ""RH_7Rnd_45cal_m1911"";  for ""_i"" from 1 to 2 do {this addItemToBackpack ""hlc_20Rnd_762x51_B_fal"";};  this addHeadgear ""H_Booniehat_khk_hs"";  this addGoggles ""LBG_Shemagh_Tan"";    comment ""Add weapons"";  this addWeapon ""hlc_rifle_falosw"";  this addPrimaryWeaponItem ""RH_compm4s"";  this addWeapon ""RH_kimber"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadio"";    comment ""Set identity"";  this setFace ""WhiteHead_18"";  this setSpeaker ""Male02ENGB"";  [this,""MCo_PVT_W""] call bis_fnc_setUnitInsignia;  ";
 					syncId=3;
 					synchronizations[]={4};
 				};
 				class Item1
 				{
-					position[]={7579.6797,446.67267,6096.6855};
+					position[]={7580.6602,447.2648,6100.8481};
 					azimut=101.61;
 					id=8;
 					side="WEST";
-					vehicle="MEC_WBO_Rifleman";
+					vehicle="B_Soldier_F";
 					player="PLAY CDG";
-					skill=0.40000001;
+					skill=0.44999999;
+					init="comment ""Exported from Arsenal by Mange"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_mas_sfod_B_CombatUniform_des_vest1"";  this addItemToUniform ""FirstAidKit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""MiniGrenade"";};  this addItemToUniform ""SmokeShellBlue"";  this addItemToUniform ""CUP_17Rnd_9x19_glock17"";  this addVest ""V_Chestrig_blk"";  this addItemToVest ""FirstAidKit"";  for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""CUP_17Rnd_9x19_glock17"";};  for ""_i"" from 1 to 5 do {this addItemToVest ""hlc_30rnd_556x45_EPR"";};  this addBackpack ""B_AssaultPack_blk"";  this addItemToBackpack ""FirstAidKit"";  this addGoggles ""T_HoodBlkBLK"";    comment ""Add weapons"";  this addWeapon ""hlc_rifle_M4"";  this addPrimaryWeaponItem ""CUP_acc_Flashlight"";  this addPrimaryWeaponItem ""RH_barska_rds"";  this addWeapon ""CUP_hgun_Glock17"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadio"";    comment ""Set identity"";  this setFace ""WhiteHead_05"";  this setSpeaker ""Male01ENGB"";  [this,""MCo_PVT_W""] call bis_fnc_setUnitInsignia;  ";
 				};
 				class Item2
 				{
-					position[]={7582.8496,448.11496,6102.8867};
+					position[]={7580.4844,447.07718,6099.0269};
 					azimut=101.61;
 					id=9;
 					side="WEST";
-					vehicle="MEC_WBO_Rifleman";
+					vehicle="B_Soldier_F";
 					player="PLAY CDG";
-					skill=0.40000001;
+					skill=0.44999999;
+					init="comment ""Exported from Arsenal by Mange"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_B_CTRG_3"";  this addItemToUniform ""FirstAidKit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""MiniGrenade"";};  for ""_i"" from 1 to 2 do {this addItemToUniform ""SmokeShellBlue"";};  this addItemToUniform ""hlc_20rnd_762x51_b_G3"";  this addVest ""V_HarnessO_gry"";  this addItemToVest ""FirstAidKit"";  for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";};  this addItemToVest ""CUP_17Rnd_9x19_glock17"";  for ""_i"" from 1 to 5 do {this addItemToVest ""hlc_20rnd_762x51_b_G3"";};  this addBackpack ""B_AssaultPack_blk"";  this addItemToBackpack ""FirstAidKit"";  this addHeadgear ""H_HelmetB_desert"";    comment ""Add weapons"";  this addWeapon ""hlc_rifle_g3ka4"";  this addPrimaryWeaponItem ""RH_LTdocterl"";  this addWeapon ""CUP_hgun_Glock17"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadio"";    comment ""Set identity"";  this setFace ""WhiteHead_06"";  this setSpeaker ""Male01ENGB"";  [this,""MCo_PVT_W""] call bis_fnc_setUnitInsignia;    ";
 				};
 				class Item3
 				{
-					position[]={7575.541,445.98923,6104.7852};
+					position[]={7580.2495,446.9191,6097.7349};
 					azimut=101.61;
 					id=10;
 					side="WEST";
-					vehicle="MEC_WBO_Rifleman";
+					vehicle="B_Soldier_F";
 					player="PLAY CDG";
-					skill=0.40000001;
+					skill=0.44999999;
+					init="comment ""Exported from Arsenal by Mange"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_I_G_resistanceLeader_F"";  this addItemToUniform ""FirstAidKit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""MiniGrenade"";};  for ""_i"" from 1 to 2 do {this addItemToUniform ""30Rnd_556x45_Stanag"";};  this addVest ""V_PlateCarrier1_blk"";  this addItemToVest ""FirstAidKit"";  for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";};  this addItemToVest ""CUP_17Rnd_9x19_glock17"";  for ""_i"" from 1 to 7 do {this addItemToVest ""30Rnd_556x45_Stanag"";};  this addHeadgear ""H_Cap_blk"";    comment ""Add weapons"";  this addWeapon ""RH_M27IAR"";  this addWeapon ""CUP_hgun_Glock17"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadio"";    comment ""Set identity"";  this setFace ""GreekHead_A3_08"";  this setSpeaker ""Male05ENGB"";  [this,""MCo_PVT_W""] call bis_fnc_setUnitInsignia;    ";
 				};
 				class Item4
 				{
-					position[]={7572.4639,444.64828,6098.3516};
+					position[]={7576.9614,445.95889,6098.7334};
 					azimut=101.61;
 					id=11;
 					side="WEST";
-					vehicle="MEC_WBO_Rifleman";
+					vehicle="B_soldier_M_F";
 					player="PLAY CDG";
-					skill=0.40000001;
+					skill=0.44999999;
+					init="comment ""Exported from Arsenal by Mange"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_mas_usd_B_founiform1_o"";  this addItemToUniform ""FirstAidKit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""MiniGrenade"";};  for ""_i"" from 1 to 2 do {this addItemToUniform ""hlc_30Rnd_9x19_B_MP5"";};  this addVest ""V_TacVest_oli"";  for ""_i"" from 1 to 2 do {this addItemToVest ""FirstAidKit"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""SmokeShellBlue"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""hlc_20Rnd_762x51_B_M14"";};  this addHeadgear ""H_Cap_headphones"";    comment ""Add weapons"";  this addWeapon ""hlc_rifle_m14sopmod"";  this addPrimaryWeaponItem ""RH_accupoint"";  this addWeapon ""hlc_smg_mp5k"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadio"";    comment ""Set identity"";  this setFace ""WhiteHead_12"";  this setSpeaker ""Male02ENGB"";  [this,""MCo_PVT_W""] call bis_fnc_setUnitInsignia;  ";
 				};
 				class Item5
 				{
-					position[]={7569.1353,444.07867,6102.4805};
+					position[]={7577.4897,446.28073,6100.9067};
 					azimut=101.61;
 					id=12;
 					side="WEST";
-					vehicle="MEC_WBO_Rifleman";
+					vehicle="B_Soldier_F";
 					player="PLAY CDG";
-					skill=0.40000001;
+					skill=0.44999999;
+					init="comment ""Exported from Arsenal by Mange"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_mas_usn_B_CombatUniform_mcam_vest2"";  this addItemToUniform ""FirstAidKit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""MiniGrenade"";};  for ""_i"" from 1 to 3 do {this addItemToUniform ""16Rnd_9x21_Mag"";};  for ""_i"" from 1 to 2 do {this addItemToUniform ""30Rnd_556x45_Stanag"";};  this addVest ""V_TacVestIR_blk"";  for ""_i"" from 1 to 2 do {this addItemToVest ""FirstAidKit"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""SmokeShellBlue"";};  for ""_i"" from 1 to 4 do {this addItemToVest ""30Rnd_556x45_Stanag"";};  this addBackpack ""B_AssaultPack_rgr"";  this addItemToBackpack ""16Rnd_9x21_Mag"";  this addHeadgear ""H_Booniehat_tan"";    comment ""Add weapons"";  this addWeapon ""RH_M4_moe"";  this addPrimaryWeaponItem ""CUP_acc_ANPEQ_15"";  this addWeapon ""hgun_P07_F"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadio"";    comment ""Set identity"";  this setFace ""AfricanHead_01"";  this setSpeaker ""Male03ENGB"";  [this,""MCo_PVT_W""] call bis_fnc_setUnitInsignia;    ";
 				};
 			};
 		};
@@ -665,7 +677,7 @@ class Mission
 		};
 		class Item4
 		{
-			position[]={9134.1006,207.33296,6677.8242};
+			position[]={9124.251,206.20905,6682.5322};
 			id=22;
 			side="EMPTY";
 			vehicle="Box_East_AmmoOrd_F";
