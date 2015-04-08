@@ -120,3 +120,5 @@ Terrorists vs PMC battle in a town. Terrorist(s) are very, very outnumbered but 
 * Countdown until mission start.
 * Different endings depending on side.
 * Strategic map for choosing insertion.
+* Parameter for map settings.
+* Custom loadouts for every unit.
