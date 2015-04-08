@@ -109,3 +109,14 @@ Two groups move through the woods to destroy to AA turrets.
 **Interesting parts:**
 * Randomized patrols using editor.
 * Arrow pointing to one extra ammo box if the first one is destroyed and AA turrents are still there.
+
+### Martyr
+
+**Type:** PvP
+
+Terrorists vs PMC battle in a town. Terrorist(s) are very, very outnumbered but have access to mines and other explosives.
+
+**Interesting parts:**
+* Countdown until mission start.
+* Different endings depending on side.
+* Strategic map for choosing insertion.

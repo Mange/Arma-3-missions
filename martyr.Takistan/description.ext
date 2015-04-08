@@ -1,0 +1,36 @@
+OnLoadName = "[HEHU] [PvP] Martyr";
+OnLoadMission = "/ Kill the american swine! \ / Find the hidden terrorist! \";
+author = "Mange";
+
+respawn = "BIRD";
+respawnTemplates[] = {"Spectator"};
+//respawnDelay = 8;
+//respawnVehicleDelay = 20;
+//respawnOnStart = 0;
+
+disabledAI = 1;
+joinUnassigned = 0;
+saving = 0;
+
+class Header
+{
+	gameType = Coop;
+	minPlayers = 2;
+	maxPlayers = 7;
+};
+
+class CfgDebriefing
+{
+    class EastWon
+    {
+        title = "MISSION ACCOMPLISHED";
+        subtitle = "Americans killed";
+        description = "The American swine are now on the ground where they belong. Allahu Ackbar!";
+    };
+    class WestWon
+    {
+        title = "MISSION ACCOMPLISHED";
+        subtitle = "Terrorists killed";
+        description = "You can smell the freedom in the air. 'MERICA!";
+    };
+};
