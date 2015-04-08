@@ -19,6 +19,17 @@ class Header
 	maxPlayers = 7;
 };
 
+class Params
+{
+	class SetupTime {
+		title = "Waiting time until mission starts.";
+		texts[] = {"None", "1 minute", "2 minutes", "3 minutes", "4 minutes", "5 minutes"};
+		values[] = {    0,         60,         120,         180,         240,         300};
+		default = 180;
+	};
+};
+
+
 class CfgDebriefing
 {
     class EastWon
