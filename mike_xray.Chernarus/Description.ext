@@ -1,0 +1,28 @@
+OnLoadName = "Mike X-Ray";
+OnLoadMission = "Infiltrate through the woods and join the other team.";
+author = "Mange & Xerita";
+
+//respawn = "BASE";
+//respawnTemplates[] = {"MenuPosition"};
+//respawnDelay = 8;
+//respawnVehicleDelay = 20;
+//respawnOnStart = 0;
+
+disabledAI = 1;
+joinUnassigned = 0;
+saving = 0;
+
+class Header
+{
+	gameType = Coop;
+	minPlayers = 4;
+	maxPlayers = 8;
+};
+
+#include "SRS\GUI\SRSdialogs.hpp"
+class RscTitles {
+	#include "SRS\GUI\SRSprogressBar.hpp"
+};
+class CfgFunctions {
+	#include "SRS\CfgFunctions.hpp"
+};

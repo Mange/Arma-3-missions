@@ -99,3 +99,13 @@ Escort a pilot to an airfield, steal an airplane and a truck and take out enemie
 **Interesting parts:**
 * Time skip script.
 * Rearming script.
+
+### Mike X-Ray
+
+**Type:** Coop
+
+Two groups move through the woods to destroy to AA turrets.
+
+**Interesting parts:**
+* Randomized patrols using editor.
+* Arrow pointing to one extra ammo box if the first one is destroyed and AA turrents are still there.
