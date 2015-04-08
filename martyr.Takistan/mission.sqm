@@ -266,13 +266,13 @@ class Mission
 						};
 						class Item1
 						{
-							value="3";
+							value="4";
 							parentCls="HEHU_MF_ModuleUnitLocator";
 							typeName="Precision";
 						};
 						class Item2
 						{
-							value="2";
+							value="5";
 							parentCls="HEHU_MF_ModuleUnitLocator";
 							typeName="RefreshInterval";
 						};
@@ -711,7 +711,7 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			text="TODO: Add mission parameter";
-			expCond="true";
+			expCond="[""ShowBluforOnMap"", 0] call BIS_fnc_getParamValue == 1";
 			class Effects
 			{
 			};
