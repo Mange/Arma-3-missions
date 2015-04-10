@@ -14,7 +14,7 @@ saving = 0;
 
 class Header
 {
-	gameType = Coop;
+	gameType = TDM;
 	minPlayers = 2;
 	maxPlayers = 7;
 };
