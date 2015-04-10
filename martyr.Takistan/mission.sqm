@@ -15,7 +15,8 @@ class Mission
 		"A3_Weapons_F_Ammoboxes",
 		"A3_Characters_F_OPFOR",
 		"a3_characters_f",
-		"A3_Characters_F_BLUFOR"
+		"A3_Characters_F_BLUFOR",
+		"A3_Modules_F_Effects"
 	};
 	addOnsAuto[]=
 	{
@@ -25,6 +26,7 @@ class Mission
 		"HEHU_MF",
 		"A3_Characters_F_BLUFOR",
 		"A3_Modules_F_StrategicMap",
+		"A3_Modules_F_Effects",
 		"A3_Structures_F_Mil_Flags",
 		"A3_Soft_F_Gamma_Offroad",
 		"a3_soft_f_offroad_01",
@@ -52,7 +54,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=12;
+		items=14;
 		class Item0
 		{
 			side="EAST";
@@ -302,7 +304,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					syncId=2;
-					synchronizations[]={0,9};
+					synchronizations[]={0,10};
 				};
 			};
 		};
@@ -325,7 +327,7 @@ class Mission
 					skill=0.44999999;
 					init="comment ""Exported from Arsenal by Mange"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_I_G_Story_Protagonist_F"";  this addItemToUniform ""FirstAidKit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""MiniGrenade"";};  this addItemToUniform ""SmokeShellBlue"";  this addVest ""V_Chestrig_blk"";  this addItemToVest ""FirstAidKit"";  for ""_i"" from 1 to 4 do {this addItemToVest ""hlc_20Rnd_762x51_B_fal"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";};  this addBackpack ""B_AssaultPack_blk"";  this addItemToBackpack ""FirstAidKit"";  this addItemToBackpack ""RH_7Rnd_45cal_m1911"";  for ""_i"" from 1 to 2 do {this addItemToBackpack ""hlc_20Rnd_762x51_B_fal"";};  this addHeadgear ""H_Booniehat_khk_hs"";  this addGoggles ""LBG_Shemagh_Tan"";    comment ""Add weapons"";  this addWeapon ""hlc_rifle_falosw"";  this addPrimaryWeaponItem ""RH_compm4s"";  this addWeapon ""RH_kimber"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadio"";    comment ""Set identity"";  this setFace ""WhiteHead_18"";  this setSpeaker ""Male02ENGB"";  [this,""MCo_PVT_W""] call bis_fnc_setUnitInsignia;  ";
 					syncId=3;
-					synchronizations[]={4};
+					synchronizations[]={4,9};
 				};
 				class Item1
 				{
@@ -422,7 +424,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					syncId=4;
-					synchronizations[]={10,3,5};
+					synchronizations[]={11,3,5};
 				};
 			};
 		};
@@ -636,6 +638,100 @@ class Mission
 				};
 			};
 		};
+		class Item12
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={7625.2124,461.45505,6090.4868};
+					class args
+					{
+						items=2;
+						class Item0
+						{
+							value="SmokeShellPurple";
+							parentCls="ModuleSmoke_F";
+							typeName="Type";
+						};
+						class Item1
+						{
+							value="1";
+							parentCls="ModuleSmoke_F";
+							typeName="Repeat";
+						};
+					};
+					id=18;
+					side="LOGIC";
+					vehicle="ModuleSmoke_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item13
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={7577.3428,447.8631,6116.7817};
+					class args
+					{
+						items=6;
+						class Item0
+						{
+							value="1";
+							parentCls="HEHU_MF_ModuleUnitLocator";
+							typeName="Units";
+						};
+						class Item1
+						{
+							value="4";
+							parentCls="HEHU_MF_ModuleUnitLocator";
+							typeName="Precision";
+						};
+						class Item2
+						{
+							value="5";
+							parentCls="HEHU_MF_ModuleUnitLocator";
+							typeName="RefreshInterval";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="HEHU_MF_ModuleUnitLocator";
+							typeName="NumberOfUnits";
+						};
+						class Item4
+						{
+							value="1";
+							parentCls="HEHU_MF_ModuleUnitLocator";
+							typeName="LocatorType";
+						};
+						class Item5
+						{
+							value="5";
+							parentCls="HEHU_MF_ModuleUnitLocator";
+							typeName="LocateUnits";
+						};
+					};
+					id=19;
+					side="LOGIC";
+					vehicle="HEHU_MF_ModuleUnitLocator";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					syncId=9;
+					synchronizations[]={3};
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
@@ -643,7 +739,7 @@ class Mission
 		class Item0
 		{
 			position[]={7623.5107,460.8902,6091.1445};
-			id=18;
+			id=20;
 			side="EMPTY";
 			vehicle="Flag_Red_F";
 			skill=0.60000002;
@@ -652,7 +748,7 @@ class Mission
 		{
 			position[]={8245.9795,178.05339,7793.5659};
 			azimut=140.87901;
-			id=19;
+			id=21;
 			side="EMPTY";
 			vehicle="B_G_Offroad_01_F";
 			skill=0.40000001;
@@ -661,7 +757,7 @@ class Mission
 		{
 			position[]={10431.813,256.90903,6336.6802};
 			azimut=304.86197;
-			id=20;
+			id=22;
 			side="EMPTY";
 			vehicle="B_G_Offroad_01_F";
 			skill=0.40000001;
@@ -670,7 +766,7 @@ class Mission
 		{
 			position[]={8923.3672,265.37134,5338.5264};
 			azimut=404.17825;
-			id=21;
+			id=23;
 			side="EMPTY";
 			vehicle="B_G_Offroad_01_F";
 			skill=0.40000001;
@@ -678,7 +774,7 @@ class Mission
 		class Item4
 		{
 			position[]={9124.251,206.20905,6682.5322};
-			id=22;
+			id=24;
 			side="EMPTY";
 			vehicle="Box_East_AmmoOrd_F";
 			leader=1;
@@ -716,7 +812,7 @@ class Mission
 			{
 			};
 			synchronizations[]={2};
-			syncId=9;
+			syncId=10;
 		};
 		class Item1
 		{
@@ -732,7 +828,7 @@ class Mission
 			{
 			};
 			synchronizations[]={4};
-			syncId=10;
+			syncId=11;
 		};
 	};
 };
