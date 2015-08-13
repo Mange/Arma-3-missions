@@ -120,5 +120,15 @@ Terrorists vs PMC battle in a town. Terrorist(s) are very, very outnumbered but 
 * Countdown until mission start.
 * Different endings depending on side.
 * Strategic map for choosing insertion.
-* Parameter for map settings.
+* Parameter for map/GPS settings.
 * Custom loadouts for every unit.
+
+### Camel Kick
+
+**Type:** Coop
+
+Destroy a NATO convoy passing through Fallujah and escape.
+
+**Interesting parts:**
+* Completely custom ammo box.
+* `addAction` to trigger convoy.
