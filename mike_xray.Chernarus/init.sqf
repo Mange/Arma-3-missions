@@ -19,5 +19,3 @@ if (isServer) then {
         };
     } forEach allUnits;
 };
-
-[] spawn SRS_fnc_init;

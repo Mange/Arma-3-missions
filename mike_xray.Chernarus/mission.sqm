@@ -12,7 +12,8 @@ class Mission
 		"mas_rus_spet_veh",
 		"CUP_Weapons_AmmoBoxes",
 		"aia_misc_e_config",
-		"A3_Modules_F_Intel"
+		"A3_Modules_F_Intel",
+		"ace_medical"
 	};
 	addOnsAuto[]=
 	{
@@ -23,6 +24,7 @@ class Mission
 		"mas_rus_reg_o",
 		"mas_rus_spet_veh",
 		"A3_Modules_F_Intel",
+		"ace_medical",
 		"CUP_Weapons_AmmoBoxes",
 		"aia_misc_e_config",
 		"aia_chernarus_config"
@@ -48,7 +50,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=45;
+		items=46;
 		class Item0
 		{
 			side="WEST";
@@ -2566,6 +2568,46 @@ class Mission
 				};
 			};
 		};
+		class Item45
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={9673.5029,243.86006,11495.588};
+					class args
+					{
+						items=3;
+						class Item0
+						{
+							value="1";
+							parentCls="ACE_moduleReviveSettings";
+							typeName="enableRevive";
+						};
+						class Item1
+						{
+							value="120";
+							parentCls="ACE_moduleReviveSettings";
+							typeName="maxReviveTime";
+						};
+						class Item2
+						{
+							value="-1";
+							parentCls="ACE_moduleReviveSettings";
+							typeName="amountOfReviveLives";
+						};
+					};
+					id=115;
+					side="LOGIC";
+					vehicle="ACE_moduleReviveSettings";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
@@ -2575,7 +2617,7 @@ class Mission
 			position[]={10279.595,361.47165,12058.344};
 			azimut=335.53699;
 			special="NONE";
-			id=115;
+			id=116;
 			side="EMPTY";
 			vehicle="CUP_RUOrdnanceBox";
 			leader=1;
@@ -2588,7 +2630,7 @@ class Mission
 			position[]={10313.147,362.00046,12078.003};
 			azimut=405.2059;
 			special="NONE";
-			id=116;
+			id=117;
 			side="EMPTY";
 			vehicle="CUP_RUOrdnanceBox";
 			leader=1;
@@ -2601,7 +2643,7 @@ class Mission
 			azimut=104.681;
 			offsetY=4;
 			special="NONE";
-			id=117;
+			id=118;
 			side="EMPTY";
 			vehicle="Sign_arrow_down_large_EP1";
 			leader=1;

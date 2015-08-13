@@ -18,11 +18,3 @@ class Header
 	minPlayers = 4;
 	maxPlayers = 8;
 };
-
-#include "SRS\GUI\SRSdialogs.hpp"
-class RscTitles {
-	#include "SRS\GUI\SRSprogressBar.hpp"
-};
-class CfgFunctions {
-	#include "SRS\CfgFunctions.hpp"
-};
