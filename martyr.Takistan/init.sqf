@@ -15,7 +15,7 @@ waitUntil {!isNull player};
 
 if (isServer || !isMultiplayer) then {
 	[] spawn {
-		while { true } do {
+		while { actualTime <= rushProtectionTime } do {
 			actualTime = time;
 			//if (ismultiplayer) then {servertime} else {time};
 			publicVariable "actualTime";
