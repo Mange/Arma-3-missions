@@ -132,3 +132,12 @@ Destroy a NATO convoy passing through Fallujah and escape.
 **Interesting parts:**
 * Completely custom ammo box.
 * `addAction` to trigger convoy.
+
+### Chemical Waste
+
+**Type:** Coop
+
+Clear out a factory of enemies. 
+
+**Interesting parts:**
+* Uses `@hehu_mf`; built in an hour

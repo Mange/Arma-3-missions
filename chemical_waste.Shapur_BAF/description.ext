@@ -1,0 +1,23 @@
+respawn = "BIRD";
+//respawnDelay = 20;
+//respawnVehicleDelay = 20;
+//respawnTemplates[] = {"MenuPosition","Wave"};
+
+//respawnOnStart = 1;
+//enableDebugConsole = 1;
+
+author = "Mange";
+onLoadName = "Chemical Waste";
+onLoadMission = "Clear the plant of all enemies.";
+//loadScreen = "loadScreen_ca.paa";
+
+disabledAI = 1;
+joinUnassigned = 0;
+saving = 0;
+
+class Header
+{
+	gameType = Coop;
+	minPlayers = 3;
+	maxPlayers = 7;
+};
