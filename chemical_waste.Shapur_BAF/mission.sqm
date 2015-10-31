@@ -45,7 +45,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=11;
+		items=12;
 		class Item0
 		{
 			side="WEST";
@@ -155,7 +155,7 @@ class Mission
 						items=2;
 						class Item0
 						{
-							value="20";
+							value="30";
 							parentCls="HEHU_MF_ModuleCQBSpawner";
 							typeName="NumberOfUnits";
 						};
@@ -654,6 +654,24 @@ class Mission
 					skill=0.60000002;
 					syncId=21;
 					synchronizations[]={0};
+				};
+			};
+		};
+		class Item11
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1238.2247,39.666687,1513.2852};
+					id=29;
+					side="LOGIC";
+					vehicle="HEHU_MF_ModuleAutomaticEndGame";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
 				};
 			};
 		};
