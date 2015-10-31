@@ -11,7 +11,7 @@ onLoadName = "Chemical Waste";
 onLoadMission = "Clear the plant of all enemies.";
 //loadScreen = "loadScreen_ca.paa";
 
-disabledAI = 1;
+disabledAI = 0;
 joinUnassigned = 0;
 saving = 0;
 
@@ -20,4 +20,10 @@ class Header
 	gameType = Coop;
 	minPlayers = 3;
 	maxPlayers = 7;
+};
+
+class Params
+{
+	#include "\a3\functions_f\Params\paramWeather.hpp"
+	#include "\a3\functions_f\Params\paramDaytimePeriod.hpp"
 };
