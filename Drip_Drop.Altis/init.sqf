@@ -104,11 +104,5 @@ if (_enableVirtualArsenal == 1) then {
     deleteVehicle ab4;
 };
 
-// Set up revive
-_enableRevive = ["EnableRevive", 1] call BIS_fnc_getParamValue;
-if (_enableRevive == 1) then {
-    [] spawn SRS_fnc_init;
-};
-
 //EOS SYSTEM
 []execVM "eos\OpenMe.sqf";

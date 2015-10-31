@@ -1,4 +1,4 @@
-OnLoadName = "[HEHU] [COOP] Drip Drop";
+OnLoadName = "Drip Drop";
 OnLoadMission = "Take a series of objectives while providing CAS and transport";
 author = "Mange";
 
@@ -27,18 +27,4 @@ class Params
 		values[] = {0, 1};
 		default = 1;
 	};
-	class EnableRevive {
-		title = "Enable revive system?";
-		texts[] = {"No", "Yes"};
-		values[] = {0, 1};
-		default = 1;
-	};
-};
-
-#include "SRS\GUI\SRSdialogs.hpp"
-class RscTitles {
-	#include "SRS\GUI\SRSprogressBar.hpp"
-};
-class CfgFunctions {
-	#include "SRS\CfgFunctions.hpp"
 };

@@ -44,7 +44,6 @@ CSAT invades a few areas of Altis using helicopter transport/CAS. Don't take too
 **Interesting parts:**
 * Rearming script.
 * Properly formatted EOS config.
-* Conditional SRS revive system.
 
 ### Infidels
 
@@ -137,7 +136,7 @@ Destroy a NATO convoy passing through Fallujah and escape.
 
 **Type:** Coop
 
-Clear out a factory of enemies. 
+Clear out a factory of enemies.
 
 **Interesting parts:**
 * Uses `@hehu_mf`; built in an hour
