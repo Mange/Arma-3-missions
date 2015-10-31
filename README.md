@@ -45,12 +45,6 @@ CSAT invades a few areas of Altis using helicopter transport/CAS. Don't take too
 * Rearming script.
 * Properly formatted EOS config.
 
-### Infidels
-
-**Type:** Wave Defense
-
-Work-in-progress wave defense. Defend our glorious leader (PBUH) from the american dogs! **No enemies spawn yet**
-
 **Interesting parts:**
 * A lot of placed decorative objects.
 
