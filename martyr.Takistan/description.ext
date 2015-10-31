@@ -1,4 +1,4 @@
-OnLoadName = "[HEHU] [PvP] Martyr";
+OnLoadName = "Martyr";
 OnLoadMission = "/ Kill the american swine! \ / Find the hidden terrorist! \";
 author = "Mange";
 

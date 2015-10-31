@@ -6,7 +6,6 @@ class Mission
 		"MEC_Taliban",
 		"A3_Modules_F",
 		"A3_Modules_F_Curator_Misc",
-		"mas_HMMWV",
 		"A3_Air_F_Heli_Light_01",
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f",
@@ -19,7 +18,8 @@ class Mission
 		"A3_Modules_F_Intel",
 		"A3_Data_F_Curator_Characters",
 		"A3_Characters_F_INDEP",
-		"A3_Modules_F_ObjectModifiers"
+		"A3_Modules_F_ObjectModifiers",
+		"CUP_WheeledVehicles_HMMWV"
 	};
 	addOnsAuto[]=
 	{
@@ -28,7 +28,7 @@ class Mission
 		"A3_Characters_F_INDEP",
 		"A3_Modules_F",
 		"A3_Modules_F_Curator_Misc",
-		"mas_HMMWV",
+		"CUP_WheeledVehicles_HMMWV",
 		"A3_Characters_F_BLUFOR",
 		"A3_Air_F_Heli_Light_01",
 		"MEC_Civilians",
@@ -218,7 +218,7 @@ class Mission
 					special="NONE";
 					id=9;
 					side="WEST";
-					vehicle="B_mas_HMMWV_M2_des";
+					vehicle="CUP_B_HMMWV_M2_USA";
 					leader=1;
 					skill=0.5;
 					text="car1";
@@ -230,7 +230,7 @@ class Mission
 					special="NONE";
 					id=10;
 					side="WEST";
-					vehicle="B_mas_HMMWV_M2_des";
+					vehicle="CUP_B_HMMWV_M2_USA";
 					skill=0.5;
 					text="car2";
 					syncId=2;
@@ -243,7 +243,7 @@ class Mission
 					special="NONE";
 					id=11;
 					side="WEST";
-					vehicle="B_mas_HMMWV_UNA_des";
+					vehicle="CUP_B_HMMWV_Unarmed_USA";
 					skill=0.5;
 					text="car3";
 				};
@@ -254,7 +254,7 @@ class Mission
 					special="NONE";
 					id=12;
 					side="WEST";
-					vehicle="B_mas_HMMWV_UNA_des";
+					vehicle="CUP_B_HMMWV_Unarmed_USA";
 					skill=0.5;
 					text="car4";
 				};
@@ -265,7 +265,7 @@ class Mission
 					special="NONE";
 					id=13;
 					side="WEST";
-					vehicle="B_mas_HMMWV_M2_des";
+					vehicle="CUP_B_HMMWV_M2_USA";
 					skill=0.5;
 					text="car5";
 				};
