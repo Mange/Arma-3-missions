@@ -1379,7 +1379,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=2;
+		items=3;
 		class Item0
 		{
 			position[]={3231.1448,6.4948411,2412.2827};
@@ -1396,6 +1396,14 @@ class Mission
 			text="Cash on the second floor, north western wing.";
 			type="mil_flag";
 			colorName="ColorRed";
+		};
+		class Item2
+		{
+			position[]={4451.6763,17.37919,4226.998};
+			name="m5";
+			text="Insertion";
+			type="mil_start";
+			colorName="ColorBlue";
 		};
 	};
 	class Sensors
