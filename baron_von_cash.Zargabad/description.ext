@@ -1,0 +1,25 @@
+respawn = "BIRD";
+//respawnDelay = 7;
+//respawnDialog = 1;
+
+//respawnVehicleDelay = 20;
+//respawnTemplates[] = {"MenuPosition","Wave"};
+
+//respawnOnStart = 1;
+enableDebugConsole = 1;
+
+disabledAI = 1;
+joinUnassigned = 0;
+saving = 0;
+
+author = "Mange";
+onLoadName = "Baron von Cash";
+onLoadMission = "Cash cash cash cash";
+//loadScreen = "loadScreen_ca.paa";
+
+class Header
+{
+	gameType = Coop;
+    minPlayers = 2;
+    maxPlayers = 4;
+};

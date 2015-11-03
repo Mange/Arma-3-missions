@@ -6,6 +6,18 @@ Missions I work on for Arma 3.
 
 Here's a short summary of the different missions.
 
+### Baron von Cash
+
+**Type:** Cooperative (2-4 players)
+
+Perform an armed robbery and escape with the money.
+
+**Interesting parts:**
+* Enemies chasing you when you are discovered. They will never give up and they are ruthless.
+* All units have custom load outs.
+* Police cars.
+* Very hard difficulty.
+
 ### CQBuilding 1
 
 **Type:** Training
