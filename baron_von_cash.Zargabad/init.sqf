@@ -5,6 +5,33 @@ tf_same_lr_frequencies_for_side = true;
 
 policeChase = false; // Triggered when money is taken
 
+globalHideUnit = {
+    params ["_unit", "_hide"];
+	_unit hideObjectGlobal _hide;
+    _unit enableSimulationGlobal !_hide;
+};
+
+policeUnits = [];
+{
+    if (side _x == blufor) then {
+        policeUnits pushBack _x;
+    }
+} forEach (allUnits);
+{ policeUnits pushBack _x; } forEach entities "C_Offroad_01_F";
+
+if (isServer) then {
+    {
+        [_x, true] call globalHideUnit;
+    } forEach policeUnits;
+
+    [] spawn {
+        waitUntil { sleep 2; policeChase };
+        {
+            [_x, false] call globalHideUnit;
+        } forEach policeUnits;
+    };
+};
+
 // TODO: Add randomization
 initPolice = {
     removeAllWeapons _this;
