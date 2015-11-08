@@ -3,6 +3,7 @@ TF_give_personal_radio_to_regular_soldier = true;
 tf_same_sw_frequencies_for_side = true;
 tf_same_lr_frequencies_for_side = true;
 
+robberGroup = (group player);
 policeChase = false; // Triggered when money is taken
 
 globalHideUnit = {
@@ -32,95 +33,22 @@ if (isServer) then {
     };
 };
 
-// TODO: Add randomization
-initPolice = {
-    removeAllWeapons _this;
-    removeAllItems _this;
-    removeAllAssignedItems _this;
-    removeUniform _this;
-    removeVest _this;
-    removeBackpack _this;
-    removeHeadgear _this;
-    removeGoggles _this;
-
-    _this forceAddUniform "TRYK_U_B_BLK";
-    for "_i" from 1 to 2 do {_this addItemToUniform "ACE_CableTie";};
-    _this addItemToUniform "ACE_EarPlugs";
-    _this addVest "TRYK_V_tacv1_P_BK";
-    for "_i" from 1 to 6 do {_this addItemToVest "CUP_30Rnd_9x19_EVO";};
-    for "_i" from 1 to 2 do {_this addItemToVest "ACE_M84";};
-    _this addItemToVest "ACE_HandFlare_Red";
-    for "_i" from 1 to 2 do {_this addItemToVest "Chemlight_green";};
-    _this addItemToVest "SmokeShell";
-    _this addHeadgear "TRYK_H_PASGT_BLK";
-
-    _this addWeapon "CUP_smg_EVO";
-    _this addPrimaryWeaponItem "acc_flashlight";
-};
-
-initGuard = {
-    removeAllWeapons _this;
-    removeAllItems _this;
-    removeAllAssignedItems _this;
-    removeUniform _this;
-    removeVest _this;
-    removeBackpack _this;
-    removeHeadgear _this;
-    removeGoggles _this;
-
-    _this forceAddUniform "TRYK_U_B_BLTAN_T";
-    for "_i" from 1 to 3 do {_this addItemToUniform "RH_17Rnd_9x19_g17";};
-    _this addItemToUniform "hlc_30rnd_556x45_EPR";
-    _this addVest "TRYK_V_tacSVD_BK";
-    _this addItemToVest "ACE_EarPlugs";
-    _this addItemToVest "ACE_CableTie";
-    for "_i" from 1 to 3 do {_this addItemToVest "ACE_fieldDressing";};
-    _this addItemToVest "ACE_morphine";
-    for "_i" from 1 to 3 do {_this addItemToVest "hlc_30rnd_556x45_EPR";};
-    _this addHeadgear "TRYK_H_headsetcap_blk_Glasses";
-
-    _this addWeapon "hlc_rifle_M4";
-    _this addPrimaryWeaponItem "CUP_acc_Flashlight";
-    _this addWeapon "RH_g17";
-
-    _this linkItem "ItemMap";
-    _this linkItem "ItemCompass";
-    _this linkItem "ItemWatch";
-    _this linkItem "ItemRadio";
-};
-
 {
     if (local _x) then {
         switch (side _x) do {
             case (Blufor): {
-                _x call initPolice;
+                _x call bvc_fnc_initPolice;
             };
             case (Independent): {
-                _x call initGuard;
+                _x call bvc_fnc_initGuard;
             };
-            // Robbers are initialized in the mission
+            // Robbers are initialized in the mission file
         };
     };
 } forEach allUnits;
 
-initPoliceCar = {
-    if (local _this) then {
-        [
-        	_this,
-        	["blue",1],
-        	[
-        		"hidePolice", 0,
-        		"BeaconsStart", 1,
-        		"HideBumper2", 0,
-        		"Proxy", 0,
-        		"Destruct", 0
-        	]
-        ] call BIS_fnc_initVehicle;
-    };
-};
-
 {
-    _x call initPoliceCar;
+    _x call bvc_fnc_initPoliceCar;
 } forEach entities "C_Offroad_01_F";
 
 selectFirstAlive = {
@@ -217,7 +145,7 @@ if (isServer) then {
         sleep 30;
         [
             [(group officer1), (group officer2), (group officer3)],
-            units (group (player))
+            units robberGroup
         ] spawn chaseRobbers;
     };
 };

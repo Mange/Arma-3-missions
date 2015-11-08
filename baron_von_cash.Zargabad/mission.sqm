@@ -13,19 +13,18 @@ class Mission
 		"A3_Characters_F_Gamma",
 		"A3_Modules_F_ObjectModifiers",
 		"CUP_WheeledVehicles_Datsun",
-		"CUP_WheeledVehicles_UAZ"
+		"A3_Data_F_Curator_Characters"
 	};
 	addOnsAuto[]=
 	{
-		"A3_Characters_F_Civil",
-		"a3_characters_f",
+		"A3_Data_F_Curator_Characters",
 		"CUP_Creatures_People_Military_DummyInfantrySet",
 		"HEHU_MF",
 		"A3_Characters_F_Gamma",
+		"a3_characters_f",
 		"CUP_Weapons_Items",
 		"A3_Soft_F_Offroad_01",
 		"CUP_WheeledVehicles_Datsun",
-		"CUP_WheeledVehicles_UAZ",
 		"aia_zargabad_config"
 	};
 	randomSeed=5678645;
@@ -52,7 +51,7 @@ class Mission
 		items=19;
 		class Item0
 		{
-			side="CIV";
+			side="EAST";
 			class Vehicles
 			{
 				items=4;
@@ -61,57 +60,61 @@ class Mission
 					position[]={4447.3433,17.360149,4225.8638};
 					azimut=63.0751;
 					id=0;
-					side="CIV";
-					vehicle="C_man_p_fugitive_F";
+					side="EAST";
+					vehicle="o_survivor_F";
 					player="PLAYER COMMANDER";
 					leader=1;
 					skill=0.60000002;
 					text="robber1";
-					init="comment ""Exported from Arsenal by Mange"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""TRYK_U_denim_hood_blk"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  for ""_i"" from 1 to 3 do {this addItemToUniform ""ACE_morphine"";};  this addItemToUniform ""ACE_EarPlugs"";  this addVest ""V_BandollierB_blk"";  for ""_i"" from 1 to 3 do {this addItemToVest ""ACE_fieldDressing"";};  for ""_i"" from 1 to 6 do {this addItemToVest ""RH_32Rnd_9x19_tec"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_M84"";};  this addBackpack ""B_AssaultPack_blk"";  for ""_i"" from 1 to 3 do {this addItemToBackpack ""CUP_PG7V_M"";};  this addGoggles ""G_Balaclava_blk"";    comment ""Add weapons"";  this addWeapon ""RH_tec9"";    comment ""Add items"";  this linkItem ""ItemRadio""; this linkItem ""ItemMap""; this linkItem ""ItemCompass"";                                                             this moveInDriver car;";
+					init="[this, 0] call bvc_fnc_initRobber; this moveInDriver car;";
+					description="Robber";
 					syncId=0;
-					synchronizations[]={4,6,5};
+					synchronizations[]={4,5};
 				};
 				class Item1
 				{
 					position[]={4444.7769,17.322716,4227.0815};
 					azimut=63.0751;
 					id=1;
-					side="CIV";
-					vehicle="C_man_p_fugitive_F";
+					side="EAST";
+					vehicle="o_survivor_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="robber2";
-					init="comment ""Exported from Arsenal by Mange"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""TRYK_shirts_BLK_PAD_RED2"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  for ""_i"" from 1 to 3 do {this addItemToUniform ""ACE_morphine"";};  this addItemToUniform ""ACE_EarPlugs"";  for ""_i"" from 1 to 3 do {this addItemToUniform ""RH_15Rnd_9x19_M9"";};  this addVest ""V_BandollierB_blk"";  for ""_i"" from 1 to 3 do {this addItemToVest ""ACE_fieldDressing"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_M84"";};  for ""_i"" from 1 to 6 do {this addItemToVest ""RH_15Rnd_9x19_M9"";};  this addBackpack ""B_AssaultPack_blk"";  for ""_i"" from 1 to 2 do {this addItemToBackpack ""RH_15Rnd_9x19_M9"";};  this addGoggles ""MEC_shemag_black"";    comment ""Add weapons"";  this addWeapon ""RH_m9"";    comment ""Add items"";  this linkItem ""ItemRadio"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";                                            this moveInCargo car;";
+					init="[this, 1] call bvc_fnc_initRobber; this moveInCargo car;";
+					description="Robber";
 					syncId=1;
-					synchronizations[]={6,5};
+					synchronizations[]={5};
 				};
 				class Item2
 				{
 					position[]={4446.5327,17.353527,4223.5625};
 					azimut=63.0751;
 					id=2;
-					side="CIV";
-					vehicle="C_man_p_fugitive_F";
+					side="EAST";
+					vehicle="o_survivor_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="robber3";
-					init="comment ""Exported from Arsenal by Mange"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""TRYK_U_B_PCUGs_OD"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  for ""_i"" from 1 to 3 do {this addItemToUniform ""ACE_morphine"";};  this addItemToUniform ""ACE_EarPlugs"";  this addVest ""V_BandollierB_blk"";  for ""_i"" from 1 to 3 do {this addItemToVest ""ACE_fieldDressing"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_M84"";};  for ""_i"" from 1 to 5 do {this addItemToVest ""RH_7Rnd_45cal_m1911"";};  this addBackpack ""TRYK_B_tube_blk"";  for ""_i"" from 1 to 3 do {this addItemToBackpack ""RH_7Rnd_45cal_m1911"";};  this addGoggles ""G_Balaclava_oli"";    comment ""Add weapons"";  this addWeapon ""RH_kimber_nw"";    comment ""Add items"";  this linkItem ""ItemRadio"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";                                            this moveInCargo car;";
+					init="[this, 2] call bvc_fnc_initRobber; this moveInCargo car;";
+					description="Robber";
 					syncId=2;
-					synchronizations[]={6,5};
+					synchronizations[]={5};
 				};
 				class Item3
 				{
 					position[]={4445.5508,17.329927,4222.2637};
 					azimut=63.0751;
 					id=3;
-					side="CIV";
-					vehicle="C_man_p_fugitive_F";
+					side="EAST";
+					vehicle="o_survivor_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="robber4";
-					init="comment ""Exported from Arsenal by Mange"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""TRYK_U_B_PCUGs_OD"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  for ""_i"" from 1 to 3 do {this addItemToUniform ""ACE_morphine"";};  this addItemToUniform ""ACE_EarPlugs"";  this addVest ""V_BandollierB_blk"";  for ""_i"" from 1 to 3 do {this addItemToVest ""ACE_fieldDressing"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_M84"";};  for ""_i"" from 1 to 5 do {this addItemToVest ""RH_7Rnd_45cal_m1911"";};  this addBackpack ""TRYK_B_tube_blk"";  for ""_i"" from 1 to 3 do {this addItemToBackpack ""RH_7Rnd_45cal_m1911"";};  this addGoggles ""G_Balaclava_oli"";    comment ""Add weapons"";  this addWeapon ""RH_kimber_nw"";    comment ""Add items"";  this linkItem ""ItemRadio"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";                                            this moveInCargo car;";
+					init="[this, 3] call bvc_fnc_initRobber; this moveInCargo car;";
+					description="Robber";
 					syncId=3;
-					synchronizations[]={6,5};
+					synchronizations[]={5};
 				};
 			};
 		};
@@ -713,7 +716,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=30;
+		items=29;
 		class Item0
 		{
 			position[]={4830.5767,37.716118,4608.1045};
@@ -1018,20 +1021,9 @@ class Mission
 		};
 		class Item28
 		{
-			position[]={4895.9209,38.110348,4619.4873};
-			azimut=123.165;
-			id=65;
-			side="EMPTY";
-			vehicle="CUP_O_UAZ_MG_TKA";
-			skill=0.60000002;
-			fuel=0.055845466;
-			ammo=0.2914564;
-		};
-		class Item29
-		{
 			position[]={3740.4106,11.800207,2764.7344};
 			azimut=-26.852289;
-			id=66;
+			id=65;
 			side="EMPTY";
 			vehicle="C_Offroad_01_F";
 			leader=1;
@@ -1069,40 +1061,24 @@ class Mission
 	};
 	class Sensors
 	{
-		items=5;
+		items=4;
 		class Item0
 		{
-			position[]={4867.4341,37.468487,4593.2378};
+			position[]={4862.019,37.587017,4588.394};
 			a=100;
 			b=100;
-			activationBy="CIV";
-			interruptable=1;
-			age="UNKNOWN";
-			expCond="this && player in thisList";
-			expActiv="{ _x addRating -100000; } forEach allPlayers;";
-			class Effects
-			{
-			};
-		};
-		class Item1
-		{
-			position[]={4851.3608,37.652897,4584.9761};
-			a=100;
-			b=100;
-			activationBy="ANY";
+			activationBy="EAST";
 			activationType="GUER D";
 			interruptable=1;
 			age="UNKNOWN";
-			expActiv="0 = [(independent call allGroupsInSide), units (group (thisList select 0))] spawn chaseRobbers;";
+			expActiv="0 = [(independent call allGroupsInSide), (units robberGroup)] spawn chaseRobbers;";
 			class Effects
 			{
 				soundDet="AlarmSfx";
 				track="ATrack6";
 			};
-			synchronizations[]={1,0,2,3};
-			syncId=5;
 		};
-		class Item2
+		class Item1
 		{
 			position[]={3243.645,9.6934776,2463.6338};
 			activationBy="ANY";
@@ -1114,9 +1090,9 @@ class Mission
 			{
 			};
 			synchronizations[]={0,2,1,3};
-			syncId=6;
+			syncId=5;
 		};
-		class Item3
+		class Item2
 		{
 			position[]={3301.6301,12.529013,2539.9385};
 			a=100;
@@ -1131,7 +1107,7 @@ class Mission
 			{
 			};
 		};
-		class Item4
+		class Item3
 		{
 			position[]={3328.6472,5.608036,2431.4126};
 			a=0;

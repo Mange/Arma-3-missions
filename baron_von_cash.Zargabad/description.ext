@@ -23,3 +23,20 @@ class Header
     minPlayers = 2;
     maxPlayers = 4;
 };
+
+class CfgFunctions
+{
+	class BVC { // Baron von Cash
+		class loadouts {
+			class initRobber {};
+			class initPolice {};
+			class initGuard {};
+
+			class initPolicecar {};
+		};
+
+		class chase {
+			class chaseUnits {};
+		}
+	};
+};
