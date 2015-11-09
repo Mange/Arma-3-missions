@@ -53,14 +53,23 @@ _robbers = (units (group (allPlayers select 0)));
 };
 
 // Restore police when policeChase is switched over.
-[_policeObjects] spawn {
-    private "_policeObjects";
+[_policeObjects, _robbers] spawn {
+    private ["_policeObjects", "_robbers"];
     _policeObjects = param [0];
+    _robbers = param [1];
 
     waitUntil { sleep 2.1; policeChase };
 
     {
-        [_x, false] call BVC_fnc_globalHideUnit;
+        private "_unit";
+        _unit = _x;
+
+        [_unit, false] call BVC_fnc_globalHideUnit;
+        // When unit is restored from enableSimulation false, it needs a nudge to understand its
+        // surroundings or the AI might not react to anything or do anything.
+        // In addition, police dispatch should make all robbers known to the police unit.
+        { _unit reveal [_x, 4]; } forEach (_unit nearEntities 50);
+        { _unit reveal [_x, 2]; } forEach _robbers;
     } forEach _policeObjects;
 
     // Let them enter their cars, then tell the ones in a car to chase the robbers.
