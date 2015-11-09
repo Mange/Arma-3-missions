@@ -56,19 +56,21 @@ for "_i" from 1 to 2 do {_unit addItemToVest "ACE_M84";};
 // Weapon and ammo
 switch(_preset) do {
     case (0): {
-        _unit addWeapon "RH_tec9";
         for "_i" from 1 to 6 do {_unit addItemToVest "RH_32Rnd_9x19_tec";};
+        _unit addItemToUniform "RH_32Rnd_9x19_tec";
+        _unit addWeapon "RH_tec9";
     };
 
     case(1): {
-        _unit addWeapon "RH_kimber_nw";
         for "_i" from 1 to 5 do {_unit addItemToVest "RH_7Rnd_45cal_m1911";};
         for "_i" from 1 to 3 do {_unit addItemToBackpack "RH_7Rnd_45cal_m1911";};
+        _unit addItemToUniform "RH_7Rnd_45cal_m1911";
+        _unit addWeapon "RH_kimber_nw";
     };
 
     case (2): {
-        _unit addWeapon "RH_m9";
         for "_i" from 1 to 6 do {_unit addItemToVest "RH_15Rnd_9x19_M9";};
         for "_i" from 1 to 3 do {_unit addItemToUniform "RH_15Rnd_9x19_M9";};
+        _unit addWeapon "RH_m9";
     };
 };
