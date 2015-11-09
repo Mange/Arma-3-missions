@@ -1,4 +1,4 @@
-OnLoadName = "[HEHU] [COOP] UPS Man";
+OnLoadName = "UPS Man";
 OnLoadMission = "Escort a pilot to an airfield, then destroy targets in a nearby town.";
 author = "Mange";
 
