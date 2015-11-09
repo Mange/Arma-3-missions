@@ -27,6 +27,11 @@ class Header
 class CfgFunctions
 {
 	class BVC { // Baron von Cash
+		class scenario {
+			class scenarioInit {};
+			class globalHideUnit {};
+		};
+
 		class loadouts {
 			class initRobber {};
 			class initPolice {};
@@ -36,7 +41,9 @@ class CfgFunctions
 		};
 
 		class chase {
-			class chaseUnits {};
+			class chaseInit {};
+			class addChasers {};
+			class keepChasing {};
 		}
 	};
 };

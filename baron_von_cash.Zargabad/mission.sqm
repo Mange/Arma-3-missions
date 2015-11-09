@@ -57,7 +57,7 @@ class Mission
 				items=4;
 				class Item0
 				{
-					position[]={4447.3433,17.360149,4225.8638};
+					position[]={4444.8794,17.323191,4227.5649};
 					azimut=63.0751;
 					id=0;
 					side="EAST";
@@ -73,7 +73,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={4444.7769,17.322716,4227.0815};
+					position[]={4440.4946,17.296421,4226.9053};
 					azimut=63.0751;
 					id=1;
 					side="EAST";
@@ -88,7 +88,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={4446.5327,17.353527,4223.5625};
+					position[]={4446.6504,17.350401,4225.2637};
 					azimut=63.0751;
 					id=2;
 					side="EAST";
@@ -103,7 +103,7 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={4445.5508,17.329927,4222.2637};
+					position[]={4443.6147,17.329294,4223.1436};
 					azimut=63.0751;
 					id=3;
 					side="EAST";
@@ -392,7 +392,7 @@ class Mission
 			};
 			class Waypoints
 			{
-				items=3;
+				items=2;
 				class Item0
 				{
 					position[]={3964.582,10.760252,2715.2144};
@@ -406,14 +406,6 @@ class Mission
 				class Item1
 				{
 					position[]={3976.6167,10.786886,2720.9263};
-					class Effects
-					{
-					};
-					showWP="NEVER";
-				};
-				class Item2
-				{
-					position[]={4711.6606,23.551672,4463.417};
 					class Effects
 					{
 					};
@@ -450,20 +442,12 @@ class Mission
 			};
 			class Waypoints
 			{
-				items=2;
+				items=1;
 				class Item0
 				{
 					position[]={3644.1216,19.565685,4071.1001};
 					id=59;
 					type="GETIN";
-					class Effects
-					{
-					};
-					showWP="NEVER";
-				};
-				class Item1
-				{
-					position[]={4704.1079,22.898888,4461.7832};
 					class Effects
 					{
 					};
@@ -500,7 +484,7 @@ class Mission
 			};
 			class Waypoints
 			{
-				items=3;
+				items=2;
 				class Item0
 				{
 					position[]={2887.2048,23.384483,4560.4316};
@@ -514,14 +498,6 @@ class Mission
 				class Item1
 				{
 					position[]={3620.3997,10.434266,4539.5645};
-					class Effects
-					{
-					};
-					showWP="NEVER";
-				};
-				class Item2
-				{
-					position[]={4718.6758,24.559286,4471.499};
 					class Effects
 					{
 					};
@@ -1061,7 +1037,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=4;
+		items=5;
 		class Item0
 		{
 			position[]={4862.019,37.587017,4588.394};
@@ -1071,7 +1047,7 @@ class Mission
 			activationType="GUER D";
 			interruptable=1;
 			age="UNKNOWN";
-			expActiv="0 = [(independent call allGroupsInSide), (units robberGroup)] spawn chaseRobbers;";
+			expActiv="guardChase = true;";
 			class Effects
 			{
 				soundDet="AlarmSfx";
@@ -1116,6 +1092,22 @@ class Mission
 			age="UNKNOWN";
 			expCond="policeChase && triggerActivated isLeaving && triggerActivated hasNoTail";
 			expActiv="""END1"" call BIS_fnc_endMission;";
+			class Effects
+			{
+			};
+		};
+		class Item4
+		{
+			position[]={4910.0811,35.385277,4549.2578};
+			a=0;
+			b=0;
+			timeoutMin=240;
+			timeoutMid=240;
+			timeoutMax=240;
+			interruptable=1;
+			age="UNKNOWN";
+			expCond="guardChase";
+			expActiv="policeChase = true";
 			class Effects
 			{
 			};
