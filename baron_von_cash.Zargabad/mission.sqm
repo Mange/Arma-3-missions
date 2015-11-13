@@ -1173,7 +1173,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=5;
+		items=6;
 		class Item0
 		{
 			position[]={4862.019,37.587017,4588.394};
@@ -1187,7 +1187,6 @@ class Mission
 			class Effects
 			{
 				soundDet="AlarmSfx";
-				track="LeadTrack01_F_Mark";
 			};
 		};
 		class Item1
@@ -1244,6 +1243,21 @@ class Mission
 			expActiv="policeChase = true";
 			class Effects
 			{
+			};
+		};
+		class Item5
+		{
+			position[]={4820.4609,31.247753,4540.0469};
+			a=200;
+			b=30;
+			angle=42.319038;
+			rectangular=1;
+			activationBy="EAST";
+			interruptable=1;
+			age="UNKNOWN";
+			class Effects
+			{
+				track="LeadTrack03_F_EPA";
 			};
 		};
 	};
