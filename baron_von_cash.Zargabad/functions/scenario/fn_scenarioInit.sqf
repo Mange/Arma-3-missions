@@ -45,8 +45,10 @@ _robbers = (units (group (allPlayers select 0)));
     waitUntil { sleep 2; guardChase };
 
     {
+        // TODO: Use allGroups?
         // Only execute on leaders so the same group isn't added multiple times...
         if (side _x == independent && leader _x == _x) then {
+            // TODO: Destroy existing waypoints in case of patrols.
             [group _x] call BVC_fnc_addChasers;
         };
     } forEach allUnits;

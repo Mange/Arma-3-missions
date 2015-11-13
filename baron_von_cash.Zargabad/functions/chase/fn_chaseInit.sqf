@@ -48,15 +48,15 @@ chaseGroups = param [1, [], [[]]];
             };
 
             {
-                private ["_chaser"];
-                _chaser = _x;
+                private ["_chasingGroup"];
+                _chasingGroup = _x;
 
                 // Make all chasers know about all targets
                 {
-                    _chaser reveal [_x, 4];
+                    _chasingGroup reveal [_x, 4];
                 } forEach chaseTargets;
 
-                [_x, _currentPosition] call BVC_fnc_keepChasing;
+                [_chasingGroup, _currentPosition] call BVC_fnc_keepChasing;
 
                 sleep 0.2;
             } forEach chaseGroups;

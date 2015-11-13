@@ -22,7 +22,7 @@ _this addItemToUniform "ACE_EarPlugs";
 for "_i" from 1 to 2 do {_this addItemToVest "ACE_M84";};
 _this addItemToVest "ACE_HandFlare_Red";
 for "_i" from 1 to 2 do {_this addItemToVest "Chemlight_green";};
-_this addItemToVest "SmokeShell";
+_this addItemToVest "SmokeShell"; // TODO: Shell?
 
 // Weapon and ammo
 _this addWeapon "CUP_smg_EVO";

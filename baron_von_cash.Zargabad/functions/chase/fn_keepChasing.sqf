@@ -11,9 +11,9 @@ if (_wp == 0 || count (waypoints _group) == _wp) then {
 } else {
     // Convert waypoint index into full waypoint format
     _wp = [_group, _wp];
+    _wp setWaypointPosition [_targetPosition, 0];
 };
 
-_wp setWaypointPosition [_targetPosition, 0];
 _wp setWaypointType "DESTROY";
 _wp setWaypointSpeed "FULL";
 _wp setWaypointBehaviour "COMBAT";
