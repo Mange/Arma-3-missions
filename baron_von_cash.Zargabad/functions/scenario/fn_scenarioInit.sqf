@@ -40,14 +40,24 @@ _policeObjects = [];
 _robbers = (units (group (allPlayers select 0)));
 [_robbers] call BVC_fnc_chaseInit;
 
+// Put some money in the safes
+{
+    _x addItemCargoGlobal ["CUP_item_Money", 10];
+} forEach [safe1, safe2];
+
 // Guards should chase robbers when guardChase is switched over.
 [] spawn {
+    private "_ignoreChase";
     waitUntil { sleep 2; guardChase };
+
+    _ignoreChase = [
+        moneyGuard1, moneyGuard2, moneyGuard3, moneyGuard4
+    ] call CBA_fnc_getAlive;
 
     {
         // TODO: Use allGroups?
         // Only execute on leaders so the same group isn't added multiple times...
-        if (side _x == independent && leader _x == _x) then {
+        if (side _x == independent && leader _x == _x && !(_x in _ignoreChase)) then {
             // TODO: Destroy existing waypoints in case of patrols.
             [group _x] call BVC_fnc_addChasers;
         };
