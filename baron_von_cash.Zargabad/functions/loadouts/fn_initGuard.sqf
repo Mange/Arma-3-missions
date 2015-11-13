@@ -27,9 +27,9 @@ _unit linkItem "ItemWatch";
 _unit linkItem "ItemRadio";
 
 // Weapon and ammo
-_unit addWeapon "hlc_rifle_M4";
+for "_i" from 1 to 4 do {_unit addItemToVest "RH_30Rnd_556x45_M855A1";};
+_unit addWeapon "RH_M4_ris";
 _unit addPrimaryWeaponItem "CUP_acc_Flashlight";
-for "_i" from 1 to 4 do {_unit addItemToVest "hlc_30rnd_556x45_EPR";};
 
-_unit addWeapon "RH_g17";
 for "_i" from 1 to 3 do {_unit addItemToUniform "RH_17Rnd_9x19_g17";};
+_unit addWeapon "RH_g17";
