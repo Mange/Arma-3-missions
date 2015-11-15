@@ -8,12 +8,13 @@ class Mission
 		"a3_characters_f",
 		"A3_Modules_F_GroupModifiers",
 		"HEHU_MF",
-		"mas_rus_reg_o",
-		"mas_rus_spet_veh",
 		"CUP_Weapons_AmmoBoxes",
 		"aia_misc_e_config",
 		"A3_Modules_F_Intel",
-		"ace_medical"
+		"ace_medical",
+		"CUP_Creatures_People_Military_DummyInfantrySet",
+		"CUP_WheeledVehicles_UAZ",
+		"A3_Static_F_Gamma_AA"
 	};
 	addOnsAuto[]=
 	{
@@ -21,8 +22,9 @@ class Mission
 		"a3_characters_f",
 		"A3_Modules_F_GroupModifiers",
 		"HEHU_MF",
-		"mas_rus_reg_o",
-		"mas_rus_spet_veh",
+		"CUP_Creatures_People_Military_DummyInfantrySet",
+		"CUP_WheeledVehicles_UAZ",
+		"A3_Static_F_Gamma_AA",
 		"A3_Modules_F_Intel",
 		"ace_medical",
 		"CUP_Weapons_AmmoBoxes",
@@ -320,7 +322,7 @@ class Mission
 					placement=100;
 					id=11;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.55000001;
@@ -331,7 +333,7 @@ class Mission
 					position[]={10672.724,258.36975,13156.388};
 					id=12;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -341,7 +343,7 @@ class Mission
 					position[]={10675.763,258.66534,13156.655};
 					id=13;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -351,7 +353,7 @@ class Mission
 					position[]={10678.621,258.94827,13156.923};
 					id=14;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -412,7 +414,7 @@ class Mission
 					placement=100;
 					id=15;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.55000001;
@@ -423,7 +425,7 @@ class Mission
 					position[]={10164.588,212.26512,12837.109};
 					id=16;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -433,7 +435,7 @@ class Mission
 					position[]={10167.627,212.41341,12837.377};
 					id=17;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -443,7 +445,7 @@ class Mission
 					position[]={10170.485,212.55283,12837.645};
 					id=18;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -462,7 +464,7 @@ class Mission
 					placement=100;
 					id=19;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.55000001;
@@ -473,7 +475,7 @@ class Mission
 					position[]={10434.484,209.36021,13062.237};
 					id=20;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -483,7 +485,7 @@ class Mission
 					position[]={10437.523,210.08842,13062.505};
 					id=21;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -493,7 +495,7 @@ class Mission
 					position[]={10440.382,210.77286,13062.772};
 					id=22;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -512,7 +514,7 @@ class Mission
 					placement=100;
 					id=23;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.55000001;
@@ -523,7 +525,7 @@ class Mission
 					position[]={9762.9873,186.39442,12798.991};
 					id=24;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -533,7 +535,7 @@ class Mission
 					position[]={9766.0264,186.67572,12799.259};
 					id=25;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -543,7 +545,7 @@ class Mission
 					position[]={9768.8848,186.91809,12799.526};
 					id=26;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -604,7 +606,7 @@ class Mission
 					placement=100;
 					id=27;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.55000001;
@@ -615,7 +617,7 @@ class Mission
 					position[]={9884.2734,235.01273,12445.291};
 					id=28;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -625,7 +627,7 @@ class Mission
 					position[]={9887.3125,235.10977,12445.559};
 					id=29;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -635,7 +637,7 @@ class Mission
 					position[]={9890.1709,235.18063,12445.826};
 					id=30;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -687,7 +689,7 @@ class Mission
 					placement=100;
 					id=31;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.55000001;
@@ -698,7 +700,7 @@ class Mission
 					position[]={10476.548,276.66412,12513.256};
 					id=32;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -708,7 +710,7 @@ class Mission
 					position[]={10479.587,276.64001,12513.523};
 					id=33;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -718,7 +720,7 @@ class Mission
 					position[]={10482.445,276.64001,12513.791};
 					id=34;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -737,7 +739,7 @@ class Mission
 					placement=100;
 					id=35;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.55000001;
@@ -748,7 +750,7 @@ class Mission
 					position[]={10508.264,257.17172,12813.919};
 					id=36;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -758,7 +760,7 @@ class Mission
 					position[]={10511.303,257.51367,12814.187};
 					id=37;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -768,7 +770,7 @@ class Mission
 					position[]={10514.161,257.82687,12814.454};
 					id=38;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -787,7 +789,7 @@ class Mission
 					placement=100;
 					id=39;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.55000001;
@@ -798,7 +800,7 @@ class Mission
 					position[]={10153.049,247.41011,12543.069};
 					id=40;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -808,7 +810,7 @@ class Mission
 					position[]={10156.088,247.69653,12543.337};
 					id=41;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -818,7 +820,7 @@ class Mission
 					position[]={10158.946,247.97672,12543.604};
 					id=42;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -879,7 +881,7 @@ class Mission
 					placement=100;
 					id=43;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.55000001;
@@ -890,7 +892,7 @@ class Mission
 					position[]={10278.009,241.87976,12673.103};
 					id=44;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -900,7 +902,7 @@ class Mission
 					position[]={10281.048,242.09659,12673.37};
 					id=45;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -910,7 +912,7 @@ class Mission
 					position[]={10283.906,242.31169,12673.638};
 					id=46;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -929,7 +931,7 @@ class Mission
 					placement=100;
 					id=47;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.55000001;
@@ -940,7 +942,7 @@ class Mission
 					position[]={9995.7402,221.9675,12634.41};
 					id=48;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -950,7 +952,7 @@ class Mission
 					position[]={9998.7793,222.18581,12634.678};
 					id=49;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -960,7 +962,7 @@ class Mission
 					position[]={10001.638,222.3922,12634.945};
 					id=50;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -978,7 +980,7 @@ class Mission
 					azimut=289.07523;
 					id=51;
 					side="EAST";
-					vehicle="O_mas_rus_MRAP_02_hmg_F";
+					vehicle="CUP_O_UAZ_MG_RU";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.5;
@@ -1134,7 +1136,7 @@ class Mission
 					azimut=-188.58316;
 					id=52;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.55000001;
@@ -1146,7 +1148,7 @@ class Mission
 					azimut=-188.58316;
 					id=53;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1157,7 +1159,7 @@ class Mission
 					azimut=-188.58316;
 					id=54;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1168,7 +1170,7 @@ class Mission
 					azimut=-188.58316;
 					id=55;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1221,7 +1223,7 @@ class Mission
 					azimut=-188.58316;
 					id=56;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.55000001;
@@ -1233,7 +1235,7 @@ class Mission
 					azimut=-188.58316;
 					id=57;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1244,7 +1246,7 @@ class Mission
 					azimut=-188.58316;
 					id=58;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1255,7 +1257,7 @@ class Mission
 					azimut=-188.58316;
 					id=59;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1308,7 +1310,7 @@ class Mission
 					azimut=-188.58316;
 					id=60;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.55000001;
@@ -1320,7 +1322,7 @@ class Mission
 					azimut=-188.58316;
 					id=61;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1331,7 +1333,7 @@ class Mission
 					azimut=-188.58316;
 					id=62;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1342,7 +1344,7 @@ class Mission
 					azimut=-188.58316;
 					id=63;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1404,7 +1406,7 @@ class Mission
 					azimut=-188.58316;
 					id=64;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.55000001;
@@ -1416,7 +1418,7 @@ class Mission
 					azimut=-188.58316;
 					id=65;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1427,7 +1429,7 @@ class Mission
 					azimut=-188.58316;
 					id=66;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1438,7 +1440,7 @@ class Mission
 					azimut=-188.58316;
 					id=67;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1491,7 +1493,7 @@ class Mission
 					azimut=-188.58316;
 					id=68;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.55000001;
@@ -1503,7 +1505,7 @@ class Mission
 					azimut=-188.58316;
 					id=69;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1514,7 +1516,7 @@ class Mission
 					azimut=-188.58316;
 					id=70;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1525,7 +1527,7 @@ class Mission
 					azimut=-188.58316;
 					id=71;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1545,7 +1547,7 @@ class Mission
 					azimut=-188.58316;
 					id=72;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.55000001;
@@ -1557,7 +1559,7 @@ class Mission
 					azimut=-188.58316;
 					id=73;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1568,7 +1570,7 @@ class Mission
 					azimut=-188.58316;
 					id=74;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1579,7 +1581,7 @@ class Mission
 					azimut=-188.58316;
 					id=75;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1632,7 +1634,7 @@ class Mission
 					azimut=-82.891495;
 					id=76;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.55000001;
@@ -1644,7 +1646,7 @@ class Mission
 					azimut=-82.891495;
 					id=77;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1655,7 +1657,7 @@ class Mission
 					azimut=-82.891495;
 					id=78;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1666,7 +1668,7 @@ class Mission
 					azimut=-82.891495;
 					id=79;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1717,7 +1719,7 @@ class Mission
 					azimut=-245.61119;
 					id=80;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.55000001;
@@ -1729,7 +1731,7 @@ class Mission
 					azimut=-245.61119;
 					id=81;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1740,7 +1742,7 @@ class Mission
 					azimut=-245.61119;
 					id=82;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1751,7 +1753,7 @@ class Mission
 					azimut=-245.61119;
 					id=83;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1810,7 +1812,7 @@ class Mission
 					azimut=-420.20178;
 					id=84;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.55000001;
@@ -1822,7 +1824,7 @@ class Mission
 					azimut=-420.20178;
 					id=85;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1833,7 +1835,7 @@ class Mission
 					azimut=-420.20178;
 					id=86;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1844,7 +1846,7 @@ class Mission
 					azimut=-420.20178;
 					id=87;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1895,7 +1897,7 @@ class Mission
 					azimut=-179.726;
 					id=88;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.55000001;
@@ -1907,7 +1909,7 @@ class Mission
 					azimut=-179.72623;
 					id=89;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1918,7 +1920,7 @@ class Mission
 					azimut=-179.72623;
 					id=90;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1929,7 +1931,7 @@ class Mission
 					azimut=-179.72623;
 					id=91;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -1947,7 +1949,7 @@ class Mission
 					azimut=127.10698;
 					id=92;
 					side="EAST";
-					vehicle="O_mas_rus_soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.5;
@@ -1958,9 +1960,22 @@ class Mission
 					azimut=127.10698;
 					id=93;
 					side="EAST";
-					vehicle="O_mas_rus_soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
+				};
+			};
+			class Waypoints
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10287.559,363.31168,12003.687};
+					type="GUARD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
 				};
 			};
 		};
@@ -1975,7 +1990,7 @@ class Mission
 					position[]={10257.497,363.99774,12001.498};
 					id=94;
 					side="EAST";
-					vehicle="O_mas_rus_soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.5;
@@ -1985,7 +2000,7 @@ class Mission
 					position[]={10260.497,364.51398,11996.498};
 					id=95;
 					side="EAST";
-					vehicle="O_mas_rus_soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -2056,10 +2071,23 @@ class Mission
 					azimut=-48.799927;
 					id=96;
 					side="EAST";
-					vehicle="O_mas_rus_soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.5;
+				};
+			};
+			class Waypoints
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10260.695,359.30322,12056.117};
+					type="GUARD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
 				};
 			};
 		};
@@ -2074,7 +2102,7 @@ class Mission
 					position[]={10303.094,362.10114,12078.211};
 					id=97;
 					side="EAST";
-					vehicle="O_mas_rus_soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.5;
@@ -2084,9 +2112,22 @@ class Mission
 					position[]={10306.094,362.33615,12073.211};
 					id=98;
 					side="EAST";
-					vehicle="O_mas_rus_soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
+				};
+			};
+			class Waypoints
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10304.78,362.19684,12078.769};
+					type="GUARD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
 				};
 			};
 		};
@@ -2101,7 +2142,7 @@ class Mission
 					position[]={10145.759,340.31552,12038.877};
 					id=99;
 					side="EAST";
-					vehicle="O_mas_rus_soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.5;
@@ -2111,7 +2152,7 @@ class Mission
 					position[]={10148.759,340.99808,12033.877};
 					id=100;
 					side="EAST";
-					vehicle="O_mas_rus_soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
@@ -2121,7 +2162,7 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={10164.582,339.74948,12061.82};
+					position[]={10193.303,342.86304,12069.225};
 					class Effects
 					{
 					};
@@ -2129,7 +2170,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={10161.45,341.1676,12009.571};
+					position[]={10180.304,341.70905,11992.644};
 					class Effects
 					{
 					};
@@ -2158,10 +2199,23 @@ class Mission
 					azimut=-47.808506;
 					id=101;
 					side="EAST";
-					vehicle="O_mas_rus_soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.44999999;
+				};
+			};
+			class Waypoints
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10134.135,337.35779,12047.651};
+					type="GUARD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
 				};
 			};
 		};
@@ -2177,10 +2231,23 @@ class Mission
 					azimut=-377.75769;
 					id=102;
 					side="EAST";
-					vehicle="O_mas_rus_soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.5;
+				};
+			};
+			class Waypoints
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10271.495,359.83441,12063.372};
+					type="GUARD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
 				};
 			};
 		};
@@ -2196,10 +2263,23 @@ class Mission
 					azimut=94.7603;
 					id=103;
 					side="EAST";
-					vehicle="O_mas_rus_soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.5;
+				};
+			};
+			class Waypoints
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10315.21,361.75891,12070.552};
+					type="GUARD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
 				};
 			};
 		};
@@ -2216,10 +2296,23 @@ class Mission
 					special="NONE";
 					id=104;
 					side="EAST";
-					vehicle="O_mas_rus_Soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.44999999;
+				};
+			};
+			class Waypoints
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10313.199,361.71536,12063.108};
+					type="GUARD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
 				};
 			};
 		};
@@ -2235,10 +2328,23 @@ class Mission
 					azimut=3.3968835;
 					id=105;
 					side="EAST";
-					vehicle="O_mas_rus_soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.44999999;
+				};
+			};
+			class Waypoints
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10286.363,361.80859,12069.071};
+					type="GUARD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
 				};
 			};
 		};
@@ -2254,10 +2360,23 @@ class Mission
 					azimut=-53.012348;
 					id=106;
 					side="EAST";
-					vehicle="O_mas_rus_soldier_GL_F_a";
+					vehicle="CUP_O_RU_Soldier_GL";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.5;
+				};
+			};
+			class Waypoints
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10131.846,335.57742,12054.176};
+					type="GUARD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
 				};
 			};
 		};
@@ -2274,7 +2393,7 @@ class Mission
 					special="NONE";
 					id=107;
 					side="EAST";
-					vehicle="O_mas_rus_static_AA2_F";
+					vehicle="O_static_AA_F";
 					leader=1;
 					lock="LOCKED";
 					rank="CORPORAL";
@@ -2296,7 +2415,7 @@ class Mission
 					special="NONE";
 					id=108;
 					side="EAST";
-					vehicle="O_mas_rus_static_AA2_F";
+					vehicle="O_static_AA_F";
 					leader=1;
 					lock="LOCKED";
 					rank="CORPORAL";
@@ -2317,10 +2436,23 @@ class Mission
 					azimut=-54.432373;
 					id=109;
 					side="EAST";
-					vehicle="O_mas_rus_soldier_F_a";
+					vehicle="CUP_O_RU_Soldier";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.44999999;
+				};
+			};
+			class Waypoints
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10253.151,358.92911,12046.939};
+					type="GUARD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
 				};
 			};
 		};
@@ -2671,7 +2803,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=5;
+		items=8;
 		class Item0
 		{
 			position[]={10283.754,361.76016,12061.992};
@@ -2745,6 +2877,42 @@ class Mission
 			};
 			synchronizations[]={7};
 			syncId=9;
+		};
+		class Item5
+		{
+			position[]={10287.972,362.57559,12054.057};
+			a=25;
+			b=25;
+			interruptable=1;
+			type="EAST G";
+			age="UNKNOWN";
+			class Effects
+			{
+			};
+		};
+		class Item6
+		{
+			position[]={10301.517,362.53833,12060.764};
+			a=25;
+			b=25;
+			interruptable=1;
+			type="EAST G";
+			age="UNKNOWN";
+			class Effects
+			{
+			};
+		};
+		class Item7
+		{
+			position[]={10284.49,364.95642,12036.777};
+			a=25;
+			b=25;
+			interruptable=1;
+			type="EAST G";
+			age="UNKNOWN";
+			class Effects
+			{
+			};
 		};
 	};
 };
