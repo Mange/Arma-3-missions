@@ -45,7 +45,7 @@ _robbers = [];
 
 // Put some money in the safes
 {
-    _x addItemCargoGlobal ["CUP_item_Money", 10];
+    _x addItemCargoGlobal ["CUP_item_Money", 40];
 } forEach [safe1, safe2];
 
 // Guards should chase robbers when guardChase is switched over.
@@ -89,7 +89,7 @@ _robbers = [];
     } forEach _policeObjects;
 
     // Let them enter their cars, then tell the ones in a car to chase the robbers.
-    sleep 30;
+    sleep 15;
     {
         // Only pick groups that are inside vehicles.
         if (vehicle (leader _x) != (leader _x)) then {
