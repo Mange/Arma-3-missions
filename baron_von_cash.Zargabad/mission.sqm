@@ -1167,7 +1167,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=6;
+		items=7;
 		class Item0
 		{
 			position[]={4862.019,37.587017,4588.394};
@@ -1241,9 +1241,9 @@ class Mission
 		};
 		class Item5
 		{
-			position[]={4820.4609,31.247753,4540.0469};
+			position[]={4837.8779,36.689785,4560.4424};
 			a=200;
-			b=30;
+			b=60;
 			angle=42.319;
 			rectangular=1;
 			activationBy="EAST";
@@ -1252,6 +1252,22 @@ class Mission
 			class Effects
 			{
 				track="LeadTrack03_F_EPA";
+			};
+		};
+		class Item6
+		{
+			position[]={4761.373,27.187662,4480.9604};
+			a=200;
+			b=20;
+			angle=42.095699;
+			rectangular=1;
+			activationBy="EAST";
+			interruptable=1;
+			age="UNKNOWN";
+			expCond="guardChase && this";
+			expActiv="policeChase = true";
+			class Effects
+			{
 			};
 		};
 	};
