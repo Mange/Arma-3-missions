@@ -33,7 +33,7 @@ switch(_preset) do {
         _unit forceAddUniform "TRYK_shirts_BLK_PAD_RED2";
         _unit addVest "V_BandollierB_blk";
         _unit addBackpack "B_AssaultPack_blk";
-        _unit addGoggles "MEC_shemag_black";
+        _unit addGoggles "G_Bandanna_shades";
     };
 
     case (2): {
