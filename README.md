@@ -17,6 +17,7 @@ Perform an armed robbery and escape with the money.
 * All units have custom load outs.
 * Police cars.
 * Very hard difficulty.
+* Mission-specific library functions.
 
 ### CQBuilding 1
 
@@ -37,15 +38,6 @@ CQB practice in a large maze (from `@mbg_killhouses_a3`). Full virtual armory to
 Initial mission where I started on my CQB framework.
 
 **TODO:** Port to new HEHU_CQB version.
-
-### CQBuilding plus
-
-**Type:** Training
-
-Work-in-progress version of the new *HEHU CQB* framework. Should be extracted into a proper script package when it is ready.
-
-**Interesting parts:**
-* CQB Framework
 
 ### Drip Drop
 
@@ -79,21 +71,6 @@ The original HEHU Last Breath. Stay alive in the cold Finnish winter night as th
 Defend a worthless island to your last breath.
 
 **TODO:** Make it less hard now that firing from vehicles came. You die too fast.
-
-### Pinball
-
-**Type:** Coop
-
-Kill two HVTs in a nearby town and extract with helicopter. Several teams and AI players are available.
-
-### Soi soi soi
-
-**Type:** Foolin' around
-
-> My ROFLcopter goes Soi soi soi
-> *Microsoft Sam*
-
-Throw yourself at an enemy base using infinite lives and helicopters. An experiment in respawning vehicles and other tricks.
 
 ### UPS Man
 
