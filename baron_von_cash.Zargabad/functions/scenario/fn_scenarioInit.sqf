@@ -43,6 +43,8 @@ _robbers = [];
 // Initialize chaser routine for all the robbers
 [_robbers] call BVC_fnc_chaseInit;
 
+// TODO: Put robbers in the cars. Spread them out evenly.
+
 // Put some money in the safes
 {
     _x addItemCargoGlobal ["CUP_item_Money", 40];
