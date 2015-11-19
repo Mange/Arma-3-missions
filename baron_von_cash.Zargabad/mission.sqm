@@ -14,7 +14,8 @@ class Mission
 		"CUP_WheeledVehicles_Datsun",
 		"A3_Data_F_Curator_Characters",
 		"cba_main",
-		"A3_Structures_F_Heli_Items_Luggage"
+		"A3_Structures_F_Heli_Items_Luggage",
+		"A3_Modules_F_Intel"
 	};
 	addOnsAuto[]=
 	{
@@ -25,6 +26,7 @@ class Mission
 		"a3_characters_f",
 		"cba_main",
 		"A3_Modules_F_ObjectModifiers",
+		"A3_Modules_F_Intel",
 		"A3_Structures_F_Heli_Items_Luggage",
 		"A3_Soft_F_Offroad_01",
 		"CUP_WheeledVehicles_Datsun",
@@ -51,7 +53,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=23;
+		items=27;
 		class Item0
 		{
 			side="EAST";
@@ -566,7 +568,7 @@ class Mission
 				class Item0
 				{
 					position[]={3964.582,10.760252,2715.2144};
-					id=42;
+					id=46;
 					type="GETIN";
 					class Effects
 					{
@@ -625,7 +627,7 @@ class Mission
 				class Item0
 				{
 					position[]={3644.1216,19.565685,4071.1001};
-					id=43;
+					id=47;
 					type="GETIN";
 					class Effects
 					{
@@ -676,7 +678,7 @@ class Mission
 				class Item0
 				{
 					position[]={2887.2048,23.384483,4560.4316};
-					id=44;
+					id=48;
 					type="GETIN";
 					class Effects
 					{
@@ -1008,6 +1010,238 @@ class Mission
 				};
 			};
 		};
+		class Item23
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4462.8247,17.082407,4284.4653};
+					class args
+					{
+						items=7;
+						class Item0
+						{
+							value="5";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Owner";
+						};
+						class Item1
+						{
+							value="task_1";
+							parentCls="ModuleTaskCreate_F";
+							typeName="ID";
+						};
+						class Item2
+						{
+							value="Get money";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Title";
+						};
+						class Item3
+						{
+							value="...or die trying. Money is located on the top floor of the villa.";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Description";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Marker";
+						};
+						class Item5
+						{
+							value="0";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Destination";
+						};
+						class Item6
+						{
+							value="ASSIGNED";
+							parentCls="ModuleTaskCreate_F";
+							typeName="State";
+						};
+					};
+					id=40;
+					side="LOGIC";
+					vehicle="ModuleTaskCreate_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item24
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4508.1978,17.311327,4286.4917};
+					class args
+					{
+						items=7;
+						class Item0
+						{
+							value="5";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Owner";
+						};
+						class Item1
+						{
+							value="task_2";
+							parentCls="ModuleTaskCreate_F";
+							typeName="ID";
+						};
+						class Item2
+						{
+							value="Get out of town";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Title";
+						};
+						class Item3
+						{
+							value="Escape south out of Zargabad";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Description";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Marker";
+						};
+						class Item5
+						{
+							value="0";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Destination";
+						};
+						class Item6
+						{
+							value="CREATED";
+							parentCls="ModuleTaskCreate_F";
+							typeName="State";
+						};
+					};
+					id=41;
+					side="LOGIC";
+					vehicle="ModuleTaskCreate_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item25
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4483.2451,17.089352,4333.0142};
+					class args
+					{
+						items=5;
+						class Item0
+						{
+							value="3";
+							parentCls="ModuleCreateDiaryRecord_F";
+							typeName="Owner";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="ModuleCreateDiaryRecord_F";
+							typeName="Subject";
+						};
+						class Item2
+						{
+							value="Mission";
+							parentCls="ModuleCreateDiaryRecord_F";
+							typeName="PresetTitle";
+						};
+						class Item3
+						{
+							value="";
+							parentCls="ModuleCreateDiaryRecord_F";
+							typeName="Title";
+						};
+						class Item4
+						{
+							value="Neutralize the guards arund the villa and steal as much money as possible. Then get out of Zargabad through the southern road and our contacts will meet you. Make sure to lose any tail you might have.";
+							parentCls="ModuleCreateDiaryRecord_F";
+							typeName="Description";
+						};
+					};
+					id=42;
+					side="LOGIC";
+					vehicle="ModuleCreateDiaryRecord_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item26
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4537.3398,17.459391,4330.3076};
+					class args
+					{
+						items=5;
+						class Item0
+						{
+							value="3";
+							parentCls="ModuleCreateDiaryRecord_F";
+							typeName="Owner";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="ModuleCreateDiaryRecord_F";
+							typeName="Subject";
+						};
+						class Item2
+						{
+							value="Execution";
+							parentCls="ModuleCreateDiaryRecord_F";
+							typeName="PresetTitle";
+						};
+						class Item3
+						{
+							value="";
+							parentCls="ModuleCreateDiaryRecord_F";
+							typeName="Title";
+						};
+						class Item4
+						{
+							value="Hit them fast, and hit them hard. They outnumber you and they have much better weaponry. Police response time seems to be under 4 minutes.";
+							parentCls="ModuleCreateDiaryRecord_F";
+							typeName="Description";
+						};
+					};
+					id=43;
+					side="LOGIC";
+					vehicle="ModuleCreateDiaryRecord_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
@@ -1017,7 +1251,7 @@ class Mission
 			position[]={4829.8208,37.722733,4608.4824};
 			azimut=-89.788399;
 			offsetY=4.3000002;
-			id=40;
+			id=44;
 			side="EMPTY";
 			vehicle="Land_MetalCase_01_medium_F";
 			leader=1;
@@ -1029,7 +1263,7 @@ class Mission
 			position[]={4829.7896,37.740211,4607.5195};
 			azimut=-89.788399;
 			offsetY=4.3000002;
-			id=41;
+			id=45;
 			side="EMPTY";
 			vehicle="Land_MetalCase_01_medium_F";
 			leader=1;
@@ -1040,7 +1274,7 @@ class Mission
 		{
 			position[]={3964.582,10.760252,2715.2144};
 			azimut=-301.255;
-			id=42;
+			id=46;
 			side="EMPTY";
 			vehicle="C_Offroad_01_F";
 			leader=1;
@@ -1050,7 +1284,7 @@ class Mission
 		{
 			position[]={3644.1216,19.565685,4071.1001};
 			azimut=-301.255;
-			id=43;
+			id=47;
 			side="EMPTY";
 			vehicle="C_Offroad_01_F";
 			leader=1;
@@ -1060,7 +1294,7 @@ class Mission
 		{
 			position[]={2887.2048,23.384483,4560.4316};
 			azimut=-301.255;
-			id=44;
+			id=48;
 			side="EMPTY";
 			vehicle="C_Offroad_01_F";
 			leader=1;
@@ -1070,7 +1304,7 @@ class Mission
 		{
 			position[]={4418.8604,17.256573,4223.8843};
 			azimut=-2.6602142;
-			id=45;
+			id=49;
 			side="EMPTY";
 			vehicle="C_Offroad_01_F";
 			leader=1;
@@ -1080,7 +1314,7 @@ class Mission
 		{
 			position[]={4658.7549,18.685015,4220.6387};
 			azimut=-89.602806;
-			id=46;
+			id=50;
 			side="EMPTY";
 			vehicle="C_Offroad_01_F";
 			leader=1;
@@ -1090,7 +1324,7 @@ class Mission
 		{
 			position[]={4047.9629,25.195047,3597.8699};
 			azimut=-58.800396;
-			id=47;
+			id=51;
 			side="EMPTY";
 			vehicle="C_Offroad_01_F";
 			leader=1;
@@ -1100,7 +1334,7 @@ class Mission
 		{
 			position[]={4451.0972,17.377743,4227.8574};
 			azimut=84.680717;
-			id=48;
+			id=52;
 			side="EMPTY";
 			vehicle="CUP_C_Datsun_4seat";
 			leader=1;
@@ -1111,7 +1345,7 @@ class Mission
 		{
 			position[]={3740.4106,11.800207,2764.7344};
 			azimut=-26.852289;
-			id=49;
+			id=53;
 			side="EMPTY";
 			vehicle="C_Offroad_01_F";
 			leader=1;
@@ -1122,7 +1356,7 @@ class Mission
 			presenceCondition="count (units player) > 4 || !isNil ""robber5""";
 			position[]={4438.6191,17.311369,4221.7095};
 			azimut=84.680702;
-			id=50;
+			id=54;
 			side="EMPTY";
 			vehicle="CUP_C_Datsun_4seat";
 			leader=1;
@@ -1228,9 +1462,9 @@ class Mission
 			position[]={4910.0811,35.385277,4549.2578};
 			a=0;
 			b=0;
-			timeoutMin=240;
-			timeoutMid=240;
-			timeoutMax=240;
+			timeoutMin=160;
+			timeoutMid=160;
+			timeoutMax=160;
 			interruptable=1;
 			age="UNKNOWN";
 			expCond="guardChase";
