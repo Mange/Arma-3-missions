@@ -72,6 +72,16 @@ Defend a worthless island to your last breath.
 
 **TODO:** Make it less hard now that firing from vehicles came. You die too fast.
 
+### Misty ###
+
+**Type:** Coop
+
+It looks like a normal invasion mission where you are about to clear out an airport, but you are oh so wrong.
+
+**Interesting parts:**
+* Almost no scripting.
+* Uses sound and environment effects for story/twist.
+
 ### UPS Man
 
 **Type:** Coop
