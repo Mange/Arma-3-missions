@@ -28,6 +28,7 @@ class CfgFunctions
 {
 	class BVC { // Baron von Cash
 		class scenario {
+			class playerInit {};
 			class scenarioInit {};
 			class globalHideUnit {};
 		};

@@ -7,13 +7,13 @@ Start scenario. (Executed on server.)
     4. Wait for policeChase to change to true and show the police again.
 */
 
-/* Mission state */
-policeChase = false; // Flip to true when the police should come
-guardChase = false; // Flip to true when the guards should start to chase you.
-
 private ["_policeObjects", "_robbers"];
 _policeObjects = [];
 _robbers = [];
+
+/* Mission state */
+policeChase = false; // Flip to true when the police should come
+guardChase = false; // Flip to true when the guards should start to chase you.
 
 // Initialize loadouts and hide police
 {
@@ -45,8 +45,6 @@ _robbers = [];
 
 // Initialize chaser routine for all the robbers
 [_robbers] call BVC_fnc_chaseInit;
-
-// TODO: Put robbers in the cars. Spread them out evenly.
 
 // Put some money in the safes
 {
