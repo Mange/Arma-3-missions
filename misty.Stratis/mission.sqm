@@ -970,7 +970,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3352.5247,43.681038,6737.564};
+					position[]={3335.042,44.12743,6732.9023};
 					class args
 					{
 						items=5;
@@ -1022,7 +1022,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3282.7886,37.534485,6740.2139};
+					position[]={3286.8677,41.610455,6734.3867};
 					class args
 					{
 						items=5;
@@ -1074,7 +1074,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3318.0979,42.452957,6736.6807};
+					position[]={3309.9395,42.781029,6735.5156};
 					class args
 					{
 						items=5;
@@ -1638,13 +1638,13 @@ class Mission
 		};
 		class Item5
 		{
-			position[]={3003.7659,0,6505.4258};
+			position[]={2950.9431,0,6526.7788};
+			a=100;
 			b=200;
 			rectangular=1;
 			activationBy="GUER";
 			interruptable=1;
 			age="UNKNOWN";
-			name="indforEscaped";
 			expCond="this && triggerActivated indforLeft";
 			expActiv="""END1"" call BIS_fnc_endMission";
 			class Effects
