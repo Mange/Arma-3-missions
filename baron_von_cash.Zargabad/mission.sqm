@@ -15,7 +15,9 @@ class Mission
 		"A3_Data_F_Curator_Characters",
 		"cba_main",
 		"A3_Structures_F_Heli_Items_Luggage",
-		"A3_Modules_F_Intel"
+		"A3_Modules_F_Intel",
+		"A3_Characters_F_BLUFOR",
+		"A3_Air_F_Heli_Light_01"
 	};
 	addOnsAuto[]=
 	{
@@ -27,9 +29,11 @@ class Mission
 		"cba_main",
 		"A3_Modules_F_ObjectModifiers",
 		"A3_Modules_F_Intel",
+		"A3_Characters_F_BLUFOR",
 		"A3_Structures_F_Heli_Items_Luggage",
 		"A3_Soft_F_Offroad_01",
 		"CUP_WheeledVehicles_Datsun",
+		"A3_Air_F_Heli_Light_01",
 		"aia_zargabad_config"
 	};
 	randomSeed=5678645;
@@ -53,7 +57,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=27;
+		items=30;
 		class Item0
 		{
 			side="EAST";
@@ -71,7 +75,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="robber1";
-					init="[this, 0] call bvc_fnc_initRobber; this moveInDriver car;";
+					init="[this, 0] call bvc_fnc_initRobber;";
 					description="Robber";
 					syncId=0;
 					synchronizations[]={1};
@@ -86,7 +90,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="robber2";
-					init="[this, 1] call bvc_fnc_initRobber; this moveInCargo car;";
+					init="[this, 1] call bvc_fnc_initRobber;";
 					description="Robber";
 				};
 				class Item2
@@ -99,7 +103,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="robber3";
-					init="[this, 2] call bvc_fnc_initRobber; this moveInCargo car;";
+					init="[this, 2] call bvc_fnc_initRobber;";
 					description="Robber";
 				};
 				class Item3
@@ -112,7 +116,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="robber4";
-					init="[this, 3] call bvc_fnc_initRobber; this moveInCargo car;";
+					init="[this, 3] call bvc_fnc_initRobber;";
 					description="Robber";
 				};
 				class Item4
@@ -125,7 +129,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="robber5";
-					init="[this, 4] call bvc_fnc_initRobber; if (!isNil ""car2"") then { this moveInDriver car2; };";
+					init="[this, 4] call bvc_fnc_initRobber;";
 					description="Robber";
 				};
 			};
@@ -534,8 +538,8 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={3962.8342,10.733332,2716.8628};
-					azimut=-203.123;
+					position[]={3950.0691,12.76264,2895.7974};
+					azimut=-247.22;
 					id=18;
 					side="WEST";
 					vehicle="B_G_officer_F";
@@ -545,8 +549,8 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={3961.8428,10.689359,2717.8975};
-					azimut=-203.123;
+					position[]={3948.6367,12.75974,2895.8518};
+					azimut=-247.22;
 					id=19;
 					side="WEST";
 					vehicle="B_G_officer_F";
@@ -554,8 +558,8 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={3961.2217,10.738126,2716.75};
-					azimut=-203.123;
+					position[]={3948.9895,12.742829,2894.5947};
+					azimut=-247.22;
 					id=20;
 					side="WEST";
 					vehicle="B_G_officer_F";
@@ -564,20 +568,12 @@ class Mission
 			};
 			class Waypoints
 			{
-				items=2;
+				items=1;
 				class Item0
 				{
-					position[]={3964.582,10.760252,2715.2144};
-					id=46;
+					position[]={3952.4709,12.758039,2895.8306};
+					id=54;
 					type="GETIN";
-					class Effects
-					{
-					};
-					showWP="NEVER";
-				};
-				class Item1
-				{
-					position[]={3976.6167,10.786886,2720.9263};
 					class Effects
 					{
 					};
@@ -593,7 +589,7 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={3642.3738,19.637697,4072.7485};
+					position[]={4410.6445,17.967321,4092.8091};
 					azimut=-203.123;
 					id=21;
 					side="WEST";
@@ -604,7 +600,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={3641.3823,19.637045,4073.7832};
+					position[]={4409.6528,17.96204,4093.8438};
 					azimut=-203.123;
 					id=22;
 					side="WEST";
@@ -613,7 +609,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={3642.7566,19.512123,4074.1816};
+					position[]={4411.0273,17.946095,4094.2422};
 					azimut=-203.123;
 					id=23;
 					side="WEST";
@@ -626,8 +622,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3644.1216,19.565685,4071.1001};
-					id=47;
+					position[]={4412.3921,17.968039,4091.1606};
+					id=55;
 					type="GETIN";
 					class Effects
 					{
@@ -644,7 +640,7 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={2885.457,23.407574,4562.0801};
+					position[]={3860.4192,15.472125,4381.0117};
 					azimut=-203.123;
 					id=24;
 					side="WEST";
@@ -655,7 +651,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={2883.8948,23.43572,4562.9106};
+					position[]={3858.8569,15.466146,4381.8423};
 					azimut=-203.123;
 					id=25;
 					side="WEST";
@@ -664,7 +660,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={2885.1177,23.405142,4563.2368};
+					position[]={3860.0798,15.407154,4382.1685};
 					azimut=-203.123;
 					id=26;
 					side="WEST";
@@ -674,20 +670,12 @@ class Mission
 			};
 			class Waypoints
 			{
-				items=2;
+				items=1;
 				class Item0
 				{
-					position[]={2887.2048,23.384483,4560.4316};
-					id=48;
+					position[]={3862.167,15.548679,4379.3633};
+					id=56;
 					type="GETIN";
-					class Effects
-					{
-					};
-					showWP="NEVER";
-				};
-				class Item1
-				{
-					position[]={3620.3997,10.434266,4539.5645};
 					class Effects
 					{
 					};
@@ -921,7 +909,7 @@ class Mission
 						};
 						class Item5
 						{
-							value="";
+							value="UP";
 							parentCls="ModuleMode_F";
 							typeName="Stance";
 						};
@@ -945,7 +933,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					syncId=10;
-					synchronizations[]={3,2,7,6,5,4,9,8};
+					synchronizations[]={3,2,7,6,5,4,9,8,12,11};
 				};
 			};
 		};
@@ -1176,7 +1164,7 @@ class Mission
 						};
 						class Item4
 						{
-							value="Neutralize the guards arund the villa and steal as much money as possible. Then get out of Zargabad through the southern road and our contacts will meet you. Make sure to lose any tail you might have.";
+							value="Neutralize the guards arund the villa and steal as much money as possible. Then get out of Zargabad to the south and our contacts will meet you.";
 							parentCls="ModuleCreateDiaryRecord_F";
 							typeName="Description";
 						};
@@ -1228,7 +1216,7 @@ class Mission
 						};
 						class Item4
 						{
-							value="Hit them fast, and hit them hard. They outnumber you and they have much better weaponry. Police response time seems to be under 4 minutes.";
+							value="Hit them fast, and hit them hard. They outnumber you and they have much better weaponry. Police response time is estimated to be around 2 minutes.";
 							parentCls="ModuleCreateDiaryRecord_F";
 							typeName="Description";
 						};
@@ -1242,16 +1230,120 @@ class Mission
 				};
 			};
 		};
+		class Item27
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=6;
+				class Item0
+				{
+					position[]={2073.6538,38.559723,4665.5986};
+					id=44;
+					side="WEST";
+					vehicle="B_Helipilot_F";
+					leader=1;
+					skill=0.60000002;
+					init="this moveInDriver policeChopper";
+				};
+				class Item1
+				{
+					position[]={2063.2173,38.536087,4663.7305};
+					id=45;
+					side="WEST";
+					vehicle="B_helicrew_F";
+					skill=0.60000002;
+					init="this moveInTurret [policeChopper, [0]]";
+				};
+				class Item2
+				{
+					position[]={2070.3359,38.603466,4670.1191};
+					id=46;
+					side="WEST";
+					vehicle="B_officer_F";
+					skill=0.60000002;
+					init="this moveInTurret [policeChopper, [2]]";
+				};
+				class Item3
+				{
+					position[]={2068.707,38.599777,4670.5415};
+					id=47;
+					side="WEST";
+					vehicle="B_officer_F";
+					skill=0.60000002;
+					init="this moveInTurret [policeChopper, [1]]";
+				};
+				class Item4
+				{
+					position[]={2073.835,38.629639,4670.9639};
+					id=48;
+					side="WEST";
+					vehicle="B_officer_F";
+					skill=0.60000002;
+					init="this moveInTurret [policeChopper, [4]]";
+				};
+				class Item5
+				{
+					position[]={2071.9045,38.619446,4670.6616};
+					id=49;
+					side="WEST";
+					vehicle="B_officer_F";
+					skill=0.60000002;
+					init="this moveInTurret [policeChopper, [3]]";
+				};
+			};
+		};
+		class Item28
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4907.1294,17.464088,2935.0554};
+					azimut=-370.56689;
+					id=50;
+					side="WEST";
+					vehicle="B_G_officer_F";
+					leader=1;
+					skill=0.60000002;
+					syncId=11;
+					synchronizations[]={10};
+				};
+			};
+		};
+		class Item29
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4899.1152,16.795208,2934.9648};
+					azimut=-366.67639;
+					special="NONE";
+					id=51;
+					side="WEST";
+					vehicle="B_G_officer_F";
+					leader=1;
+					skill=0.60000002;
+					syncId=12;
+					synchronizations[]={10};
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
-		items=11;
+		items=13;
 		class Item0
 		{
 			position[]={4829.8208,37.722733,4608.4824};
 			azimut=-89.788399;
 			offsetY=4.3000002;
-			id=44;
+			id=52;
 			side="EMPTY";
 			vehicle="Land_MetalCase_01_medium_F";
 			leader=1;
@@ -1263,7 +1355,7 @@ class Mission
 			position[]={4829.7896,37.740211,4607.5195};
 			azimut=-89.788399;
 			offsetY=4.3000002;
-			id=45;
+			id=53;
 			side="EMPTY";
 			vehicle="Land_MetalCase_01_medium_F";
 			leader=1;
@@ -1272,9 +1364,9 @@ class Mission
 		};
 		class Item2
 		{
-			position[]={3964.582,10.760252,2715.2144};
-			azimut=-301.255;
-			id=46;
+			position[]={3952.4709,12.758039,2895.8306};
+			azimut=-345.35199;
+			id=54;
 			side="EMPTY";
 			vehicle="C_Offroad_01_F";
 			leader=1;
@@ -1282,9 +1374,9 @@ class Mission
 		};
 		class Item3
 		{
-			position[]={3644.1216,19.565685,4071.1001};
+			position[]={4412.3921,17.968039,4091.1606};
 			azimut=-301.255;
-			id=47;
+			id=55;
 			side="EMPTY";
 			vehicle="C_Offroad_01_F";
 			leader=1;
@@ -1292,9 +1384,9 @@ class Mission
 		};
 		class Item4
 		{
-			position[]={2887.2048,23.384483,4560.4316};
+			position[]={3862.167,15.548679,4379.3633};
 			azimut=-301.255;
-			id=48;
+			id=56;
 			side="EMPTY";
 			vehicle="C_Offroad_01_F";
 			leader=1;
@@ -1304,7 +1396,7 @@ class Mission
 		{
 			position[]={4418.8604,17.256573,4223.8843};
 			azimut=-2.6602142;
-			id=49;
+			id=57;
 			side="EMPTY";
 			vehicle="C_Offroad_01_F";
 			leader=1;
@@ -1314,7 +1406,7 @@ class Mission
 		{
 			position[]={4658.7549,18.685015,4220.6387};
 			azimut=-89.602806;
-			id=50;
+			id=58;
 			side="EMPTY";
 			vehicle="C_Offroad_01_F";
 			leader=1;
@@ -1324,7 +1416,7 @@ class Mission
 		{
 			position[]={4047.9629,25.195047,3597.8699};
 			azimut=-58.800396;
-			id=51;
+			id=59;
 			side="EMPTY";
 			vehicle="C_Offroad_01_F";
 			leader=1;
@@ -1333,19 +1425,19 @@ class Mission
 		class Item8
 		{
 			position[]={4451.0972,17.377743,4227.8574};
-			azimut=84.680717;
-			id=52;
+			azimut=84.680702;
+			id=60;
 			side="EMPTY";
 			vehicle="CUP_C_Datsun_4seat";
 			leader=1;
 			skill=0.60000002;
-			text="car";
+			text="car1";
 		};
 		class Item9
 		{
 			position[]={3740.4106,11.800207,2764.7344};
 			azimut=-26.852289;
-			id=53;
+			id=61;
 			side="EMPTY";
 			vehicle="C_Offroad_01_F";
 			leader=1;
@@ -1353,23 +1445,42 @@ class Mission
 		};
 		class Item10
 		{
-			presenceCondition="count (units player) > 4 || !isNil ""robber5""";
 			position[]={4438.6191,17.311369,4221.7095};
 			azimut=84.680702;
-			id=54;
+			id=62;
 			side="EMPTY";
 			vehicle="CUP_C_Datsun_4seat";
 			leader=1;
 			skill=0.60000002;
 			text="car2";
 		};
+		class Item11
+		{
+			position[]={2066.0991,38.560707,4667.1699};
+			azimut=166.44843;
+			id=63;
+			side="EMPTY";
+			vehicle="B_Heli_Light_01_F";
+			skill=0.60000002;
+			text="policeChopper";
+		};
+		class Item12
+		{
+			position[]={4903.2197,17.115896,2936.4775};
+			azimut=-93.658478;
+			id=64;
+			side="EMPTY";
+			vehicle="C_Offroad_01_F";
+			leader=1;
+			skill=0.60000002;
+		};
 	};
 	class Markers
 	{
-		items=4;
+		items=5;
 		class Item0
 		{
-			position[]={3231.1448,6.4948411,2412.2827};
+			position[]={3224.8062,5.6723704,2395.3955};
 			name="m1";
 			text="Escape route";
 			type="mil_arrow2";
@@ -1398,10 +1509,19 @@ class Mission
 			name="marker_villa";
 			type="Empty";
 		};
+		class Item4
+		{
+			position[]={5098.8789,28.146446,2355.2896};
+			name="m1_1";
+			text="Escape route";
+			type="mil_arrow2";
+			colorName="ColorGreen";
+			angle=-184.2439;
+		};
 	};
 	class Sensors
 	{
-		items=7;
+		items=5;
 		class Item0
 		{
 			position[]={4862.019,37.587017,4588.394};
@@ -1419,45 +1539,19 @@ class Mission
 		};
 		class Item1
 		{
-			position[]={3243.645,9.6934776,2463.6338};
+			position[]={4185.9146,10.739975,2373.2998};
+			a=1500;
+			angle=360.97708;
+			rectangular=1;
 			activationBy="EAST";
 			interruptable=1;
 			age="UNKNOWN";
-			name="isLeaving";
-			expCond="this && policeChase";
-			class Effects
-			{
-			};
-		};
-		class Item2
-		{
-			position[]={3301.6301,12.529013,2539.9385};
-			a=100;
-			b=100;
-			activationBy="WEST";
-			activationType="NOT PRESENT";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			name="hasNoTail";
-			class Effects
-			{
-			};
-		};
-		class Item3
-		{
-			position[]={3328.6472,5.608036,2431.4126};
-			a=0;
-			b=0;
-			interruptable=1;
-			age="UNKNOWN";
-			expCond="triggerActivated isLeaving && triggerActivated hasNoTail";
 			expActiv="""END1"" call BIS_fnc_endMission;";
 			class Effects
 			{
 			};
 		};
-		class Item4
+		class Item2
 		{
 			position[]={4910.0811,35.385277,4549.2578};
 			a=0;
@@ -1473,7 +1567,7 @@ class Mission
 			{
 			};
 		};
-		class Item5
+		class Item3
 		{
 			position[]={4837.8779,36.689785,4560.4424};
 			a=200;
@@ -1488,7 +1582,7 @@ class Mission
 				track="LeadTrack03_F_EPA";
 			};
 		};
-		class Item6
+		class Item4
 		{
 			position[]={4761.373,27.187662,4480.9604};
 			a=200;

@@ -19,7 +19,10 @@ _robbers = [];
 {
     switch (side _x) do {
         case (Blufor): {
-            _x call BVC_fnc_initPolice;
+            // Only give "Officer" units police outfits. Pilots keep their gear as-is.
+            if (_x isKindOf "B_officer_F") then {
+                _x call BVC_fnc_initPolice;
+            };
             [_x, true] call BVC_fnc_globalHideUnit;
             _policeObjects pushBack _x;
         };
