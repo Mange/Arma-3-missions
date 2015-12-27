@@ -58,6 +58,17 @@ CQB in a medium-sized town. Random enemy patrols, and two cars driving around. P
 * Weapons and equipment tied to the location.
 * No radios for the players, so they need to rely on fuzzy GPS tracking to find each other.
 
+### ...if you can
+
+A recreation of the *Kill the Traitor* community mission. One soldier locked inside a room full of civilians. Some of the civilians are the other players. In the middle of the room, there is a gun. It's up to the players to try to kill the soldier, and the solider's job is to find the players among the civilians.
+
+**Still a work in progress.**
+
+**Interesting parts:**
+* Randomized faces and voices of players.
+* Care is taken to make sure everything is randomized and anonymized.
+* Everything kept vanilla. No mods required.
+
 ### Knock, Knock
 
 **Type:** Last Breath

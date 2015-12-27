@@ -1,0 +1,17 @@
+respawn = "BIRD";
+respawnTemplates[] = {"Spectator","EndMission"};
+
+enableDebugConsole = 0;
+
+disabledAI = 0;
+joinUnassigned = 1;
+saving = 0;
+
+author = "Mange & Ghost";
+onLoadName = "If you can";
+onLoadMission = "Catch the hidden players.";
+
+class Header
+{
+	gameType = TDM;
+};
