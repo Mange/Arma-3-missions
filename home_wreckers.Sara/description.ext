@@ -1,0 +1,39 @@
+respawn = "BIRD";
+respawnTemplates[] = {"Spectator","EndMission"};
+
+enableDebugConsole = 1;
+
+disabledAI = 1;
+joinUnassigned = 0;
+saving = 0;
+
+author = "Mange & Xerita";
+onLoadName = "Home-wreckers";
+onLoadMission = "Kill all the invaders of your town.";
+
+class Header
+{
+	gameType = Coop;
+	minPlayers = 1;
+	maxPlayers = 6;
+};
+
+class CfgFunctions
+{
+    class HW { // Home Wreckers
+        class scenario {
+            class initPlayer {};
+        };
+    };
+};
+
+class CfgRemoteExec
+{
+    class Functions
+    {
+        mode = 1;
+        jip = 0;
+
+        class HW_fnc_initPlayer {allowedTargets = 0;};
+    };
+};

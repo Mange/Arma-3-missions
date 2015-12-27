@@ -49,8 +49,14 @@ CSAT invades a few areas of Altis using helicopter transport/CAS. Don't take too
 * Rearming script.
 * Properly formatted EOS config.
 
+### Home-wreckers
+
+CQB in a medium-sized town. Random enemy patrols, and two cars driving around. Players start at random, but fixed, spawn points with no radios. They need to find each other and clear out the town.
+
 **Interesting parts:**
-* A lot of placed decorative objects.
+* Random "spawns" from a list of spawn points.
+* Weapons and equipment tied to the location.
+* No radios for the players, so they need to rely on fuzzy GPS tracking to find each other.
 
 ### Knock, Knock
 
