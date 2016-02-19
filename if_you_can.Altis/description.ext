@@ -15,3 +15,36 @@ class Header
 {
 	gameType = TDM;
 };
+
+class CfgDebriefing
+{
+	class End1 // NATO won
+	{
+		title = "Mission Completed";
+		subtitle = "Fuck those guys";
+		description = "You found them all, you are a true champ!";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class End2 // Civilians won
+	{
+		title = "Mission Completed";
+		subtitle = "You are free!";
+		description = "You managed to end your oppressor with a bullet to the face.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class loser
+	{
+		title = "Fail";
+		subtitle = "You had one thing to do. One thing.";
+		description = "You died before you did the only thing you had to do.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.6,0.1,0.2,1};
+	};
+};

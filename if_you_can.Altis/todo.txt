@@ -1,22 +1,23 @@
 Saker jag inte gillar med Kill The Traitor:
-    3. Alla står still
-        * Slumpade waypoints
     4. Det finns ingen tidsgräns / motivation att göra något som civil
         * ....
     5. Endast ett sätt att vinna på
         * Flera vapen
         * addAction på soldaten
-    6. No win condition
-        * Trigger / Script
     8. Ett enda vapen / kluster / jag stirrar på vapnet och är oövervinnelig
         * Flera vapen
-    9. WHERE THE FUCK IS THE GUN?
-        * Waypoint
+    10. Someone moved the gun. Where is it?
 
 Fixed
     1. FACES => script setFace
     7. RESUME => saving = 0
     2. Radio => Confa TFAR
+    6. No win condition
+        * Trigger / Script
+    9. WHERE THE FUCK IS THE GUN?
+        * Waypoint
+    3. Alla står still
+        * Slumpade waypoints
 
 Wishlist?
     1. Params
@@ -26,7 +27,6 @@ Wishlist?
         * Blind for x seconds? (where x = x^0.7n, where n = dead civilians)
         * Take damage (kill player restores health)
         * Everyone is teleported to random position
-
 
 HARD MODE LOL
     * Every civ has a gun, but no ammo
