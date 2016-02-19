@@ -22,10 +22,13 @@ speakers = (
 
         if (side _unit == civilian && _unit isKindOf "Man") then {
             _unit setPos ([playArea] call BIS_fnc_randomPosTrigger);
-
-            _unit setFace (faces call BIS_fnc_selectRandom);
-            _unit setSpeaker (speakers call BIS_fnc_selectRandom);
             _unit addMagazines ["30Rnd_9x21_Mag", 1];
+
+            [
+              _unit,
+              (faces call BIS_fnc_selectRandom),
+              (speakers call BIS_fnc_selectRandom)
+            ] remoteExec ["BIS_fnc_setIdentity", 0, true];
         };
 
         if (!isPlayer _unit) then {

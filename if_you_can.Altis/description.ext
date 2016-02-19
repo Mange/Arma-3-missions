@@ -11,6 +11,14 @@ author = "Mange & Ghost";
 onLoadName = "If you can";
 onLoadMission = "Catch the hidden players.";
 
+class CfgRemoteExec
+{
+	class Functions
+	{
+		class BIS_fnc_setIdentity { allowedTargets = 0; jip = 1; }
+	};
+};
+
 class Header
 {
 	gameType = TDM;
