@@ -11,6 +11,28 @@ speakers = (
   "getNumber (_x >> 'scope') == 2" configClasses (configFile >> "CfgVoice")
 ) apply { configName _x } select { _x != "NoVoice" };
 
+civilianUniforms = (
+  // Select all available uniforms
+  "((configName _x) isKindOf ['Uniform_Base', configFile >> 'CfgWeapons'])" configClasses (configFile >> "CfgWeapons")
+) select {
+  // ...that does not require a DLC
+  getText (_x >> "DLC") == '' &&
+    // ...and is available
+    getNumber (_x >> "scope") > 0
+} select {
+  // In order to detect which uniforms are used by civilians, we need to access a config on
+  // it and then cross-reference the side of the that config.
+  private _uniformClass = getText (_x >> "ItemInfo" >> "uniformClass");
+  private _sides = getArray (configFile >> "CfgVehicles" >> _uniformClass >> "modelSides");
+  // _sides == [3]; 3 is civilians
+  3 in _sides && count _sides == 1
+} apply {
+  configName _x
+} select {
+  // Filter out the VR characters
+  _x find "VR" < 0
+};
+
 {
     private ["_unit", "_direction"];
     _unit = _x;
@@ -22,6 +44,7 @@ speakers = (
 
         if (side _unit == civilian && _unit isKindOf "Man") then {
             _unit setPos ([playArea] call BIS_fnc_randomPosTrigger);
+            _unit addUniform (civilianUniforms call BIS_fnc_selectRandom);
             _unit addMagazines ["30Rnd_9x21_Mag", 1];
 
             [
