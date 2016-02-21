@@ -160,7 +160,7 @@ if (hasInterface) then {
 
   waitUntil { time > 10 };
   [] spawn {
-    private ["_loop", "_civilians", "_soldiers", "_natoWinCondition", "_civilianWinCondition"];
+    private ["_loop", "_civilians", "_soldiers", "_side", "_natoWinCondition", "_civilianWinCondition"];
     _loop = true;
     _civilians = [];
     _soldiers = [];
@@ -171,7 +171,10 @@ if (hasInterface) then {
       } else {
         _civilians pushBack _x;
       };
-    } forEach allPlayers;
+    } forEach (call BIS_fnc_listPlayers);
+
+    // By the time we need to check the player's side, they will be a spectator and will not have a side.
+    _side = side player;
 
     // Real conditions
     if (isMultiplayer) then {
@@ -185,7 +188,7 @@ if (hasInterface) then {
 
     while { _loop } do {
       if ([] call _civilianWinCondition) then {
-        if (side player == west) then {
+        if (_side == west) then {
           ["loser", false, true] call BIS_fnc_endMission;
         } else {
           ["end2", true, true] call BIS_fnc_endMission;
@@ -193,7 +196,7 @@ if (hasInterface) then {
         _loop = false;
       } else {
         if ([] call _natoWinCondition) then {
-          if (side player == west) then {
+          if (_side == west) then {
             ["end1", true, true] call BIS_fnc_endMission;
           } else {
             ["loser", false, true] call BIS_fnc_endMission;
