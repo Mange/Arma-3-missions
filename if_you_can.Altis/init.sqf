@@ -57,8 +57,11 @@ civilianUniforms = (
         if (!isPlayer _unit) then {
           private ["_totalWps", "_wpIndex", "_wpPos", "_wp"];
 
-          _wp = (group _unit) addWaypoint [getPos _unit, 2];
+          _wp = (group _unit) addWaypoint [getPos _unit, 0];
           _wp setWaypointTimeout [5, 50, 120];
+          _wp setWaypointCompletionRadius 5;
+          _wp setWaypointBehaviour "SAFE";
+          _wp setWaypointSpeed "LIMITED";
 
           _totalWps = [2, 7] call BIS_fnc_randomInt;
           for "_wpIndex" from 0 to _totalWps-1 do {
@@ -67,9 +70,10 @@ civilianUniforms = (
             } else {
               _wpPos = [closeToGun] call BIS_fnc_randomPosTrigger;
             };
-            _wp = (group _unit) addWaypoint [_wpPos, 1];
+            _wp = (group _unit) addWaypoint [_wpPos, 0];
             _wp setWaypointBehaviour "SAFE";
             _wp setWaypointSpeed "LIMITED";
+            _wp setWaypointCompletionRadius 1;
             switch ([1, 6] call BIS_fnc_randomInt) do {
               case (1): {
                 // No timeout.
@@ -89,7 +93,13 @@ civilianUniforms = (
 } forEach allUnits;
 
 if (hasInterface) then {
-  waitUntil { time > 5 };
+  if (side player == west) then {
+    titleText ["Find and kill the hidden players", "BLACK IN", 100];
+    sleep 5;
+    titleText ["Find and kill the hidden players", "BLACK IN", 1];
+  };
+
+  waitUntil { time > 10 };
 
   [] spawn {
     private ["_loop", "_civilians", "_soldiers", "_natoWinCondition", "_civilianWinCondition"];
