@@ -1,0 +1,1 @@
+civilianUniforms call BIS_fnc_selectRandom
