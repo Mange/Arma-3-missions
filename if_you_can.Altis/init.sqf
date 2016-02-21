@@ -33,6 +33,50 @@ civilianUniforms = (
   _x find "VR" < 0
 };
 
+poisonCooldownSeconds = 30;
+lastPoisonTry = 0;
+
+fn_tryPoison = {
+  params ["_target"];
+  private ["_timeLeft"];
+
+  _timeLeft = (lastPoisonTry + poisonCooldownSeconds) - time;
+  if (_timeLeft <= 0) then {
+    [_target] call fn_poisonApply;
+  } else {
+    hint format ["You need to wait %1 more seconds before you can poison again!", round _timeLeft];
+  };
+};
+
+fn_poisonApply = {
+  private ["_succeeded"];
+  params ["_target"];
+  lastPoisonTry = time;
+  hintSilent format ["Stand close to %1 to poison them!", name _target];
+
+  sleep 2;
+  _succeeded = (player distance _target <= 2);
+
+  if (_succeeded) then {
+    hint parseText format ["<t color='#ff0000'>You have poisoned %1!</t>", name _target];
+  } else {
+    hint parseText "<t color='#3333ff'>Poisoning failed!</t>";
+  };
+  [_target, player, _succeeded] remoteExec ["fn_poison", _target];
+};
+
+fn_poison = {
+  params ["_unit", "_poisoner", "_succeeded"];
+
+  sleep random [2, 5, 10];
+  if (_succeeded) then {
+    _unit setDamage (getDammage _unit) + 0.25; // TODO: Param for poison strength
+    hint parseText format ["<t color='#ff0000'>%1 poisoned you.</t>", name _poisoner];
+  } else {
+    hint parseText format ["<t color='#3333ff'>%1 tried to poison you.</t>", name _poisoner];
+  };
+};
+
 {
     private ["_unit", "_direction"];
     _unit = _x;
@@ -99,8 +143,22 @@ if (hasInterface) then {
     titleText ["Find and kill the hidden players", "BLACK IN", 1];
   };
 
-  waitUntil { time > 10 };
+  if (side player == civilian) then {
+    soldier1 addAction [
+      "<t color='#00ff00'>Poison soldier</t>", // Text
+      {
+        [soldier1] call fn_tryPoison;
+      }, // Code
+      [], // Arguments to code
+      10, // Priority
+      true, // Show text on screen
+      true, // Hide action menu when used
+      "compass", // Enable using keybind
+      "player distance soldier1 < 2"
+    ];
+  };
 
+  waitUntil { time > 10 };
   [] spawn {
     private ["_loop", "_civilians", "_soldiers", "_natoWinCondition", "_civilianWinCondition"];
     _loop = true;
