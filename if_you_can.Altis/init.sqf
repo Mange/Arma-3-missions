@@ -25,7 +25,7 @@ civilianUniforms = (
   private _uniformClass = getText (_x >> "ItemInfo" >> "uniformClass");
   private _sides = getArray (configFile >> "CfgVehicles" >> _uniformClass >> "modelSides");
   // _sides == [3]; 3 is civilians
-  3 in _sides && count _sides == 1
+  count _sides == 1 && 3 in _sides
 } apply {
   configName _x
 } select {
@@ -56,6 +56,10 @@ civilianUniforms = (
 
         if (!isPlayer _unit) then {
           private ["_totalWps", "_wpIndex", "_wpPos", "_wp"];
+
+          _wp = (group _unit) addWaypoint [getPos _unit, 2];
+          _wp setWaypointTimeout [5, 50, 120];
+
           _totalWps = [2, 7] call BIS_fnc_randomInt;
           for "_wpIndex" from 0 to _totalWps-1 do {
             if (random 1 < 0.7) then {
@@ -71,10 +75,10 @@ civilianUniforms = (
                 // No timeout.
               };
               case (2): {
-                _wp setWaypointTimeout [30, 50, 70];
+                _wp setWaypointTimeout [5, 20, 50];
               };
               default {
-                _wp setWaypointTimeout [5, 10, 20];
+                _wp setWaypointTimeout [30, 70, 120];
               };
             };
           };
@@ -107,7 +111,7 @@ if (hasInterface) then {
       _civilianWinCondition = { ({alive _x} count _soldiers) < 1 };
     } else {
       // For editor preview
-      _natoWinCondition = { count allDead > 1 && (allDead select 0) != soldier1 };
+      _natoWinCondition = { count allDead >= 2 && (allDead select 0) != soldier1 };
       _civilianWinCondition = { count allDead > 0 && (allDead select 0) == soldier1 };
     };
 
