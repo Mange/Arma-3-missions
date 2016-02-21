@@ -15,7 +15,12 @@ allUnits apply {
         };
 
         if (!isPlayer _unit) then {
-          _unit call IYC_fnc_npcInit;
+          if (side _unit == west) then {
+            // If the soldier is AI, remove it from the game.
+            deleteVehicle _unit;
+          } else {
+            _unit call IYC_fnc_npcInit;
+          };
         };
     };
 };
