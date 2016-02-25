@@ -23,8 +23,8 @@
     _civilianWinCondition = { ({alive _x} count _soldiers) < 1 };
   } else {
     // For editor preview
-    _natoWinCondition = { count allDead >= 2 && (allDead select 0) != soldier1 };
-    _civilianWinCondition = { count allDead > 0 && (allDead select 0) == soldier1 };
+    _natoWinCondition = { count allDead >= 2 && side (allDead select 0) != west };
+    _civilianWinCondition = { count allDead > 0 && side (allDead select 0) == west };
   };
 
   while { _loop } do {
