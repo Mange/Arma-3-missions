@@ -52,6 +52,7 @@ class CfgFunctions
 			class assassinInit {};
 			class npcInit {};
 			class initVictoryConditions {};
+			class initEventHandlers {};
 		};
 
 		class unit {
