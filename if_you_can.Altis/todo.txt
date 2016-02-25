@@ -1,32 +1,30 @@
-Saker jag inte gillar med Kill The Traitor:
-    4. Det finns ingen tidsgräns / motivation att göra något som civil
-        * ....
-    5. Endast ett sätt att vinna på
-        * Flera vapen
-        * addAction på soldaten
-    8. Ett enda vapen / kluster / jag stirrar på vapnet och är oövervinnelig
-        * Flera vapen
-    10. Someone moved the gun. Where is it?
+----------------- PLAY TEST 1 ----------------
 
-Fixed
-    1. FACES => script setFace
-    7. RESUME => saving = 0
-    2. Radio => Confa TFAR
-    6. No win condition
-        * Trigger / Script
-    9. WHERE THE FUCK IS THE GUN?
-        * Waypoint
-    3. Alla står still
-        * Slumpade waypoints
+1. Klumpas i mitten (DONE)
+2. Poison should fail when killed (DONE)
+3. You can grab the gun as a soldier
+  How to detect this? Gear event, I think.
+4. Second soldier cannot be poisoned (DONE)
+5. Player headgear is still present. (DONE)
+
+Ideer:
+  * Kill NPCs randomly (pro soldier)
+  * Random location for gun (maybe parameter?)
+  * Broadcast poisons to other assassins (DONE!)
+
+----------------------------------------------
 
 Wishlist?
     1. Params
-    2. Civilian addAction > Random civilian moves
-        * Ammo count / cooldown
-    3. Punish for shooting civ
-        * Blind for x seconds? (where x = x^0.7n, where n = dead civilians)
-        * Take damage (kill player restores health)
-        * Everyone is teleported to random position
+      * Waypoints?
+      * Slow or fast waypoints?
+      * Poison potency
+    5. JIP support
+      * _civilians and _soldiers will be incorrect when joining late gate as some of them will be "ENEMY" side.
+      * No poison action
+    6. Spectator roles
+    7. Icon on poison action
+    8. 3D Icon on dead players
 
 HARD MODE LOL
     * Every civ has a gun, but no ammo
