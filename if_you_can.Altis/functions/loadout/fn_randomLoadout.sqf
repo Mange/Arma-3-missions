@@ -7,3 +7,4 @@ params ["_unit"];
 ] remoteExec ["BIS_fnc_setIdentity", 0, true];
 
 _unit addUniform (call IYC_fnc_randomUniform);
+removeGoggles _unit;
