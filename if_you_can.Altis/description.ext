@@ -3,6 +3,9 @@ class CfgRemoteExec
 	class Functions
 	{
 		class BIS_fnc_setIdentity { allowedTargets = 0; jip = 1; }
+
+		class IYC_fnc_poisonTarget { allowedTargets = 0; jip = 0; }
+		class IYC_fnc_broadcastPoisoning { allowedTargets = 0; jip = 0; }
 	};
 };
 
@@ -69,6 +72,7 @@ class CfgFunctions
 			class poisonWithCooldown {};
 			class poisonTarget {};
 			class receivePoison {};
+			class broadcastPoisoning {};
 		};
 	};
 };
