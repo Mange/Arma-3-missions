@@ -32,6 +32,7 @@ for "_wpIndex" from 0 to _totalWps-1 do {
       _wp setWaypointTimeout [30, 70, 120];
     };
   };
+};
 
 _wp = (group _unit) addWaypoint [getPos _unit, 0];
 _wp setWaypointType "CYCLE";

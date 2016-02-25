@@ -1,6 +1,5 @@
 // TODO: Make this work without a hardcoded soldier name.
 
-hint "Assassin!";
 soldier1 addAction [
   "<t color='#00ff00'>Poison soldier</t>", // Text
   {
