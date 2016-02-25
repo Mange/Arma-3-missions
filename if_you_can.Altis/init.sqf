@@ -16,6 +16,7 @@ poisonDistance = 2.2; // Distance that poison can be given.
 poisonDamage = 0.25; // TODO: Parameter for this
 poisonApplicationTime = 1.2; // Seconds to apply poison for it to succeed.
 
+weaponClass = "hgun_PDW2000_F";
 weaponAmmo = "30Rnd_9x21_Mag"; // Ammo that works with the weapon on the ground
 
 call IYC_fnc_scenarioInit;

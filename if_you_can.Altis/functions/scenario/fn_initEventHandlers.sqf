@@ -11,3 +11,22 @@ player addEventHandler ["HandleRating", {
     _rating
   };
 }];
+
+// Easter egg. If a soldier picks up the gun, every civilian will get their own
+// gun and the soldier will become an enemy of all of them.
+if (side player == west) then {
+  player addEventHandler ["Take", {
+    private _soldier = _this select 0;
+    private _item = _this select 2;
+    if (_item == weaponClass) then {
+      // All hell breaks loose
+      allUnits select { side _x == civilian } apply {
+        if (primaryWeapon _x == "") then {
+          _x addWeaponGlobal weaponClass;
+        };
+      };
+
+      _soldier addRating -10000;
+    };
+  }];
+};

@@ -28,8 +28,6 @@ allUnits apply {
 };
 
 if (hasInterface) then {
-  call IYC_fnc_initEventHandlers;
-
   // Wait for scenario to start, or the side will not be the actual side in the
   // editor preview.
   waitUntil { time > 0 };
@@ -43,4 +41,5 @@ if (hasInterface) then {
   };
 
   call IYC_fnc_initVictoryConditions;
+  call IYC_fnc_initEventHandlers;
 };
