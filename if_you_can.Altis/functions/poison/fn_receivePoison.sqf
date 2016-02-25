@@ -1,6 +1,6 @@
-params ["_unit", "_poisoner", "_succeeded"];
+params ["_unit", "_poisoner", "_succeeded", "_delay"];
 
-sleep random [2, 5, 10];
+sleep _delay;
 if (_succeeded) then {
   _unit setDamage (getDammage _unit) + poisonDamage;
   hint parseText format ["<t color='#ff0000'>%1 poisoned you.</t>", name _poisoner];
