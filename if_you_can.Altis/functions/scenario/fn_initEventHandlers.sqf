@@ -12,9 +12,22 @@ player addEventHandler ["HandleRating", {
   };
 }];
 
-// Easter egg. If a soldier picks up the gun, every civilian will get their own
-// gun and the soldier will become an enemy of all of them.
 if (side player == west) then {
+  addMissionEventHandler ["EntityKilled", {
+    private _victim = _this select 0;
+    private _killer = _this select 1;
+
+    if (_killer != _victim && _killer == player && side group _victim == civilian) then {
+      if (isPlayer _victim) then {
+        _killer setDamage 0;
+      } else {
+        _killer setDamage ((getDammage _killer) + murderDamage);
+      };
+    };
+  }];
+
+  // Easter egg. If a soldier picks up the gun, every civilian will get their
+  // own gun and the soldier will become an enemy of all of them.
   player addEventHandler ["Take", {
     private _soldier = _this select 0;
     private _item = _this select 2;
