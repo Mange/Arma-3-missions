@@ -6,9 +6,17 @@ Ideer:
 
 ------------------ PLAY TEST 2 ---------------
 
-* Can poison dead soldiers
+* Can poison dead soldiers.
   * Remove action when soldier is killed.
-* JIP resets weaponContainers
+* JIP resets weaponContainers.
+* Give SMGs (rifles) to soldiers.
+  * Will correctly show weapon icons when they die.
+  * Cannot use same SMG or else we cannot keep the easter egg.
+
+Ideer:
+  * Randomly spawn a new weapon to pick up. Less often than random NPC deaths,
+    but just to keep everything interesing (otherwise, soldier gets it better
+    and better as time goes on so why would it be a rush?)
 
 ----------------------------------------------
 
@@ -21,9 +29,11 @@ Wishlist?
       * _civilians and _soldiers will be incorrect when joining late gate as some of them will be "ENEMY" side.
       * No poison action
     6. Spectator roles
-    7. Icon on poison action
+    7. Icon on poison action (KIA)
     8. 3D Icon on dead players
-    9. Remove _side mess; we can do side group _x instead.
+    9. Remove _side mess; we can do side group _x instead
+    10. Add player icons on alive players
+    11. Params for all the different icons
 
 Size: 24*23.5
 
