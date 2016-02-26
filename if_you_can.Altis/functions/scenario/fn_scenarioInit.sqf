@@ -43,3 +43,5 @@ if (hasInterface) then {
   call IYC_fnc_initVictoryConditions;
   call IYC_fnc_initEventHandlers;
 };
+
+call IYC_fnc_trackWeapons;

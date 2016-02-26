@@ -1,16 +1,14 @@
 ----------------- PLAY TEST 1 ----------------
 
-1. Klumpas i mitten (DONE)
-2. Poison should fail when killed (DONE)
-3. You can grab the gun as a soldier
-  How to detect this? Gear event, I think.
-4. Second soldier cannot be poisoned (DONE)
-5. Player headgear is still present. (DONE)
-
 Ideer:
   * Kill NPCs randomly (pro soldier)
   * Random location for gun (maybe parameter?)
-  * Broadcast poisons to other assassins (DONE!)
+
+------------------ PLAY TEST 2 ---------------
+
+* Can poison dead soldiers
+  * Remove action when soldier is killed.
+* JIP resets weaponContainers
 
 ----------------------------------------------
 
@@ -25,10 +23,7 @@ Wishlist?
     6. Spectator roles
     7. Icon on poison action
     8. 3D Icon on dead players
-
-HARD MODE LOL
-    * Every civ has a gun, but no ammo
-    * Ammo drops to pick up
+    9. Remove _side mess; we can do side group _x instead.
 
 Size: 24*23.5
 

@@ -75,5 +75,9 @@ class CfgFunctions
 			class receivePoison {};
 			class broadcastPoisoning {};
 		};
+
+		class indicators {
+			class trackWeapons {};
+		}
 	};
 };
