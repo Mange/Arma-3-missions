@@ -6,25 +6,21 @@
 
   waitUntil { time > 10 };
 
-  {
+  private _players = (call BIS_fnc_listPlayers);
+  if (!isMultiplayer) then {
+    _players = switchableUnits;
+  };
+
+  _players apply {
     if (side group _x == west) then {
       _soldiers pushBack _x;
     } else {
       _civilians pushBack _x;
     };
-  } forEach (call BIS_fnc_listPlayers);
-
-  // Real conditions
-  if (isMultiplayer) then {
-    _natoWinCondition = { ({alive _x} count _civilians) < 1 };
-    _civilianWinCondition = { ({alive _x} count _soldiers) < 1 };
-  } else {
-    // For editor preview
-    _civilians = allUnits select { side group _x == civilian };
-    _soldiers = allUnits select { side group _x == west };
-    _natoWinCondition = { ({alive _x} count _soldiers) < 1 };
-    _civilianWinCondition = { ({alive _x} count _civilians) < 10 };
   };
+
+  _natoWinCondition = { ({alive _x} count _civilians) < 1 };
+  _civilianWinCondition = { ({alive _x} count _soldiers) < 1 };
 
   while { _loop } do {
     if ([] call _civilianWinCondition) then {

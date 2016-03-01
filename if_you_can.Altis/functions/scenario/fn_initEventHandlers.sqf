@@ -18,7 +18,7 @@ addMissionEventHandler ["EntityKilled", {
   private _killer = _this select 1;
 
   // Remove stuff that might have been used on the victim
-  if (isPlayer _victim || !isMultiplayer) then {
+  if (isPlayer _victim || (!isMultiplayer && _victim in switchableUnits)) then {
     _victim call IYC_fnc_trackDead;
   };
   _victim call IYC_fnc_removePoisonAction;
