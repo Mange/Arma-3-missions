@@ -7,7 +7,7 @@
   waitUntil { time > 10 };
 
   {
-    if (side _x == west) then {
+    if (side group _x == west) then {
       _soldiers pushBack _x;
     } else {
       _civilians pushBack _x;

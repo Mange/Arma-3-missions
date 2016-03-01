@@ -1,8 +1,9 @@
 // Track all known positions of a weapon to pick up.
 
 // Start out with the starting container.
-// TODO: Don't reset if already defined (JIP)
-weaponContainers = [weapon1];
+if (isNil "weaponContainers") then {
+  weaponContainers = [weapon1];
+};
 
 fn_isAWeapon = {
   private _class = _this;
