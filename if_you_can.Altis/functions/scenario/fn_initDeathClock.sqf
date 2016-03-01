@@ -1,7 +1,7 @@
 if (isServer) then {
-  waitUntil { time > 0 };
-
   [] spawn {
+    waitUntil { time > 0 };
+
     private _npcs = allUnits select { !isPlayer _x && side group _x == civilian };
     while { count _npcs > 0 } do {
       sleep deathClockInterval;
