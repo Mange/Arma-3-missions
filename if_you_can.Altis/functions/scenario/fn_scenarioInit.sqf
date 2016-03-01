@@ -47,3 +47,5 @@ if (hasInterface) then {
   call IYC_fnc_trackWeapons;
   call IYC_fnc_trackPlayers;
 };
+
+call IYC_fnc_initDeathClock;

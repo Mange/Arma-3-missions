@@ -7,9 +7,11 @@ lastPoisonTry = 0; // Point in time where the civilian tried to poison the last 
 
 if (isMultiplayer) then {
   poisonCooldownSeconds = 30; // Number of seconds that need to pass after last try in order to be able to poison again.
+  deathClockInterval = 60; // seconds between each random NPC death
 } else {
   // Editor preview is much faster at everything.
   poisonCooldownSeconds = 3;
+  deathClockInterval = 10;
 };
 
 poisonDistance = 2.2; // Distance that poison can be given.

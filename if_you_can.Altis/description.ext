@@ -53,6 +53,7 @@ class CfgFunctions
 			class npcInit {};
 			class initVictoryConditions {};
 			class initEventHandlers {};
+			class initDeathClock {};
 		};
 
 		class unit {
