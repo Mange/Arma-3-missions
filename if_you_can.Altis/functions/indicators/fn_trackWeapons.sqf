@@ -84,8 +84,8 @@ if (hasInterface) then {
         private _color = [1, 0.1, 0.1, 1];
 
         if (_x isKindOf "Man") then {
-          _icon = "\a3\Ui_F_Curator\Data\CfgMarkers\kia_ca.paa";
-          _position = _x modelToWorld (_x selectionPosition "RightHand");
+          _icon = "\A3\ui_f\data\map\markers\military\warning_CA.paa";
+          _position = _x modelToWorld (_x selectionPosition "RightHand"),
         };
 
         // Unit, icon, color, position, text, arrows

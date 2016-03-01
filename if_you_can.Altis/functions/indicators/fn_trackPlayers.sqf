@@ -37,9 +37,11 @@ if (side group player == civilian) then {
     // Unit, icon, color, position, text, arrows
     [
       _x,
-      nil, // TODO: Choose an icon
+      "\A3\ui_f\data\map\markers\military\box_CA.paa",
       nil,
-      (getPosATLVisual _x) vectorAdd ([0, 0, 2]) // 2 meters above feet (0.2 meters above head when standing)
+      (getPosATLVisual _x) vectorAdd ([0, 0, 2]), // 2 meters above feet (0.2 meters above head when standing)
+      "", // Don't show player names for alive players
+      (side group player == civilian) // NATO gets no arrows
     ] call IYC_fnc_drawIcon;
   };
 
@@ -47,9 +49,11 @@ if (side group player == civilian) then {
     // Unit, icon, color, position, text, arrows
     [
       _x,
-      nil, // TODO: Choose an icon
+      "\a3\Ui_F_Curator\Data\CfgMarkers\kia_ca.paa",
       [1, 0, 0, 1],
-      _x modelToWorld (_x selectionPosition "head_hit")
+      _x modelToWorld (_x selectionPosition "head_hit"),
+      nil,
+      (side group player == civilian) // NATO gets no arrows
     ] call IYC_fnc_drawIcon;
   };
 }] call BIS_fnc_addStackedEventHandler;
