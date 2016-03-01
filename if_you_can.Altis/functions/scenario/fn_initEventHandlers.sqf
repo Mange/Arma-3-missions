@@ -12,22 +12,67 @@ player addEventHandler ["HandleRating", {
   };
 }];
 
-if (side player == west) then {
-  addMissionEventHandler ["EntityKilled", {
-    private _victim = _this select 0;
-    private _killer = _this select 1;
+// Global events
+addMissionEventHandler ["EntityKilled", {
+  private _victim = _this select 0;
+  private _killer = _this select 1;
 
-    if (_killer != _victim && _killer == player && side group _victim == civilian) then {
-      if (isPlayer _victim) then {
-        _killer setDamage 0;
-      } else {
-        _killer setDamage ((getDammage _killer) + murderDamage);
-      };
+  // Remove stuff that might have been used on the victim
+  if (isPlayer _victim || !isMultiplayer) then {
+    _victim call IYC_fnc_trackDead;
+  };
+  _victim call IYC_fnc_removePoisonAction;
+  _victim call IYC_fnc_stopTrackingContainer;
+
+  // Punish peace keepers that kill innocent civilians, and reward for killing
+  // assassins.
+  if (
+    local _killer &&
+    side group _killer == west &&
+    side group _victim == civilian &&
+    _killer != _victim
+  ) then {
+    if (isPlayer _victim) then {
+      // Heal the peacekeeper!
+      _killer setDamage 0;
+    } else {
+      // Hurt the peacekeeper.
+      _killer setDamage ((getDammage _killer) + murderDamage);
+    };
+  };
+}];
+
+// Events for all units.
+// "Take" and "Put" events run no matter where the unit was local, but we limit
+// ourselves to registering them only on machines that have these units locally
+// initially to make the logic easier.
+allUnits select { local _x } apply {
+  private _unit = _x;
+
+  // If unit picks up a gun
+  _unit addEventHandler ["Take", {
+    params ["_taker", "_box", "_item"];
+
+    if (_item call IYC_fnc_isAWeapon) then {
+      _box call IYC_fnc_stopTrackingContainerIfNoWeapons;
+      _taker call IYC_fnc_trackContainer;
     };
   }];
 
-  // Easter egg. If a soldier picks up the gun, every civilian will get their
-  // own gun and the soldier will become an enemy of all of them.
+  // If unit drops a gun
+  _unit addEventHandler ["Put", {
+    params ["_putter", "_box", "_item"];
+
+    if (_item call IYC_fnc_isAWeapon) then {
+      _putter call IYC_fnc_stopTrackingContainerIfNoWeapons;
+      _box call IYC_fnc_trackContainer;
+    };
+  }];
+};
+
+// Easter egg. If a soldier picks up the gun, every civilian will get their own
+// gun and the soldier will become an enemy of all of them.
+if (side player == west) then {
   player addEventHandler ["Take", {
     private _soldier = _this select 0;
     private _item = _this select 2;

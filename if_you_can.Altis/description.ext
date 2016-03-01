@@ -67,9 +67,13 @@ class CfgFunctions
 			class randomVoice {};
 			class randomUniform {};
 			class randomLoadout {};
+			class isAWeapon {};
 		};
 
 		class poison {
+			class addPoisonAction;
+			class removePoisonAction;
+
 			class poisonWithCooldown {};
 			class poisonTarget {};
 			class receivePoison {};
@@ -80,6 +84,10 @@ class CfgFunctions
 			class trackWeapons {};
 			class trackPlayers {};
 			class drawIcon {};
+			class trackDead {};
+			class stopTrackingContainer {};
+			class stopTrackingContainerIfNoWeapons {};
+			class trackContainer {};
 		}
 	};
 };
