@@ -5,7 +5,7 @@
   waitUntil { time > 2 };
 
   allUnits select { side group _x == west && alive _x } apply {
-    _x addAction [
+    private _actionId = _x addAction [
       format ["<t color='#00ff00'>Poison %1</t>", name _x], // Text
       {
         [_this select 0] call IYC_fnc_poisonWithCooldown;
@@ -17,5 +17,6 @@
       "compass", // Enable using keybind
       "_this distance _target < poisonDistance" // Condition
     ];
+    _x addEventHandler ["Killed", "(_this select 0) removeAction " + str _actionId];
   };
 };
