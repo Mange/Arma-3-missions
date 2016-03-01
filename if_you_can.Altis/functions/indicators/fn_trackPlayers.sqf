@@ -19,17 +19,19 @@ if (side group player == civilian) then {
   };
 };
 
-(call BIS_fnc_listPlayers) apply {
-  _x addEventHandler ["Killed", {
-    params ["_victim"];
+if (isServer) then {
+  (call BIS_fnc_listPlayers) apply {
+    _x addMPEventHandler ["Killed", {
+      params ["_victim"];
 
-    private _index = trackedPlayers find _victim;
-    if (_index >= 0) then {
-      trackedPlayers deleteAt _index;
-    };
+      private _index = trackedPlayers find _victim;
+      if (_index >= 0) then {
+        trackedPlayers deleteAt _index;
+      };
 
-    trackedDead pushBack _victim;
-  }];
+      trackedDead pushBack _victim;
+    }];
+  };
 };
 
 ["IYC_player_3dicons", "onEachFrame", {
