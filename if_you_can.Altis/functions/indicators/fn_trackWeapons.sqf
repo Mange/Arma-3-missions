@@ -26,8 +26,8 @@ if (hasInterface) then {
           _position = _x modelToWorld (_x selectionPosition "RightHand"),
         };
 
-        // Unit, icon, color, position, text, arrows
-        [_x, _icon, [1, 0.1, 0.1, 1], _position, "" ] call IYC_fnc_drawIcon;
+        // Unit, icon, color, position, arrows
+        [_x, _icon, [1, 0.1, 0.1, 1], _position] call IYC_fnc_drawIcon;
       };
     };
   }] call BIS_fnc_addStackedEventHandler;

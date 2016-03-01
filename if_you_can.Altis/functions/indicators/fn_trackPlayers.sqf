@@ -21,25 +21,23 @@ if (side group player == civilian) then {
 
 ["IYC_player_3dicons", "onEachFrame", {
   trackedPlayers apply {
-    // Unit, icon, color, position, text, arrows
+    // Unit, icon, color, position, arrows
     [
       _x,
       "\A3\ui_f\data\map\markers\military\box_CA.paa",
       nil,
       (getPosATLVisual _x) vectorAdd ([0, 0, 2]), // 2 meters above feet (0.2 meters above head when standing)
-      "", // Don't show player names for alive players
       (side group player == civilian) // NATO gets no arrows
     ] call IYC_fnc_drawIcon;
   };
 
   trackedDead apply {
-    // Unit, icon, color, position, text, arrows
+    // Unit, icon, color, position, arrows
     [
       _x,
       "\a3\Ui_F_Curator\Data\CfgMarkers\kia_ca.paa",
       [1, 0, 0, 1],
       _x modelToWorld (_x selectionPosition "head_hit"),
-      nil,
       (side group player == civilian) // NATO gets no arrows
     ] call IYC_fnc_drawIcon;
   };

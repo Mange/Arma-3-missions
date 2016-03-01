@@ -2,8 +2,7 @@ private _unit     = param [0, objNull, [objNull]];
 private _icon     = param [1, "\a3\Ui_F_Curator\Data\CfgMarkers\kia_ca.paa", [""]];
 private _color    = param [2, (side group _unit) call BIS_fnc_sideColor, [[]], 4];
 private _position = param [3, getPosATLVisual _unit, [[]], 3];
-private _text     = param [4, name _unit, [""]];
-private _arrows   = param [5, true, [true]];
+private _arrows   = param [4, true, [true]];
 
 private _distance = player distance _x;
 
@@ -24,10 +23,10 @@ drawIcon3D [
   _icon, _color, _position,
   1 * _scale, 1 * _scale, // Width, height
   0, // Angle
-  _text, // Optional text
+  "", // Optional text
   0, // Optional shadow
-  0.05 * _scale, // Optional text size
-  "TahomaB", // Optional font
-  "center", // Optional text alignment
+  0, // Optional text size
+  "", // Optional font
+  "", // Optional text alignment
   _arrows // Optional show side arrows?
 ];
