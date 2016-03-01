@@ -2,7 +2,10 @@ if (isServer) then {
   [] spawn {
     waitUntil { time > 0 };
 
-    private _npcs = allUnits select { !isPlayer _x && side group _x == civilian };
+    private _npcs = (
+      allUnits select { !isPlayer _x && side group _x == civilian }
+    ) - switchableUnits;
+
     while { count _npcs > 0 } do {
       sleep deathClockInterval;
       private _index = floor random (count _npcs);
