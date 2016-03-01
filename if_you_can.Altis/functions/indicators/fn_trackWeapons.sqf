@@ -72,47 +72,24 @@ allUnits select { local _x } apply {
 
 // Draw icons on all weapon container's positions
 if (hasInterface) then {
-  ["IYC_3dicons", "onEachFrame", {
+  ["IYC_weapon_3dicons", "onEachFrame", {
     // Nato does not get to see any markers. They still get this onEachFrame,
     // however as I want to support team switch in the editor.
     if (side group player == west) exitWith {};
 
     weaponContainers apply {
-      private _icon = "\A3\ui_f\data\gui\cfg\hints\rifles_ca.paa";
-      private _position = getPosATLVisual _x;
-      private _color = [1, 0.1, 0.1, 1];
-      private _distance = player distance _x;
+      if (_x != player) then {
+        private _icon = "\A3\ui_f\data\gui\cfg\hints\rifles_ca.paa";
+        private _position = getPosATLVisual _x;
+        private _color = [1, 0.1, 0.1, 1];
 
-      if (_x != player && _distance > 0) then {
         if (_x isKindOf "Man") then {
           _icon = "\a3\Ui_F_Curator\Data\CfgMarkers\kia_ca.paa";
           _position = _x modelToWorld (_x selectionPosition "RightHand");
         };
 
-        // Make the icon smaller the further away you are, but lengthen the factor
-        // by only looking at 20% of the distance so it doesn't shrink too fast.
-        private _scale = 1 / (_distance * 0.2);
-        if (_scale > 2) then { _scale = 2; };
-        if (_scale < 0.3) then { _scale = 0.3; };
-
-        // Make it a bit more transparent when near
-        // http://www.wolframalpha.com/input/?i=plot+f(x)%3D(ln(x)%2B2)%2F4,+0%3Cx%3C7
-        if (_distance < 7) then {
-          private _opacity = ((ln _distance) + 2) / 4;
-          _color set [3, (_opacity max 0.1) min 1.0];
-        };
-
-        drawIcon3D [
-          _icon, _color, _position,
-          1 * _scale, 1 * _scale, // Width, height
-          0, // Angle
-          "", // Optional text
-          0, // Optional shadow
-          0, // Optional text size
-          "", // Optional font
-          "", // Optional text alignment
-          true // Optional show side arrows?
-        ];
+        // Unit, icon, color, position, text, arrows
+        [_x, _icon, [1, 0.1, 0.1, 1], _position, "" ] call IYC_fnc_drawIcon;
       };
     };
   }] call BIS_fnc_addStackedEventHandler;

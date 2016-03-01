@@ -16,7 +16,8 @@ allUnits apply {
 
         if (!isPlayer _unit) then {
           if (side _unit == west) then {
-            // If the soldier is AI, remove it from the game if this is muliplayer
+            // Non-player NATO soldiers should not be in the game. AIs cannot
+            // play this role.
             if (isMultiplayer) then {
               deleteVehicle _unit;
             };
@@ -42,6 +43,7 @@ if (hasInterface) then {
 
   call IYC_fnc_initVictoryConditions;
   call IYC_fnc_initEventHandlers;
-};
 
-call IYC_fnc_trackWeapons;
+  call IYC_fnc_trackWeapons;
+  call IYC_fnc_trackPlayers;
+};
