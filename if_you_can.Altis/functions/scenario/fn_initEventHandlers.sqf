@@ -32,7 +32,7 @@ addMissionEventHandler ["EntityKilled", {
     side group _victim == civilian &&
     _killer != _victim
   ) then {
-    if (isPlayer _victim) then {
+    if (isPlayer _victim || _victim in switchableUnits) then {
       // Heal the peacekeeper!
       _killer setDamage 0;
     } else {
