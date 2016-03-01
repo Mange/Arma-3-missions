@@ -1,11 +1,8 @@
 [] spawn {
-  private ["_loop", "_civilians", "_soldiers", "_side", "_natoWinCondition", "_civilianWinCondition"];
+  private ["_loop", "_civilians", "_soldiers", "_natoWinCondition", "_civilianWinCondition"];
   _loop = true;
   _civilians = [];
   _soldiers = [];
-
-  // By the time we need to check the player's side, they will be a spectator and will not have a side.
-  _side = side player;
 
   waitUntil { time > 10 };
 
@@ -29,7 +26,7 @@
 
   while { _loop } do {
     if ([] call _civilianWinCondition) then {
-      if (_side == west) then {
+      if (side group player == west) then {
         ["loser", false, true] call BIS_fnc_endMission;
       } else {
         ["end2", true, true] call BIS_fnc_endMission;
@@ -37,7 +34,7 @@
       _loop = false;
     } else {
       if ([] call _natoWinCondition) then {
-        if (_side == west) then {
+        if (side group player == west) then {
           ["end1", true, true] call BIS_fnc_endMission;
         } else {
           ["loser", false, true] call BIS_fnc_endMission;
