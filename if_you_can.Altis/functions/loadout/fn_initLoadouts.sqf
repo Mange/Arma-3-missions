@@ -28,6 +28,6 @@ civilianUniforms = (
 } apply {
   configName _x
 } select {
-  // Filter out the VR characters
-  _x find "VR" < 0
+  // Filter out the VR and invisible characters
+  _x find "VR" < 0 && _x find "VirtualMan" < 0
 };
