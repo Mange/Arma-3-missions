@@ -13,13 +13,13 @@ trackedDead = [];
 
 if (side group player == civilian) then {
   if (isMultiplayer) then {
-    trackedPlayers = allPlayers select { _x != player && side group _x == civilian };
+    trackedPlayers = (call BIS_fnc_listPlayers) select { _x != player && side group _x == civilian };
   } else {
     trackedPlayers = (allUnits select [0, 5]) select { _x != player };
   };
 };
 
-allPlayers apply {
+(call BIS_fnc_listPlayers) apply {
   _x addEventHandler ["Killed", {
     params ["_victim"];
 
